@@ -62,6 +62,12 @@ button:hover {
 	top: 0px;
 	width: 400px;
 }
+#div_h1{
+	width: 500px;
+}
+#div_h2{
+	width: 500px;
+}
 #hinweis {
      font-size: 16px;
      font-family: inherit;
