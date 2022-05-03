@@ -59,7 +59,7 @@ button:hover {
 }
 #div_hinweis {
 	position:absolute;
-	margin-right: 0px;
+	right: 0px;
 	top: 0px;
 	width: 400px;
 }
@@ -76,7 +76,7 @@ button:hover {
 }
 #div_copyright {
 	position:absolute;
-	margin-right: 0px;
+	right: 0px;
 	bottom: 20px;
 	width: 400px;
 }
