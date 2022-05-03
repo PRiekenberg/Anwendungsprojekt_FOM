@@ -1,0 +1,13 @@
+body {
+    background-color: #333333;
+    font-family: "Roboto", helvetica, arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right:5%;
+}
+h1 {
+    color: white;
+}
