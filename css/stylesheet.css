@@ -35,8 +35,8 @@ button::before {
      width: 0;
      height: 300%;
      position: absolute;
-     top: 50%;
-     left: 50%;
+     top: 70%;
+     left: 70%;
      transform: translate(-50%, -50%) rotate(45deg);
      background: #249B3C;
      transition: .5s ease;
@@ -49,7 +49,7 @@ button:hover::before {
 }
 
 button:hover {
-     color: #249B3C;
+     color: #FFFFFF;
 }
 #div_szenario {
 	margin-left: 5%;
