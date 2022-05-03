@@ -35,9 +35,9 @@ button::before {
      width: 0;
      height: 300%;
      position: absolute;
-     top: 70%;
-     left: 70%;
-     transform: translate(-50%, -50%) rotate(45deg);
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%) rotate(0deg);
      background: #249B3C;
      transition: .5s ease;
      display: block;
