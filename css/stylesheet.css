@@ -81,6 +81,7 @@ button:hover {
 	width: 400px;
 }
 #copyrigth {
+     text-align: right;
      font-size: 16px;
      font-family: inherit;
      color: #249B3C;
