@@ -75,6 +75,7 @@ button:hover {
      color: #249B3C;
 }
 #div_copyright {
+	text-align: right;
 	position:absolute;
 	right: 0px;
 	bottom: 20px;
