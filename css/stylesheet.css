@@ -57,6 +57,7 @@ button:hover {
 	width: 150px;
 }
 #div_hinweis {
+	margin_left: auto;
 	margin_right: 0px;
 	width: 400px;
 }
