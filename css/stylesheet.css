@@ -1,7 +1,6 @@
 body {
     background-image: url('ransomware.jpg');
-    max-width: 100%;
-    max-height: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #000000;
