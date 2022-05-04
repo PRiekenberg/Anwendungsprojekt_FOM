@@ -5,7 +5,7 @@ body {
     background-size: cover;
     background-color: #000000;
     font-family: "Roboto", helvetica, arial, sans-serif;
-    font-size: 16px;
+    font-size: 0.8333333333333334vw;
     font-weight: 400;
     text-rendering: optimizeLegibility;
     margin-bottom: 5%;
@@ -25,7 +25,7 @@ button {
      background-color: transparent;
      text-align: center;
      text-transform: uppercase;
-     font-size: 16px;
+     font-size: 0.8333333333333334vw;
      transition: .3s;
      z-index: 1;
      font-family: inherit;
@@ -84,7 +84,7 @@ button:hover {
 }
 #copyrigth {
      text-align: right;
-     font-size: 16px;
+     font-size: 0.8333333333333334vw;
      font-family: inherit;
      color: #249B3C;
 }
