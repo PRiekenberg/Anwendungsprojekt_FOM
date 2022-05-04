@@ -65,8 +65,7 @@ button:hover {
      color: #FFFFFF;
 }
 #div_szenario {
-	margin-left: 50%;
-	margin-right: auto;
+	margin: 0 auto;
 	width: 400px;
 	background-color: transparent;
 }
@@ -78,13 +77,11 @@ button:hover {
      font-size: 0.8333333333333334vw;
 }
 #div_h1{
-	margin-left: 50%;
-	margin-right: auto;
+	margin: 0 auto;
 	width: 500px;
 }
 #div_h2{
-	margin-left: 50%;
-	margin-right: auto;
+	margin: 0 auto;
 	width: 500px;
 }
 #hinweis {
