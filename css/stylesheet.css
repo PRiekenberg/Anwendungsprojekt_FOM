@@ -33,7 +33,7 @@ button {
      border: 2px solid #249B3C;
      position: relative;
      overflow: hidden;
-     background-color: transparent;
+     background-color: #000000;
      text-align: center;
      text-transform: uppercase;
      font-size: 0.8333333333333334vw;
@@ -67,7 +67,8 @@ button:hover {
 #div_szenario {
 	margin-left: 0%;
 	margin-right: auto;
-	width: 150px;
+	width: 400px;
+	background-color: transparent;
 }
 #div_hinweis {
 	position:absolute;
