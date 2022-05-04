@@ -12,10 +12,21 @@ body {
     margin-left: 5%;
     margin-right:5%;
 }
-h1, h2, h3 {
+h1 {
     color: white;
     text-align: left;
+    font-size: 1.6666666666666667vw;
 }
+h2 {
+     color: white;
+     text-align: left;
+     font-size: 1.25vw;
+ }
+ h3 {
+     color: white;
+     text-align: left;
+     font-size: 0.975vw;
+ }
 button {
      width: 400px;
      padding: 0.8em 1.8em;
@@ -63,6 +74,7 @@ button:hover {
 	right: 0px;
 	top: 0px;
 	width: 400px;
+     font-size: 0.8333333333333334vw;
 }
 #div_h1{
 	width: 500px;
