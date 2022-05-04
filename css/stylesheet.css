@@ -107,6 +107,7 @@ button:hover {
      }
    }
 .button_image{
+	position: relative;
 	border: 1px solid #249B3C;
 	width: 100px;
 	height:	100px;
