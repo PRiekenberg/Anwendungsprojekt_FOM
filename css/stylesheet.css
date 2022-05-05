@@ -100,6 +100,12 @@ button:hover {
      font-family: inherit;
      color: #249B3C;
 }
+#counter{
+	text-align: center;
+     	font-size: 1.5;
+     	font-family: inherit;
+     	color: #FFFFFF;
+}
 @media only screen and (max-width: 620px) {
      /* For mobile phones: */
      body {
