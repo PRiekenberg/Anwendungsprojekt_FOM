@@ -5,8 +5,8 @@ function set_h1(){
 function update_cookie(new_value){
 	var a = new Date();
 	a = new Date(a.getTime() +1000*60*60*24*365);
-	var counter_value = 'counter='+new_value+';';
-	document.cookie = counter_value +' expires='+ a.toGMTString()+';'; 
+	var counter_value = "counter="+new_value+";";
+	document.cookie = counter_value +" expires="+ a.toGMTString()+";"; 
 }
 function increment_counter(){
 	var found = new Boolean;
@@ -20,7 +20,7 @@ function increment_counter(){
       			var cookieName = cookie.substring(0, f);
       			var cookieValue = cookie.substring(f + 1);
 				
-			if (cookieName == "counter"){
+			if (cookieName == "counter" or cookieName == " counter"){
 				var new_value = parseInt(cookieValue) + 1;
 				update_cookie(new_value);
 				found = true;
