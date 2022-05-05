@@ -20,7 +20,7 @@ function increment_counter(){
       			var cookieName = cookie.substring(0, f);
       			var cookieValue = cookie.substring(f + 1);
 				
-			if (cookieName == "counter" or cookieName == " counter"){
+			if (cookieName == "counter" || cookieName == " counter"){
 				var new_value = parseInt(cookieValue) + 1;
 				update_cookie(new_value);
 				found = true;
@@ -42,7 +42,7 @@ function read_counter_cookie(){
       				var cookieName = cookie.substring(0, f);
       				var cookieValue = cookie.substring(f + 1);
 				
-				if (cookieName == "counter" or cookieName == " counter"){
+				if (cookieName == "counter" || cookieName == " counter"){
 					var value = parseInt(cookieValue) + 1;
 					var counter = document.getElementByID('counter');
 					counter.textContent = value;
