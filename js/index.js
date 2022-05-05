@@ -44,7 +44,7 @@ function read_counter_cookie(){
 				
 				if (cookieName == "counter" || cookieName == " counter"){
 					var value = parseInt(cookieValue) + 1;
-					var counter = document.getElementById('counter').innerHTML = value;
+					document.getElementById('counter').innerHTML = value;
 				}
     			}
   		}
