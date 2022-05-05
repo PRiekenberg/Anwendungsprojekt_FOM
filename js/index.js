@@ -9,7 +9,7 @@ function set_h1(){
 function get_cookie(){
   	var cookieList = (document.cookie) ? document.cookie.split(';') : [];
   	var cookieValues = {};
-	if cookieList.length < 1){
+	if (cookieList.length < 1){
 		document.cookie = 'counter=0;'; 
 	}
 		
