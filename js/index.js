@@ -1,10 +1,6 @@
-
-var myHeading = document.querySelector('h1');
-myHeading.textContent = "JavaScript funktioniert!";
-
 function set_h1(){
   var headline = document.querySelector('h1');
-  headline.textContent = "Kann ich nur bestätigen!";
+  headline.textContent = "JavaScript funktioniert!";
 }
 function get_cookie(){
   	var cookieList = (document.cookie) ? document.cookie.split(';') : [];
