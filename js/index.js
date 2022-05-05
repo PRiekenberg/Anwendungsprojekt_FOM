@@ -42,7 +42,7 @@ function read_counter_cookie(){
       				var cookieName = cookie.substring(0, f);
       				var cookieValue = cookie.substring(f + 1);
 				
-				if (cookieName == "counter"){
+				if (cookieName == "counter" or cookieName == " counter"){
 					var value = parseInt(cookieValue) + 1;
 					var counter = document.getElementByID('counter');
 					counter.textContent = value;
