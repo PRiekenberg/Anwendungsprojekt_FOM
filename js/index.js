@@ -11,7 +11,8 @@ function update_cookie(new_value){
 function increment_counter(){
 	var found = new Boolean;
 	found = false;
-	
+	var cookieList = (document.cookie) ? document.cookie.split(';') : [];
+  	var cookieValues = {};
 	for (var i = 0, n = cookieList.length; i != n; ++i) {
     		var cookie = cookieList[i];
     		var f = cookie.indexOf('=');
