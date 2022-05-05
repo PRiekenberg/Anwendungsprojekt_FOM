@@ -30,6 +30,7 @@ function increment_counter(){
 	if (found == false){
 		update_cookie(1);
 	}
+	location.reload();
 }
 
 function read_counter_cookie(){
