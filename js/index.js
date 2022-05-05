@@ -35,3 +35,22 @@ function increment_counter(){
   		}
 	}
 }
+function read_counter_cookie(){
+	var cookieList = (document.cookie) ? document.cookie.split(';') : [];
+  	var cookieValues = {};
+	for (var i = 0, n = cookieList.length; i != n; ++i) {
+    			var cookie = cookieList[i];
+    			var f = cookie.indexOf('=');
+    			if (f >= 0) {
+      				var cookieName = cookie.substring(0, f);
+      				var cookieValue = cookie.substring(f + 1);
+				
+				if cookieName = "counter"{
+					var value = parseInt(cookieValue) + 1;
+					var counter = document.getElementByID('counter');
+					counter.textContent = value;
+				}
+    			}
+  		}
+	
+}
