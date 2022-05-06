@@ -41,6 +41,7 @@ button {
      	z-index: 1;
      	font-family: inherit;
      	color: #249B3C;
+	border-radius: 50%;
 }
 
 button::before {
@@ -55,7 +56,6 @@ button::before {
 	transition: .5s ease;
 	display: block;
 	z-index: -1;
-	border-radius: 50%;
 }
 
 button:hover::before {
