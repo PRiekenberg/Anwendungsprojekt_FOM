@@ -41,7 +41,7 @@ button {
      	z-index: 1;
      	font-family: inherit;
      	color: #249B3C;
-	border-radius: 50%;
+	border-radius: 50%; 
 }
 
 button::before {
