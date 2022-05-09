@@ -167,10 +167,16 @@ button:hover {
 	right: 10px;
 	top: 300px;
 }
-#img_hacker_menu{
-	width: 300px;
-	left: 100px;
+
+#div_hacker_menu{
 	top: 200px;
+	width: 300;
+	margin: 0 auto;
+}
+
+#img_hacker_menu{
+	height: auto;
+      	max-width: 100%;
 }
 
 @media only screen and (max-width: 620px) {
