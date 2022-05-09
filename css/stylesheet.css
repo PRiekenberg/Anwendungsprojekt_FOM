@@ -64,12 +64,6 @@ button:hover {
      	color: #FFFFFF;
 }
 
-#div_szenario {
-	margin: 0 auto;
-	width: 600px;
-	background-color: transparent;
-}
-
 #div_hinweis {
 	position:absolute;
 	left: 0px;
