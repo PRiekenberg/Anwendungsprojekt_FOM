@@ -11,21 +11,19 @@ body {
     	margin-left: 5%;
     	margin-right:5%;
 }
+
 h1 {
     	color: white;
     	text-align: center;
     	font-size: 1.6666666666666667vw;
 }
+
 h2 {
      	color: white;
      	text-align: center;
      	font-size: 1.25vw;
  }
- h3 {
-     	color: white;
-     	text-align: left;
-     	font-size: 0.975vw;
- }
+
 button {
      	width: 400px;
      	height: 102px;
@@ -65,11 +63,13 @@ button:hover::before {
 button:hover {
      	color: #FFFFFF;
 }
+
 #div_szenario {
 	margin: 0 auto;
 	width: 600px;
 	background-color: transparent;
 }
+
 #div_hinweis {
 	position:absolute;
 	left: 0px;
@@ -77,17 +77,21 @@ button:hover {
 	width: 400px;
      	font-size: 0.8333333333333334vw;
 }
+
 #div_h1{
 	margin: auto;
 }
+
 #div_h2{
 	margin: auto;
 }
+
 #hinweis {
 	font-size: 16px;
 	font-family: inherit;
 	color: #249B3C;
 }
+
 #div_copyright {
 	text-align: right;
 	position:absolute;
@@ -95,12 +99,14 @@ button:hover {
 	bottom: 20px;
 	width: 400px;
 }
+
 #copyrigth {
 	text-align: right;
 	font-size: 0.8333333333333334vw;
 	font-family: inherit;
 	color: #249B3C;
 }
+
 #counter{
 	background-color: #000000;
 	text-align: center;
@@ -108,6 +114,7 @@ button:hover {
      	font-family: inherit;
      	color: #FFFFFF;
 }
+
 @media only screen and (max-width: 620px) {
      	/* For mobile phones: */
      	body {
