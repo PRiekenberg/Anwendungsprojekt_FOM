@@ -148,19 +148,19 @@ button:hover {
 
 #button_firmennetz{
 	left: 10px;
-	top: 150px;
-	transform: rotate(20deg);
+	top: 200px;
+	transform: rotate(16deg);
 }
 
 #button_social{
 	margin: 0 auto;
-	top: 20px;
+	top: 100px;
 }
 
 #button_banking{
 	right: 10px;
-	top: 150px;
-	transform: rotate(-20deg);
+	top: 200px;
+	transform: rotate(-16deg);
 }
 
 #button_passwort{
@@ -169,7 +169,8 @@ button:hover {
 }
 
 #div_hacker_menu{
-	top: 500px;
+	position: relative;
+	top: 200px;
 	width: 300px;
 	margin: 0 auto;
 }
