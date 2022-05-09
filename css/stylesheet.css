@@ -28,17 +28,17 @@ button {
      	width: 400px;
      	height: 102px;
      	padding: 0.8em 1.8em;
-     	border: 2px solid #249B3C;
+     	border: 2px solid #000000;
      	position: relative;
      	overflow: hidden;
-     	background-color: #000000;
+     	background-color: #FFFFFF;
      	text-align: center;
      	text-transform: uppercase;
      	font-size: 0.8333333333333334vw;
      	transition: .3s;
      	z-index: 2;
      	font-family: inherit;
-     	color: #249B3C;
+     	color: #000000;
 	border-radius: 50%; 
 }
 
@@ -50,7 +50,7 @@ button::before {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) rotate(0deg);
-	background: #249B3C;
+	background: #202020;
 	transition: .5s ease;
 	display: block;
 	z-index: -1;
