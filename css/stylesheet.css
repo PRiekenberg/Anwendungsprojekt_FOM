@@ -167,6 +167,9 @@ button:hover {
 	right: 10px;
 	top: 300px;
 }
+#img_hacker_menu{
+	width: 300px;
+}
 
 @media only screen and (max-width: 620px) {
      	/* For mobile phones: */
