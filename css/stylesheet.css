@@ -115,6 +115,24 @@ button:hover {
      	font-family: inherit;
      	color: #FFFFFF;
 }
+#button_krypto{
+}
+
+#button_firmennetz{
+}
+
+#button_social{
+	width: 300px;
+	height: 70px;
+	left: 50%;
+	top: 0px;
+}
+
+#button_banking{
+}
+
+#button_passwort{
+}
 
 @media only screen and (max-width: 620px) {
      	/* For mobile phones: */
