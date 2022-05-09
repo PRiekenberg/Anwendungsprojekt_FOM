@@ -73,7 +73,7 @@ button:hover {
 #div_hinweis {
 	position:absolute;
 	left: 0px;
-	bottom: 0px;
+	bottom: 20px;
 	width: 400px;
      	font-size: 0.8333333333333334vw;
 }
