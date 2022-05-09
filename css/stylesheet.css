@@ -84,9 +84,32 @@ button:hover {
 	background-color: #FFFFFF;
 	margin: auto;
 	width: 1200px;
-	height: 675px;
-	
+	height: 675px;	
 }
+
+#div_gamescreen_left{
+	z-index: 1;
+	background-color: #FFFFFF;
+	margin: auto;
+	width: 400px;
+	height: 675px;	
+}
+
+#div_gamescreen_center{
+	z-index: 1;
+	background-color: #FFFFFF;
+	margin: auto;
+	width: 400px;
+	height: 675px;	
+}
+#div_gamescreen_right{
+	z-index: 1;
+	background-color: #FFFFFF;
+	margin: auto;
+	width: 400px;
+	height: 675px;	
+}
+
 #hinweis {
 	font-size: 16px;
 	font-family: inherit;
