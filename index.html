@@ -17,13 +17,19 @@
             <h2>Wähle ein Szenario aus:</h2>
         </div>
         <div id="div_gamescreen">
-            <button id="button_social" type="submit">Social Engineering</button>
-            <button id="button_firmennetz" type="submit">Firmennetz</button>
-            <button id="button_banking" onclick="set_h1()">Online Banking</button>
-            <button id="button_krypto" onclick="increment_counter()">Krypto</button>
-            <a id="counter">0</a>
-            <script>read_counter_cookie()</script>
-            <button id="button_passwörter" onclick="set_h1()">Passwörter<br> Virus um Firma lahmzulegen</button>
+            <div id="div_gamescreen_left">
+                <button id="button_firmennetz" type="submit">Firmennetz</button>
+                <button id="button_krypto" onclick="increment_counter()">Krypto</button>
+            </div>
+            <div id="div_gamescreen_center">
+                <button id="button_social" type="submit">Social Engineering</button>
+            </div>
+            <div id="div_gamescreen_right">
+                <button id="button_banking" onclick="set_h1()">Online Banking</button>
+                <a id="counter">0</a>
+                <script>read_counter_cookie()</script>
+                <button id="button_passwörter" onclick="set_h1()">Passwörter<br> Virus um Firma lahmzulegen</button>
+            </div> 
         </div>
         <div id="div_hinweis">
             <a id = hinweis>
