@@ -116,12 +116,14 @@ button:hover {
      	color: #FFFFFF;
 }
 #button_krypto{
+	left: 10px;
+	top: 300px;
 }
 
 #button_firmennetz{
 	left: 10px;
 	top: 150px;
-	transform: rotate(20deg));
+	transform: rotate(20deg);
 }
 
 #button_social{
@@ -132,7 +134,7 @@ button:hover {
 #button_banking{
 	right: 10px;
 	top: 150px;
-	transform: rotate(-20deg));
+	transform: rotate(-20deg);
 }
 
 #button_passwort{
