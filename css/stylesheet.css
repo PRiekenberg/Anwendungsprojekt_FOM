@@ -80,6 +80,8 @@ button:hover {
 	margin: auto;
 }
 #div_gamescreen{
+	z-index: 1;
+	background-color: #FFFFFF;
 	margin: auto;
 	width: 1000px;
 	heigth: 500px;
