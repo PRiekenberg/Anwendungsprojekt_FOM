@@ -85,7 +85,12 @@ button:hover {
 #div_h2{
 	margin: auto;
 }
-
+#div_gamescreen{
+	margin: auto;
+	width: 1000px;
+	heigth: 500px;
+	
+}
 #hinweis {
 	font-size: 16px;
 	font-family: inherit;
