@@ -1,8 +1,8 @@
 body {
-    	background-image: url('../images/background.jpg');
+    	/*background-image: url('../images/background.jpg');*/
     	background-size: auto;
     	background-repeat: no-repeat;
-    	background-color: #000000;
+    	background-color: #202020;
     	font-family: "Roboto", helvetica, arial, sans-serif;
     	font-size: 0.8333333333333334vw;
     	font-weight: 400;
@@ -11,21 +11,19 @@ body {
     	margin-left: 5%;
     	margin-right:5%;
 }
+
 h1 {
     	color: white;
-    	text-align: left;
+    	text-align: center;
     	font-size: 1.6666666666666667vw;
 }
+
 h2 {
      	color: white;
-     	text-align: left;
+     	text-align: center;
      	font-size: 1.25vw;
  }
- h3 {
-     	color: white;
-     	text-align: left;
-     	font-size: 0.975vw;
- }
+
 button {
      	width: 400px;
      	height: 102px;
@@ -38,7 +36,7 @@ button {
      	text-transform: uppercase;
      	font-size: 0.8333333333333334vw;
      	transition: .3s;
-     	z-index: 1;
+     	z-index: 2;
      	font-family: inherit;
      	color: #249B3C;
 	border-radius: 50%; 
@@ -65,29 +63,36 @@ button:hover::before {
 button:hover {
      	color: #FFFFFF;
 }
-#div_szenario {
-	margin: 0 auto;
-	width: 600px;
-	background-color: transparent;
-}
+
 #div_hinweis {
 	position:absolute;
-	right: 0px;
-	top: 0px;
+	left: 0px;
+	bottom: 20px;
 	width: 400px;
      	font-size: 0.8333333333333334vw;
 }
+
 #div_h1{
-	margin: 0 auto;
+	margin: auto;
 }
+
 #div_h2{
-	margin: 0 auto;
+	margin: auto;
+}
+#div_gamescreen{
+	z-index: 1;
+	background-color: #FFFFFF;
+	margin: auto;
+	width: 1200px;
+	height: 675px;
+	
 }
 #hinweis {
 	font-size: 16px;
 	font-family: inherit;
 	color: #249B3C;
 }
+
 #div_copyright {
 	text-align: right;
 	position:absolute;
@@ -95,12 +100,14 @@ button:hover {
 	bottom: 20px;
 	width: 400px;
 }
+
 #copyrigth {
 	text-align: right;
 	font-size: 0.8333333333333334vw;
 	font-family: inherit;
 	color: #249B3C;
 }
+
 #counter{
 	background-color: #000000;
 	text-align: center;
@@ -108,18 +115,28 @@ button:hover {
      	font-family: inherit;
      	color: #FFFFFF;
 }
+#button_krypto{
+}
+
+#button_firmennetz{
+}
+
+#button_social{
+	width: 300px;
+	height: 70px;
+	left: 50%;
+	top: 0px;
+}
+
+#button_banking{
+}
+
+#button_passwort{
+}
+
 @media only screen and (max-width: 620px) {
      	/* For mobile phones: */
      	body {
-       	width: 100%;
-     }
-   }
-.button_image{
-	position: relative;
-	border: 1px solid #249B3C;
-	width: 100px;
-	height:	100px;
-}
-.form_szenario{
-	height:102px;
+       		width: 100%;
+     	}
 }
