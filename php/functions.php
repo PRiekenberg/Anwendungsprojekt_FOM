@@ -74,7 +74,7 @@
 
   function queryQuestions($scenarioid, $phase) {
     $collection = getCollection();
-    $result = $collection->find( [ 'scenario' => $scenarioid, 'phase' => $phase ] );
+    $result = $collection->find( [ 'scenario' => $scenarioid, 'phase' => $phase, 'type' => 'question' ] );
     echo $result;
   }
 ?>
