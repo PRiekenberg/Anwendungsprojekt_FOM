@@ -97,24 +97,24 @@
 	<body>
 		<div align="center" class="form-style-8">
 			<h2>Profil bearbeiten</h2>
-			<form id="form1" action="editprofile2.php" method="post">
-				<h3>Geburtsdatum</h3>
-				<input id="birthdateedit" type="date" name="birthdate" placeholder="Geburtsdatum" /><br><br>
+			<form id="form1" action="insertDocument()" method="post">
+				<h3>Name</h3>
+				<input id="name" type="text" name="birthdate" placeholder="Name" /><br><br>
 				
-				<h3>Adresse</h3>
-				<input id="adressedit" type="text" name="adress" placeholder="Adresse" /><br><br>
+				<h3>Frage?</h3>
+				<input id="questionbool" type="checkbox" name="questionbool" /><br><br>
 				
-				<h3>Ausbildungsberuf</h3>
-				<input id="occupationedit" type="text" name="occupation" placeholder="Ausbildungsberuf" /><br><br>
+				<h3>Antwort?</h3>
+				<input id="answerbool" type="text" name="answerbool" /><br><br>
 				
-				<h3>Ausbilder/in</h3>
-				<input id="traineredit" type="text" name="trainer" placeholder="Ausbilder" /><br><br>
+				<h3>Inhalt Frage</h3>
+				<input id="questioncontent" type="text" name="questioncontent" placeholder="Frage eingeben" /><br><br>
 				
-				<h3>Ausbildungsbeginn</h3>
-				<input id="trainingstartedit" type="date" name="training_start" placeholder="Ausbildungsbeginn" /><br><br>
+				<h3>Inhalt Antwort</h3>
+				<input id="answercontent" type="text" name="answercontent" placeholder="Antwort eingeben" /><br><br>
 				
-				<h3>Ausbildungsende</h3>
-				<input id="trainingendedit" type="date" name="training_end" placeholder="Ausbildungsende" /><br><br>
+				<h3>Szenario ID</h3>
+				<input id="scenarioid" type="text" name="scenarioid" placeholder="ID des Szenarios" /><br><br>
 				
 				
 				<input id="firebtn" type="submit" value="Daten ändern"></input>
