@@ -4,6 +4,9 @@
   require 'functions.php';
 
   printDocuments();
+ 
+  $client->close();
+
 ?>
 
 <html>
