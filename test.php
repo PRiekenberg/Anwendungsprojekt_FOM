@@ -67,9 +67,64 @@
   printCollection();
   printDocuments();
 
+  echo '
+  <form name="form1" method="post" action="username()">
+    <p>
+      <label>
+        <input type="text" name="textfield" id="textfield">
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="submit" name="button" id="button" value="Submit">
+      </label>
+    </p>
+  </form>';
   
   // disconnect from server
   $client->close();
 
     
 ?>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Berichtsheft">
+		<meta name="author" content="Philipp Riekenberg">
+		<script src="../../js/jquery.js"></script>
+		<title>Daten einfügen</title>
+		<link rel="stylesheet" href="../css/own.css">
+	</head>
+	<body>
+		<div align="center" class="form-style-8">
+			<h2>Profil bearbeiten</h2>
+			<form id="form1" action="editprofile2.php" method="post">
+				<h3>Geburtsdatum</h3>
+				<input id="birthdateedit" type="date" name="birthdate" placeholder="Geburtsdatum" /><br><br>
+				
+				<h3>Adresse</h3>
+				<input id="adressedit" type="text" name="adress" placeholder="Adresse" /><br><br>
+				
+				<h3>Ausbildungsberuf</h3>
+				<input id="occupationedit" type="text" name="occupation" placeholder="Ausbildungsberuf" /><br><br>
+				
+				<h3>Ausbilder/in</h3>
+				<input id="traineredit" type="text" name="trainer" placeholder="Ausbilder" /><br><br>
+				
+				<h3>Ausbildungsbeginn</h3>
+				<input id="trainingstartedit" type="date" name="training_start" placeholder="Ausbildungsbeginn" /><br><br>
+				
+				<h3>Ausbildungsende</h3>
+				<input id="trainingendedit" type="date" name="training_end" placeholder="Ausbildungsende" /><br><br>
+				
+				
+				<input id="firebtn" type="submit" value="Daten ändern"></input>
+
+			</form>
+		
+		</div>
+	</body>
+ </html>
