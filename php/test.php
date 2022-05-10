@@ -4,7 +4,7 @@
   require_once 'functions.php';
 
   if (isset($_POST['scenarioid'])) {
-    insertDocument($_POST['type'],$_POST['questioncontent'],$_POST['answercontent'],$_POST['scenarioid']);
+    insertDocument($_POST['type'],$_POST['questioncontent'],$_POST['answercontent'],$_POST['phase'],$_POST['scenarioid']);
     printDocuments();
   }
 
@@ -39,6 +39,9 @@
 				<h3>Inhalt Antwort (nur bei Typ Antwort angeben)</h3>
 				<input id="answercontent" type="text" name="answercontent" placeholder="Antwort eingeben" /><br><br>
 				
+				<h3>Phase im Szenario? (nur bei Typ Frage oder Antwort angeben)</h3>
+				<input id="phase" type="text" name="phase" placeholder="Frage eingeben" /><br><br>
+
 				<h3>Szenario ID (nur bei Typ Frage oder Antwort angeben)</h3>
 				<input id="scenarioid" type="text" name="scenarioid" placeholder="ID des Szenarios" /><br><br>
 				
