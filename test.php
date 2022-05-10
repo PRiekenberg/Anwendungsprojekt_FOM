@@ -1,6 +1,7 @@
 <?php
 echo "<h1>Compose Test</h1>";
 require 'vendor/autoload.php';
+phpinfo();
   try {
     // connect to Compose assuming your MONGODB_URL environment
     // variable contains the connection string
