@@ -16,32 +16,27 @@
     
     echo "Inserted with Object ID '{$result->getInsertedId()}'";
     */
-    try {
-      echo "<h2>Collections</h2>";
-      echo "<ul>";
-      // print out list of collections
-      $cursor = $db->listCollections();
-      foreach( $cursor as $doc ) {
-        echo "<li>" .  $doc->getName() . "</li>";
-      }
-      echo "</ul>";
-
-      // print out collection
-    
-      $result = $collection->find()->toArray();
-
-      print_r($result);
-      
-      
-
-        // disconnect from server
-        $client->close();
-    } catch ( MongoConnectionException $e ) {
-      die('Error connecting to MongoDB server');
-    } catch ( MongoException $e ) {
-      die('Mongo Error: ' . $e->getMessage());
-    } catch ( Exception $e ) {
-      die('Error: ' . $e->getMessage());
+    echo "<h2>Collections</h2>";
+    echo "<ul>";
+    // print out list of collections
+    $cursor = $db->listCollections();
+    foreach( $cursor as $doc ) {
+      echo "<li>" .  $doc->getName() . "</li>";
     }
+    echo "</ul>";
+
+    // print out documents in collection
+  
+    $result = $collection->find();
+
+    foreach ($result as $entry) {
+      echo $entry['_id'], ': ', $entry['name'], "\n";
+    }
+    
+    
+
+      // disconnect from server
+      $client->close();
+
     
 ?>
