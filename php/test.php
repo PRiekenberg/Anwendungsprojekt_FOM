@@ -15,7 +15,7 @@
 	</head>
 	<body>
 		<div align="center" class="form-style-8">
-			<h2>Profil bearbeiten</h2>
+			<h2>Daten einfügen</h2>
 			<form id="form1" action="insertDocument()" method="post">
 				<h3>Name</h3>
 				<input id="name" type="text" name="birthdate" placeholder="Name" /><br><br>
@@ -24,7 +24,7 @@
 				<input id="questionbool" type="checkbox" name="questionbool" /><br><br>
 				
 				<h3>Antwort?</h3>
-				<input id="answerbool" type="text" name="answerbool" /><br><br>
+				<input id="answerbool" type="checkbox" name="answerbool" /><br><br>
 				
 				<h3>Inhalt Frage</h3>
 				<input id="questioncontent" type="text" name="questioncontent" placeholder="Frage eingeben" /><br><br>
