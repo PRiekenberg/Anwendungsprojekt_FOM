@@ -2,7 +2,7 @@
 echo "<h1>Compose Test</h1>";
 require 'vendor/autoload.php';
 phpinfo();
-  try {
+  //try {
     // connect to Compose assuming your MONGODB_URL environment
     // variable contains the connection string
     //$connection_url = "mongodb://anwendungsprojekt:qnG4mX0QNnGbGRgcjMe3UFXVEFqiBoceoFVp39P5YUEcNLuq0uJUWC0nDtXcapvZusgQEAhlkL2qhAwrDrxDxw%3D%3D@anwendungsprojekt.mongo.cosmos.azure.com:10255/anwendungsprojektdb?ssl=true";
