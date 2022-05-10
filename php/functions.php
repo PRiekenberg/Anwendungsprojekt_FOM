@@ -73,14 +73,8 @@
   }
 
   function queryQuestions($scenarioid, $phase) {
-    $client = connectDB();
-    $filter = ['scenarioid' => $scenarioid,
-               'phase' => $phase];
-    $options = [];
-    $query = new MongoDB\Driver\Query($filter, $options);
-    $rows = $client->executeQuery('anwendungsprojektdb.anwendungsprojektdb', $query);
-    foreach($rows as $r){
-      print($r);
-    }
+    $collection = getCollection();
+    $result = $collection->find( [ 'scenario' => $scenarioid, 'phase' => $phase ] );
+    echo $result;
   }
 ?>
