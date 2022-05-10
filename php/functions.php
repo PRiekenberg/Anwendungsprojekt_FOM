@@ -55,4 +55,11 @@
     }
     echo "/<ul>";
   }
+
+  function deleteallCollections() {
+    $client = connectDB(); 
+    $bulk = new MongoDB\Driver\BulkWrite;
+    $bulk->delete();
+    $result = $client->executeBulkWrite('db.collection', $bulk);
+  }
 ?>

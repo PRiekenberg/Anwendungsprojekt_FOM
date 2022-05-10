@@ -8,6 +8,8 @@
     printDocuments();
   }
 
+  deleteallCollections();
+
 ?>
 
 <html>
