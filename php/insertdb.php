@@ -14,7 +14,7 @@
   }
 
   //deleteallDocuments();
-  queryQuestions(1,1)
+  queryQuestions('1','1')
 
 ?>
 
