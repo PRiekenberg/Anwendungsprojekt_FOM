@@ -4,8 +4,8 @@ require 'vendor/autoload.php';
   try {
     // connect to Compose assuming your MONGODB_URL environment
     // variable contains the connection string
-    $connection_url = "mongodb://anwendungsprojekt:qnG4mX0QNnGbGRgcjMe3UFXVEFqiBoceoFVp39P5YUEcNLuq0uJUWC0nDtXcapvZusgQEAhlkL2qhAwrDrxDxw%3D%3D@anwendungsprojekt.mongo.cosmos.azure.com:10255/anwendungsprojektdb?ssl=true";
-    //$connection_url = "mongodb://anwendungsprojektdb:h5skd43Too0CJ5f8oAHu1MemBe8Xh3VHCRAsJ4lxsOukUQmpcNlZ1yLYM7QMKtRHG0edZvcohWWNaVdcZc6IYA==@anwendungsprojektdb.mongo.cosmos.azure.com:10255/anwendungsprojektdb?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@anwendungsprojektdb@"
+    //$connection_url = "mongodb://anwendungsprojekt:qnG4mX0QNnGbGRgcjMe3UFXVEFqiBoceoFVp39P5YUEcNLuq0uJUWC0nDtXcapvZusgQEAhlkL2qhAwrDrxDxw%3D%3D@anwendungsprojekt.mongo.cosmos.azure.com:10255/anwendungsprojektdb?ssl=true";
+    $connection_url = "mongodb://anwendungsprojektdb:h5skd43Too0CJ5f8oAHu1MemBe8Xh3VHCRAsJ4lxsOukUQmpcNlZ1yLYM7QMKtRHG0edZvcohWWNaVdcZc6IYA==@anwendungsprojektdb.mongo.cosmos.azure.com:10255/anwendungsprojektdb?ssl=true";
 
      // create the mongo connection object
     $m = new MongoClient($connection_url);
