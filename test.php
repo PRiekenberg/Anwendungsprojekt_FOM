@@ -64,9 +64,9 @@
     echo "/<ul>";
   }
 
-  printCollection();
-  printDocuments();
-
+ // printCollection();
+ // printDocuments();
+ /*
   echo '
   <form name="form1" method="post" action="username()">
     <p>
@@ -84,7 +84,7 @@
   // disconnect from server
   $client->close();
 
-    
+    */
 ?>
 
 <html>
@@ -92,11 +92,8 @@
 		<meta charset="utf-8">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Berichtsheft">
-		<meta name="author" content="Philipp Riekenberg">
-		<script src="../../js/jquery.js"></script>
+		<meta name="description" content="Insertdata">
 		<title>Daten einfügen</title>
-		<link rel="stylesheet" href="../css/own.css">
 	</head>
 	<body>
 		<div align="center" class="form-style-8">
