@@ -55,26 +55,4 @@
     }
     echo "/<ul>";
   }
-
- // printCollection();
- // printDocuments();
- /*
-  echo '
-  <form name="form1" method="post" action="username()">
-    <p>
-      <label>
-        <input type="text" name="textfield" id="textfield">
-      </label>
-    </p>
-    <p>
-      <label>
-        <input type="submit" name="button" id="button" value="Submit">
-      </label>
-    </p>
-  </form>';
-  
-  // disconnect from server
-  $client->close();
-
-    */
 ?>
