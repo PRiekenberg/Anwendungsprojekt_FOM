@@ -29,9 +29,12 @@
   
     $result = $collection->find();
 
+    echo "<h2>Documents in Collection</h2>";
+    echo "<ul>";
     foreach ($result as $entry) {
-      echo $entry['_id'], ': ', $entry['name'], "\n";
+      echo "<li>". $entry['_id'], ': ', $entry['name'], "\n"."</li>";
     }
+    echo "/<ul>";
     
     
 
