@@ -11,7 +11,6 @@
     $client = new MongoDB\Client($connection_url);
     $collection = $client->anwendungsprojektdb->anwendungsprojektdb;
     $db = $client->anwendungsprojektdb;
-    $collection_name = "anwendungsprojektdb";
     /*
     $result = $collection->insertOne( [ 'name' => 'Hinterland', 'brewery' => 'BrewDog' ] );
     
@@ -32,7 +31,7 @@
       $result = $collection->find()->toArray();
 
       print_r($result);
-      }
+      
       
 
         // disconnect from server
