@@ -1,7 +1,7 @@
 <?php
   
   require '../vendor/autoload.php';
-  require 'functions.php';
+  require_once 'functions.php';
 
   printDocuments();
  
