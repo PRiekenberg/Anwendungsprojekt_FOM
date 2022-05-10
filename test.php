@@ -9,7 +9,7 @@ phpinfo();
     $connection_url = "mongodb://anwendungsprojektdb:h5skd43Too0CJ5f8oAHu1MemBe8Xh3VHCRAsJ4lxsOukUQmpcNlZ1yLYM7QMKtRHG0edZvcohWWNaVdcZc6IYA==@anwendungsprojektdb.mongo.cosmos.azure.com:10255/anwendungsprojektdb?ssl=true";
 
      // create the mongo connection object
-    $m = new MongoClient($connection_url);
+    $client = new MongoClient($connection_url);
 
     $collection = $client->anwendungsprojektdb->anwendungsprojektdb;
 
