@@ -72,7 +72,7 @@
     $delRec = $collection->deletemany([], ['limit' => 0]);
   }
 
-  function queryQuestions($scenarioid, $phase) {
+  function queryQuestion($scenarioid, $phase) {
     $collection = getCollection();
     $result = $collection->find( [ 'scenarioid' => $scenarioid, 'phase' => $phase, 'type' => 'question' ] );
 
