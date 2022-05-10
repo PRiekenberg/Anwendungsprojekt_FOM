@@ -75,6 +75,17 @@
   function queryQuestions($scenarioid, $phase) {
     $collection = getCollection();
     $result = $collection->find( [ 'scenario' => $scenarioid, 'phase' => $phase, 'type' => 'question' ] );
-    echo $result;
+
+    echo "<ul>";
+    foreach ($result as $entry) {
+      echo "<li>", $entry['_id'], ': ',
+                   $entry['type'], ': ',
+                   $entry['questioncontent'],': ',
+                   $entry['answercontent'],': ',
+                   $entry['answerstate'],': ',
+                   $entry['phase'],': ',
+                   $entry['scenarioid'],"</li>";
+    }
+    echo "/<ul>";
   }
 ?>
