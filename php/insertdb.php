@@ -46,7 +46,7 @@
 				<input id="scenarioid" type="number" name="scenarioid" placeholder="ID des Szenarios" /><br><br>
 				
 				
-				<input id="firebtn" type="submit" value="Daten ändern"></input>
+				<input id="firebtn" type="submit" value="Daten in Datenbank speichern"></input>
 
 			</form>
 		
