@@ -13,7 +13,7 @@
     printDocuments();
   }
 
-  //deleteallDocuments();
+  deleteallDocuments();
 
 ?>
 
@@ -31,7 +31,7 @@
 			<form id="form1" action="" method="post">
 				<h3>Typ</h3>
 
-				<label for="type">Typ des Datenbankeintrags auswählen:</label>
+				<h3><label for="type">Typ des Datenbankeintrags auswählen:</label></h3>
 				<select id="type" name="type">
 					<option value="question">Frage</option>
 					<option value="answer">Antwort</option>
@@ -44,7 +44,7 @@
 				<h3>Inhalt Antwort (nur bei Typ Antwort angeben)</h3>
 				<input id="answercontent" type="text" name="answercontent" placeholder="Antwort eingeben" /><br><br>
 				
-				<label for="answerstate">Antwort Wahr oder Falsch? (nur bei Typ Antwort angeben)</label>
+				<h3><label for="answerstate">Antwort Wahr oder Falsch? (nur bei Typ Antwort angeben)</label></h3>
 				<select id="answerstate" name="answerstate">
 					<option value="true">Wahr</option>
 					<option value="false">Falsch</option>
