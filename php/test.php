@@ -3,6 +3,10 @@
   require '../vendor/autoload.php';
   require_once 'functions.php';
 
+  if (isset($_POST['scenarioid'])) {
+    insertDocument();
+  }
+
 ?>
 
 <html>

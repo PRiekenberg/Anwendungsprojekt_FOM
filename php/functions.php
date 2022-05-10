@@ -25,7 +25,7 @@
   function insertDocument() {
     $client=connectDB();
     $collection=getCollection();
-    $result = $collection->insertOne( [ 'name' => 'Hinterland', 'brewery' => 'BrewDog' ] );
+    $result = $collection->insertOne( [ 'name' => 'Hinterland2', 'brewery' => 'BrewDog2' ] );
     
     echo "Inserted with Object ID '{$result->getInsertedId()}'";
   }
