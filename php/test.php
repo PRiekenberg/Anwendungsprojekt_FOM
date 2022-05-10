@@ -3,7 +3,7 @@
   require '../vendor/autoload.php';
   require 'functions.php'
 
-  getDocuments();
+  printDocuments();
 ?>
 
 <html>
