@@ -8,13 +8,12 @@
   $connection_url = "mongodb://anwendungsprojektdb:h5skd43Too0CJ5f8oAHu1MemBe8Xh3VHCRAsJ4lxsOukUQmpcNlZ1yLYM7QMKtRHG0edZvcohWWNaVdcZc6IYA==@anwendungsprojektdb.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@anwendungsprojektdb@";
 
     // create the mongo connection object
-  $client = new MongoDB\Driver\Manager($connection_url);
-
-  $collection = $client->anwendungsprojektdb->anwendungsprojektdb;
-
-  $result = $collection->insertOne( [ 'name' => 'Hinterland', 'brewery' => 'BrewDog' ] );
-
-  echo "Inserted with Object ID '{$result->getInsertedId()}'";
+    $client = new MongoDB\Client($connection_url);
+    $collection = $client->anwendungsprojektdb->anwendungsprojektdb;
+    
+    $result = $collection->insertOne( [ 'name' => 'Hinterland', 'brewery' => 'BrewDog' ] );
+    
+    echo "Inserted with Object ID '{$result->getInsertedId()}'";
 
    /* 
     // extract the DB name from the connection path
