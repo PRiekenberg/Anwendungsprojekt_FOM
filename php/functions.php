@@ -80,7 +80,7 @@
     $query = new MongoDB\Driver\Query($filter, $options);
     $rows = $client->executeQuery('anwendungsprojektdb.anwendungsprojektdb', $query);
     foreach($rows as $r){
-      print_($r);
+      print($r);
     }
   }
 ?>
