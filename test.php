@@ -10,8 +10,8 @@
     // create the mongo connection object
     $client = new MongoDB\Client($connection_url);
     $collection = $client->anwendungsprojektdb->anwendungsprojektdb;
-    $db = $client->anwendungsprojektdb
-    $collection_name = "anwendungsprojektdb"
+    $db = $client->anwendungsprojektdb;
+    $collection_name = "anwendungsprojektdb";
     /*
     $result = $collection->insertOne( [ 'name' => 'Hinterland', 'brewery' => 'BrewDog' ] );
     
@@ -44,7 +44,7 @@
       
 
         // disconnect from server
-        $m->close();
+        $client->close();
     } catch ( MongoConnectionException $e ) {
       die('Error connecting to MongoDB server');
     } catch ( MongoException $e ) {
