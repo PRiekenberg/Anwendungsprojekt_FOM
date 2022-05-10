@@ -11,11 +11,11 @@
     $client = new MongoDB\Client($connection_url);
     $collection = $client->anwendungsprojektdb->anwendungsprojektdb;
     $db = $client->anwendungsprojektdb
-    
+    /*
     $result = $collection->insertOne( [ 'name' => 'Hinterland', 'brewery' => 'BrewDog' ] );
     
     echo "Inserted with Object ID '{$result->getInsertedId()}'";
-
+    */
     try {
       echo "<h2>Collections</h2>";
       echo "<ul>";
@@ -29,21 +29,21 @@
       }
       echo "</ul>";
 
-      // print out last collection
-      if ( $collection_name != "" ) {
-        $collection = $db->selectCollection($collection_name);
-        echo "<h2>Documents in ${collection_name}</h2>";
+      // print out collection
+    
+      $collection = $db->selectCollection($collection_name);
+      echo "<h2>Documents in ${collection_name}</h2>";
 
-        // only print out the first 5 docs
-        $cursor = $collection->find();
-        $cursor->limit(5);
-        echo $cursor->count() . ' document(s) found. <br/>';
-        foreach( $cursor as $doc ) {
-          echo "<pre>";
-          var_dump($doc);
-          echo "</pre>";
-        }
+      // only print out the first 5 docs
+      $cursor = $collection->find();
+      $cursor->limit(5);
+      echo $cursor->count() . ' document(s) found. <br/>';
+      foreach( $cursor as $doc ) {
+        echo "<pre>";
+        var_dump($doc);
+        echo "</pre>";
       }
+      
 
         // disconnect from server
         $m->close();
