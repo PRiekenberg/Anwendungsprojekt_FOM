@@ -29,17 +29,9 @@
 
       // print out collection
     
-      $collection = $db->selectCollection($collection_name);
-      echo "<h2>Documents in ${collection_name}</h2>";
+      $result = $collection->find()->toArray();
 
-      // only print out the first 5 docs
-      $cursor = $collection->find();
-      $cursor->limit(5);
-      echo $cursor->count() . ' document(s) found. <br/>';
-      foreach( $cursor as $doc ) {
-        echo "<pre>";
-        var_dump($doc);
-        echo "</pre>";
+      print_r($result);
       }
       
 
