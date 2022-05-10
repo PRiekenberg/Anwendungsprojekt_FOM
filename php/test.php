@@ -8,7 +8,7 @@
     printDocuments();
   }
 
-  deleteallCollections();
+  deleteallDocuments();
 
 ?>
 

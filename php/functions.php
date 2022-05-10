@@ -56,10 +56,10 @@
     echo "/<ul>";
   }
 
-  function deleteallCollections() {
+  function deleteallDocuments() {
     $client = connectDB(); 
     $bulk = new MongoDB\Driver\BulkWrite;
-    $bulk->delete();
+    $bulk->delete([], ['limit' => 0]);
     $result = $client->executeBulkWrite('db.collection', $bulk);
   }
 ?>
