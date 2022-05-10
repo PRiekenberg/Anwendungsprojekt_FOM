@@ -5,7 +5,7 @@
 
   if (isset($_POST['scenarioid'])) {
     insertDocument();
-    printDocuments();
+    printDocuments($_POST['name'],$_POST['questionbool'],$_POST['answerbool'],$_POST['questioncontent'],$_POST['answercontent'],$_POST['scenarioid']);
   }
 
 ?>
