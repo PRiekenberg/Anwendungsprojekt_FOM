@@ -25,7 +25,7 @@
   function insertDocument($name, $questionbool, $answerbool, $questioncontent, $answercontent, $scenarioid) {
     $client=connectDB();
     $collection=getCollection();
-    $result = $collection->insertOne( [ 'name' => $name, 'questionbool' => $questionbool,'answerbool' => $answerbool,'qustioncontent' => $questioncontent,'answercontent' => $answercontent,'scenarioid' => $scenarioid ] );
+    $result = $collection->insertOne( [ 'name' => $name, 'questionbool' => $questionbool,'answerbool' => $answerbool,'questioncontent' => $questioncontent,'answercontent' => $answercontent,'scenarioid' => $scenarioid ] );
     
     echo "Inserted with Object ID '{$result->getInsertedId()}'";
   }
