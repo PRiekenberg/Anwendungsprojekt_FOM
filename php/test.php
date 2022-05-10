@@ -4,8 +4,8 @@
   require_once 'functions.php';
 
   if (isset($_POST['scenarioid'])) {
-    insertDocument();
-    printDocuments($_POST['name'],$_POST['questionbool'],$_POST['answerbool'],$_POST['questioncontent'],$_POST['answercontent'],$_POST['scenarioid']);
+    insertDocument($_POST['name'],$_POST['questionbool'],$_POST['answerbool'],$_POST['questioncontent'],$_POST['answercontent'],$_POST['scenarioid']);
+    printDocuments();
   }
 
 ?>
