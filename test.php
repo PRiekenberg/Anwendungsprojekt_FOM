@@ -65,6 +65,7 @@
   }
 
   printCollection();
+  printDocuments();
 
   
   // disconnect from server
