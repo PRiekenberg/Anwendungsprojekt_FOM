@@ -20,7 +20,7 @@
 	<body>
 		<div align="center" class="form-style-8">
 			<h2>Daten einfügen</h2>
-			<form id="form1" action="insertDocument()" method="post">
+			<form id="form1" action="" method="post">
 				<h3>Name</h3>
 				<input id="name" type="text" name="birthdate" placeholder="Name" /><br><br>
 				
