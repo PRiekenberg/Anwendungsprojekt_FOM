@@ -22,10 +22,10 @@
   }
 
   //insert function
-  function insertDocument($documentname, $questionbool, $answerbool, $questioncontent, $answercontent, $scenarioid) {
+  function insertDocument($type, $questionbool, $answerbool, $questioncontent, $answercontent, $scenarioid) {
     $client=connectDB();
     $collection=getCollection();
-    $result = $collection->insertOne( [ 'documentname' => $documentname, 'questionbool' => $questionbool,'answerbool' => $answerbool,'questioncontent' => $questioncontent,'answercontent' => $answercontent,'scenarioid' => $scenarioid ] );
+    $result = $collection->insertOne( [ 'type' => $type, 'questionbool' => $questionbool,'answerbool' => $answerbool,'questioncontent' => $questioncontent,'answercontent' => $answercontent,'scenarioid' => $scenarioid ] );
     
     echo "Inserted with Object ID '{$result->getInsertedId()}'";
   }

@@ -4,11 +4,11 @@
   require_once 'functions.php';
 
   if (isset($_POST['scenarioid'])) {
-    insertDocument($_POST['documentname'],$_POST['questionbool'],$_POST['answerbool'],$_POST['questioncontent'],$_POST['answercontent'],$_POST['scenarioid']);
+    insertDocument($_POST['type'],$_POST['questionbool'],$_POST['answerbool'],$_POST['questioncontent'],$_POST['answercontent'],$_POST['scenarioid']);
     printDocuments();
   }
 
-  deleteallDocuments();
+  //deleteallDocuments();
 
 ?>
 
@@ -24,9 +24,15 @@
 		<div align="center" class="form-style-8">
 			<h2>Daten einfügen</h2>
 			<form id="form1" action="" method="post">
-				<h3>Name</h3>
-				<input id="documentname" type="text" name="documentname" placeholder="Name" /><br><br>
+				<h3>Typ</h3>
 				
+				<label for="type">Typ des Datenbankeintrags auswählen:</label>
+				<select id="type" name="type">
+					<option value="question">Frage</option>
+					<option value="answer">Antwort</option>
+					<option value="user">Benutzer</option>
+				</select>
+
 				<h3>Frage?</h3>
 				<input id="questionbool" type="checkbox" name="questionbool" /><br><br>
 				
