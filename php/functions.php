@@ -57,9 +57,7 @@
   }
 
   function deleteallDocuments() {
-    $client = connectDB(); 
-    $bulk = new MongoDB\Driver\BulkWrite;
-    $bulk->delete([], ['limit' => 0]);
-    $result = $client->executeBulkWrite('db.collection', $bulk);
+    $collection = getCollection(); 
+    $delRec = $collection->deleteOne([], ['limit' => 0]);
   }
 ?>
