@@ -13,7 +13,8 @@
     printDocuments();
   }
 
-  deleteallDocuments();
+  //deleteallDocuments();
+  queryQuestions(1,1)
 
 ?>
 

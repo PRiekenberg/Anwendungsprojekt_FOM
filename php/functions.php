@@ -71,4 +71,16 @@
     $collection = getCollection(); 
     $delRec = $collection->deletemany([], ['limit' => 0]);
   }
+
+  function queryQuestions($scenarioid, $phase) {
+    $client = connectDB();
+    $filter = ['scenarioid' => $scenarioid,
+               'phase' => $phase];
+    $options = [];
+    $query = new MongoDB\Driver\Query($filter, $options);
+    $rows = $client->executeQuery('anwendungsprojektdb.anwendungsprojektdb', $query);
+    foreach($rows as $r){
+      print_($r);
+    }
+  }
 ?>
