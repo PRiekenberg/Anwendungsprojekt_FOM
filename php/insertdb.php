@@ -34,13 +34,13 @@
 				</select>
 				
 				<h3>Inhalt Frage (nur bei Typ Frage angeben)</h3>
-				<input id="questioncontent" type="text" name="questioncontent" placeholder="Phasennummer eintragen" /><br><br>
+				<input id="questioncontent" type="text" name="questioncontent" placeholder="Frage eingeben" /><br><br>
 				
 				<h3>Inhalt Antwort (nur bei Typ Antwort angeben)</h3>
 				<input id="answercontent" type="text" name="answercontent" placeholder="Antwort eingeben" /><br><br>
 				
 				<h3>Phase im Szenario? (nur bei Typ Frage oder Antwort angeben)</h3>
-				<input id="phase" type="number" name="phase" placeholder="Frage eingeben" /><br><br>
+				<input id="phase" type="number" name="phase" placeholder="Phasennummer eintragen" /><br><br>
 
 				<h3>Szenario ID (nur bei Typ Frage oder Antwort angeben)</h3>
 				<input id="scenarioid" type="number" name="scenarioid" placeholder="ID des Szenarios" /><br><br>
