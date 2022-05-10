@@ -4,7 +4,7 @@
   require_once 'functions.php';
 
   if (isset($_POST['scenarioid'])) {
-    insertDocument($_POST['type'],$_POST['questionbool'],$_POST['answerbool'],$_POST['questioncontent'],$_POST['answercontent'],$_POST['scenarioid']);
+    insertDocument($_POST['type'],$_POST['questioncontent'],$_POST['answercontent'],$_POST['scenarioid']);
     printDocuments();
   }
 
@@ -25,27 +25,21 @@
 			<h2>Daten einfügen</h2>
 			<form id="form1" action="" method="post">
 				<h3>Typ</h3>
-				
+
 				<label for="type">Typ des Datenbankeintrags auswählen:</label>
 				<select id="type" name="type">
 					<option value="question">Frage</option>
 					<option value="answer">Antwort</option>
 					<option value="user">Benutzer</option>
 				</select>
-
-				<h3>Frage?</h3>
-				<input id="questionbool" type="checkbox" name="questionbool" /><br><br>
 				
-				<h3>Antwort?</h3>
-				<input id="answerbool" type="checkbox" name="answerbool" /><br><br>
-				
-				<h3>Inhalt Frage</h3>
+				<h3>Inhalt Frage (nur bei Typ Frage angeben)</h3>
 				<input id="questioncontent" type="text" name="questioncontent" placeholder="Frage eingeben" /><br><br>
 				
-				<h3>Inhalt Antwort</h3>
+				<h3>Inhalt Antwort (nur bei Typ Antwort angeben)</h3>
 				<input id="answercontent" type="text" name="answercontent" placeholder="Antwort eingeben" /><br><br>
 				
-				<h3>Szenario ID</h3>
+				<h3>Szenario ID (nur bei Typ Frage oder Antwort angeben)</h3>
 				<input id="scenarioid" type="text" name="scenarioid" placeholder="ID des Szenarios" /><br><br>
 				
 				

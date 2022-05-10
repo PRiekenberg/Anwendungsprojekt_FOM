@@ -22,10 +22,10 @@
   }
 
   //insert function
-  function insertDocument($type, $questionbool, $answerbool, $questioncontent, $answercontent, $scenarioid) {
+  function insertDocument($type, $questioncontent, $answercontent, $scenarioid) {
     $client=connectDB();
     $collection=getCollection();
-    $result = $collection->insertOne( [ 'type' => $type, 'questionbool' => $questionbool,'answerbool' => $answerbool,'questioncontent' => $questioncontent,'answercontent' => $answercontent,'scenarioid' => $scenarioid ] );
+    $result = $collection->insertOne( [ 'type' => $type, 'questioncontent' => $questioncontent,'answercontent' => $answercontent,'scenarioid' => $scenarioid ] );
     
     echo "Inserted with Object ID '{$result->getInsertedId()}'";
   }
@@ -51,7 +51,7 @@
     echo "<h2>Documents in Collection</h2>";
     echo "<ul>";
     foreach ($result as $entry) {
-      echo "<li>", $entry['_id'], ': ', $entry['documentname'], ': ', $entry['questionbool'],': ', $entry['answerbool'],': ', $entry['questioncontent'],': ', $entry['answercontent'],': ', $entry['scenarioid'],"</li>";
+      echo "<li>", $entry['_id'], ': ', $entry['type'], ': ', $entry['questionbool'],': ', $entry['answerbool'],': ', $entry['questioncontent'],': ', $entry['answercontent'],': ', $entry['scenarioid'],"</li>";
     }
     echo "/<ul>";
   }
