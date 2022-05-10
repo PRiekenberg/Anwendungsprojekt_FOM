@@ -1,5 +1,6 @@
 <?php
 echo "<h1>Compose Test</h1>";
+phpinfo():
   /*try {
     // connect to Compose assuming your MONGODB_URL environment
     // variable contains the connection string
