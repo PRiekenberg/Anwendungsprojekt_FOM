@@ -58,6 +58,6 @@
 
   function deleteallDocuments() {
     $collection = getCollection(); 
-    $delRec = $collection->deleteOne([], ['limit' => 0]);
+    $delRec = $collection->deletemany([], ['limit' => 0]);
   }
 ?>
