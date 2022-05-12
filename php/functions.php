@@ -63,7 +63,7 @@
   // Delete specific documents in collection
   function deleteDocument($id) {
     $collection = getCollection(); 
-    $delRec = $collection->deleteone(['_id' => 'ObjectId("'. $id . ')'] , ['limit' => 1]);
+    $delRec = $collection->deleteone(['_id' => 'ObjectId("'. $id . ')']);
     echo 'ObjectId("'. $id . '")';
   }
 
