@@ -109,6 +109,7 @@
 			</table>
 			
 			<br><br>
+			<h2>Daten in Datenbank löschen</h2>
 			<form method="post">
 				<input id="deletebtn" name="deletebtn" type="submit" value="Alle Daten in der Datenbank löschen"></input>
 			</form>
