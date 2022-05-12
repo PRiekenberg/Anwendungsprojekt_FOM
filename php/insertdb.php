@@ -12,7 +12,12 @@
 				   $_POST['phase'],
 				   $_POST['scenarioid']);
   }
+  
   if (isset($_POST['deletebtn'])) {
+    deleteDocuments($_POST['id']);
+  } 
+ 
+  if (isset($_POST['deleteallbtn'])) {
     deleteallDocuments();
   }
 
@@ -109,9 +114,17 @@
 			</table>
 			
 			<br><br>
-			<h2>Daten in Datenbank löschen</h2>
+			<h2> Daten mit bestimmter ID in Datenbank löschen</h2>
 			<form method="post">
-				<input id="deletebtn" name="deletebtn" type="submit" value="Alle Daten in der Datenbank löschen"></input>
+				<h3>ID des Datensatzes</h3>
+				<input id="id" type="text" name="id" placeholder="ID eingeben" /><br><br>
+				<input id="deletebtn" name="deletebtn" type="submit" value="Daten mit ID in der Datenbank löschen"></input>
+			</form>
+
+			<br><br>
+			<h2> alle Daten in Datenbank löschen</h2>
+			<form method="post">
+				<input id="deleteallbtn" name="deleteallbtn" type="submit" value="Alle Daten in der Datenbank löschen"></input>
 			</form>
 		
 		</div>
