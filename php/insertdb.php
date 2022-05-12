@@ -95,7 +95,7 @@
 						echo '<td>' . $r['phase']; echo '</td>'; 
 						echo '<td>' . $r['scenarioid']; echo '</td>';  
 						echo '</tr>';
-					};
+					}
 
 					?>
 				</tbody>
