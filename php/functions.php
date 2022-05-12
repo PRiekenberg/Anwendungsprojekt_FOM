@@ -63,8 +63,7 @@
   // Delete specific documents in collection
   function deleteDocument($id) {
     $collection = getCollection(); 
-    $delRec = $collection->deleteone(['_id' => 'ObjectId("'. $id . ')']);
-    echo 'ObjectId("'. $id . '")';
+    $delRec = $collection->deleteone(['_id' => new MongoID( $id )]);
   }
 
   function queryQuestion($scenarioid, $phase) {
