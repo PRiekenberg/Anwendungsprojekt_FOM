@@ -32,8 +32,6 @@
                                         'answerpoints' => $answerpoints,
                                         'phase' => $phase,
                                         'scenarioid' => $scenarioid ] );
-    
-    echo "Inserted with Object ID '{$result->getInsertedId()}'";
   }
 
   //print out list of collections
