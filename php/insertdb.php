@@ -12,9 +12,9 @@
 				   $_POST['phase'],
 				   $_POST['scenarioid']);
   }
-
-  //deleteallDocuments();
-  queryQuestion('1','1')
+  if (isset($_POST['deltebtn'])) {
+    deleteallDocuments();
+  }
 
 ?>
 
@@ -65,6 +65,7 @@
 
 			</form>
 
+			<br><br>
 			<h2>Datenbankdaten</h2>
 
 			<table class="table-fill">
@@ -100,6 +101,11 @@
 					?>
 				</tbody>
 			</table>
+			
+			<br><br>
+			<form>
+				<input id="deletebtn" type="submit" value="Alle Daten in der Datenbank löschen"></input>
+			</form>
 		
 		</div>
 	</body>
