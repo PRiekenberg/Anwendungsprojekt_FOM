@@ -61,7 +61,7 @@
 
   function deleteDocument($id) {
     $collection = getCollection(); 
-    //$delRec = $collection->deletemany(['_id' => $id], ['limit' => 0]);
+    $delRec = $collection->deleteone(['_id' => $id], ['limit' => 1]);
     echo $id;
   }
 
