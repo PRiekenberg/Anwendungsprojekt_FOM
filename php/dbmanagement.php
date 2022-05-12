@@ -40,7 +40,6 @@
 		<div align="center" class="form-style-8">
 			<h2>Daten einfügen</h2>
 			<form id="form1" action="" method="post">
-				<h3>Typ</h3>
 
 				<h3><label for="type">Typ des Datenbankeintrags auswählen:</label></h3>
 				<select id="type" name="type">
@@ -69,7 +68,6 @@
 
 				<h3>Szenario ID (nur bei Typ Frage oder Antwort angeben)</h3>
 				<input id="scenarioid" type="number" name="scenarioid" placeholder="ID des Szenarios" /><br><br>
-				
 				
 				<input id="firebtn" type="submit" value="Daten in Datenbank speichern"></input>
 
