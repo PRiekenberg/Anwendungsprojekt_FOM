@@ -12,7 +12,7 @@
 				   $_POST['phase'],
 				   $_POST['scenarioid']);
   }
-  if (isset($_POST['deltebtn'])) {
+  if (isset($_POST['deletebtn'])) {
     deleteallDocuments();
   }
 
