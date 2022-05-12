@@ -79,13 +79,12 @@
 					<th>Szenario ID</td>
 				</tr>
 				</thead>
-				
-				
-				<tbody class="table-hover">
+
+				<tbody>
 				
 				<?php 
 					$result = printallDocuments();
-					foreach ($result as $r):{						
+					foreach ($result as $r){						
 						echo '<tr>';
 						echo '<td>' . $r['_id']; echo '</td>';  
 						echo '<td>' . $r['type']; echo '</td>';  
@@ -96,7 +95,7 @@
 						echo '<td>' . $r['phase']; echo '</td>'; 
 						echo '<td>' . $r['scenarioid']; echo '</td>';  
 						echo '</tr>';
-					}; 
+					};
 
 					?>
 				</tbody>
