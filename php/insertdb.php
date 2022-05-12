@@ -11,7 +11,6 @@
 				   $_POST['answerpoints'],
 				   $_POST['phase'],
 				   $_POST['scenarioid']);
-    printDocuments();
   }
 
   //deleteallDocuments();
@@ -65,6 +64,43 @@
 				<input id="firebtn" type="submit" value="Daten in Datenbank speichern"></input>
 
 			</form>
+
+			<h2>Datenbankdaten</h2>
+
+			<table class="table-fill">
+				<thead>
+				<tr>
+					<th>Typ</td>
+					<th>Frageninhalt</td>
+					<th>Antwortinhalt</td>
+					<th>Antwortstatus</td>
+					<th>Antwortpuinkte</td>
+					<th>Phase im Szenario</td>
+					<th>Szenario ID</td>
+				</tr>
+				</thead>
+				
+				
+				<tbody class="table-hover">
+				
+				<?php 
+					$result = printallDocuments();
+					foreach ($result as $r):{						
+						echo '<tr>';
+						echo '<td>' . $r['_id']; echo '</td>';  
+						echo '<td>' . $r['type']; echo '</td>';  
+						echo '<td>' . $r['questioncontent']; echo '</td>';  
+						echo '<td>' . $r['answercontent']; echo '</td>';
+						echo '<td>' . $r['answerstate']; echo '</td>';  
+						echo '<td>' . $r['answerpoints']; echo '</td>'; 
+						echo '<td>' . $r['phase']; echo '</td>'; 
+						echo '<td>' . $r['scenarioid']; echo '</td>';  
+						echo '</tr>';
+					}; 
+
+					?>
+				</tbody>
+			</table>
 		
 		</div>
 	</body>

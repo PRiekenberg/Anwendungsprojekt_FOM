@@ -50,23 +50,10 @@
 
   
   // print out documents in collection
-  function printDocuments(){
+  function printallDocuments(){
     $collection = getCollection();
     $result = $collection->find();
-
-    echo "<h2>Documents in Collection</h2>";
-    echo "<ul>";
-    foreach ($result as $entry) {
-      echo "<li>", $entry['_id'], ': ',
-                   $entry['type'], ': ',
-                   $entry['questioncontent'],': ',
-                   $entry['answercontent'],': ',
-                   $entry['answerstate'],': ',
-                   $entry['answerpoints'],': ',
-                   $entry['phase'],': ',
-                   $entry['scenarioid'],"</li>";
-    }
-    echo "/<ul>";
+    return $result;
   }
 
   function deleteallDocuments() {
@@ -78,35 +65,11 @@
     $collection = getCollection();
     $result = $collection->find( [ 'scenarioid' => $scenarioid, 'phase' => $phase, 'type' => 'question' ] );
     return $result;
-    /*echo "<ul>";
-    foreach ($result as $entry) {
-      echo "<li>", $entry['_id'], ': ',
-                   $entry['type'], ': ',
-                   $entry['questioncontent'],': ',
-                   $entry['answercontent'],': ',
-                   $entry['answerstate'],': ',
-                   $entry['answerpoints'],': ',
-                   $entry['phase'],': ',
-                   $entry['scenarioid'],"</li>";
-    }
-    echo "/<ul>"; */
   }
 
   function queryAnswers($scenarioid, $phase) {
     $collection = getCollection();
     $result = $collection->find( [ 'scenarioid' => $scenarioid, 'phase' => $phase, 'type' => 'answer' ] );
     return $result;
-    /*echo "<ul>";
-    foreach ($result as $entry) {
-      echo "<li>", $entry['_id'], ': ',
-                   $entry['type'], ': ',
-                   $entry['questioncontent'],': ',
-                   $entry['answercontent'],': ',
-                   $entry['answerstate'],': ',
-                   $entry['answerpoints'],': ',
-                   $entry['phase'],': ',
-                   $entry['scenarioid'],"</li>";
-    }
-    echo "/<ul>"; */
   }
 ?>
