@@ -22,13 +22,14 @@
   }
 
   //insert function
-  function insertDocument($type, $questioncontent, $answercontent, $answerstate, $phase, $scenarioid) {
+  function insertDocument($type, $questioncontent, $answercontent, $answerstate, $answerpoints, $phase, $scenarioid) {
     $client=connectDB();
     $collection=getCollection();
     $result = $collection->insertOne( [ 'type' => $type,
                                         'questioncontent' => $questioncontent,
                                         'answercontent' => $answercontent,
                                         'answerstate' => $answerstate,
+                                        'answerpoints' => $answerpoints,
                                         'phase' => $phase,
                                         'scenarioid' => $scenarioid ] );
     
@@ -61,6 +62,7 @@
                    $entry['questioncontent'],': ',
                    $entry['answercontent'],': ',
                    $entry['answerstate'],': ',
+                   $entry['answerpoints'],': ',
                    $entry['phase'],': ',
                    $entry['scenarioid'],"</li>";
     }
@@ -75,17 +77,36 @@
   function queryQuestion($scenarioid, $phase) {
     $collection = getCollection();
     $result = $collection->find( [ 'scenarioid' => $scenarioid, 'phase' => $phase, 'type' => 'question' ] );
-
-    echo "<ul>";
+    return $result;
+    /*echo "<ul>";
     foreach ($result as $entry) {
       echo "<li>", $entry['_id'], ': ',
                    $entry['type'], ': ',
                    $entry['questioncontent'],': ',
                    $entry['answercontent'],': ',
                    $entry['answerstate'],': ',
+                   $entry['answerpoints'],': ',
                    $entry['phase'],': ',
                    $entry['scenarioid'],"</li>";
     }
-    echo "/<ul>";
+    echo "/<ul>"; */
+  }
+
+  function queryAnswers($scenarioid, $phase) {
+    $collection = getCollection();
+    $result = $collection->find( [ 'scenarioid' => $scenarioid, 'phase' => $phase, 'type' => 'answer' ] );
+    return $result;
+    /*echo "<ul>";
+    foreach ($result as $entry) {
+      echo "<li>", $entry['_id'], ': ',
+                   $entry['type'], ': ',
+                   $entry['questioncontent'],': ',
+                   $entry['answercontent'],': ',
+                   $entry['answerstate'],': ',
+                   $entry['answerpoints'],': ',
+                   $entry['phase'],': ',
+                   $entry['scenarioid'],"</li>";
+    }
+    echo "/<ul>"; */
   }
 ?>

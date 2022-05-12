@@ -8,6 +8,7 @@
 				   $_POST['questioncontent'],
 				   $_POST['answercontent'],
 				   $_POST['answerstate'],
+				   $_POST['answerpoints'],
 				   $_POST['phase'],
 				   $_POST['scenarioid']);
     printDocuments();
@@ -50,6 +51,9 @@
 					<option value="true">Wahr</option>
 					<option value="false">Falsch</option>
 				</select>
+
+				<h3>Anzahl Punkte (nur bei Typ Antwort angeben)</h3>
+				<input id="answerpoints" type="number" name="answerpoints" placeholder="Anzahl Punkte eintragen" /><br><br>
 
 				<h3>Phase im Szenario? (nur bei Typ Frage oder Antwort angeben)</h3>
 				<input id="phase" type="number" name="phase" placeholder="Phasennummer eintragen" /><br><br>
