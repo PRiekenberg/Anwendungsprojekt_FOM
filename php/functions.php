@@ -59,9 +59,9 @@
     $delRec = $collection->deletemany([], ['limit' => 0]);
   }
 
-  function deleteDocuments($id) {
+  function deleteDocument($id) {
     $collection = getCollection(); 
-    $delRec = $collection->deletemany(['_ID' => $id], ['limit' => 0]);
+    $delRec = $collection->deletemany(['_id' => $id], ['limit' => 0]);
   }
 
   function queryQuestion($scenarioid, $phase) {

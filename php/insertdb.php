@@ -13,8 +13,8 @@
 				   $_POST['scenarioid']);
   }
   
-  if (isset($_POST['deletebtn'])) {
-    deleteDocuments($_POST['id']);
+  if (isset($_POST['dbid'])) {
+    deleteDocument($_POST['dbid']);
   } 
  
   if (isset($_POST['deleteallbtn'])) {
@@ -117,7 +117,7 @@
 			<h2> Daten mit bestimmter ID in Datenbank löschen</h2>
 			<form method="post">
 				<h3>ID des Datensatzes</h3>
-				<input id="id" type="text" name="id" placeholder="ID eingeben" /><br><br>
+				<input id="dbid" type="text" name="dbid" placeholder="ID eingeben" /><br><br>
 				<input id="deletebtn" name="deletebtn" type="submit" value="Daten mit ID in der Datenbank löschen"></input>
 			</form>
 
