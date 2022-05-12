@@ -24,7 +24,11 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Insertdata">
-		<link rel="stylesheet" media="screen" href="../css/stylesheet.css">
+		<style>
+			table, th, td {
+			border: 1px solid;
+			}
+		</style>
 		<title>Daten einfügen</title>
 	</head>
 	<body>
@@ -105,7 +109,7 @@
 			
 			<br><br>
 			<form method="post">
-				<input id="deletebtn" type="submit" value="Alle Daten in der Datenbank löschen"></input>
+				<input id="deletebtn" name="deletebtn" type="submit" value="Alle Daten in der Datenbank löschen"></input>
 			</form>
 		
 		</div>
