@@ -48,7 +48,7 @@
 
   
   // print out documents in collection
-  function printallDocuments(){
+  function getallDocuments(){
     $collection = getCollection();
     $result = $collection->find();
     return $result;

@@ -95,7 +95,7 @@
 				<tbody>
 				
 				<?php 
-					$result = printallDocuments();
+					$result = getallDocuments();
 					foreach ($result as $r){						
 						echo '<tr>';
 						echo '<td>' . $r['_id']; echo '</td>';  
