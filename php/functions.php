@@ -47,22 +47,24 @@
   }
 
   
-  // print out documents in collection
+  // Get all documents in collection
   function getallDocuments(){
     $collection = getCollection();
     $result = $collection->find();
     return $result;
   }
 
+  // Delete all documents in collection
   function deleteallDocuments() {
     $collection = getCollection(); 
     $delRec = $collection->deletemany([], ['limit' => 0]);
   }
 
+  // Delete specific documents in collection
   function deleteDocument($id) {
     $collection = getCollection(); 
     $delRec = $collection->deleteone(['_id' => 'ObjectId("'. $id . ')'] , ['limit' => 1]);
-    echo 'ObjectId("'. $id . ')';
+    echo 'ObjectId("'. $id . '")';
   }
 
   function queryQuestion($scenarioid, $phase) {
