@@ -81,7 +81,7 @@
 					<th>Frageninhalt</td>
 					<th>Antwortinhalt</td>
 					<th>Antwortstatus</td>
-					<th>Antwortpuinkte</td>
+					<th>Antwortpunkte</td>
 					<th>Phase im Szenario</td>
 					<th>Szenario ID</td>
 				</tr>
