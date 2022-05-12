@@ -29,7 +29,7 @@
 			border: 1px solid;
 			}
 		</style>
-		<title>Daten einfügen</title>
+		<title>Datenbankmanagement</title>
 	</head>
 	<body>
 		<div align="center" class="form-style-8">
@@ -76,6 +76,7 @@
 			<table>
 				<thead>
 				<tr>
+					<th>ID</td>
 					<th>Typ</td>
 					<th>Frageninhalt</td>
 					<th>Antwortinhalt</td>
