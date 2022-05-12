@@ -124,7 +124,7 @@
 			<br><br>
 			<h2> alle Daten in Datenbank löschen</h2>
 			<form method="post">
-				<input id="deleteallbtn" name="deleteallbtn" type="submit" value="Alle Daten in der Datenbank löschen"></input>
+				<input id="deleteallbtn" name="deleteallbtn" type="submit" value="Alle Daten in der Datenbank löschen" disabled="disabled"></input>
 			</form>
 		
 		</div>
