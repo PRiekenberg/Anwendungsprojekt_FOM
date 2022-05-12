@@ -61,8 +61,8 @@
 
   function deleteDocument($id) {
     $collection = getCollection(); 
-    $delRec = $collection->deleteone(['_id' => $id], ['limit' => 1]);
-    echo $id;
+    $delRec = $collection->deleteone(['_id' => 'ObjectId("'. $id . ')'] , ['limit' => 1]);
+    echo 'ObjectId("'. $id . ')';
   }
 
   function queryQuestion($scenarioid, $phase) {
