@@ -41,6 +41,10 @@ button {
 	border-radius: 50%; 
 }
 
+table, th, td {
+	border: 1px solid;
+  }
+
 button::before {
 	content: '';
 	width: 0;
