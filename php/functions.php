@@ -90,7 +90,7 @@
       echo $r['username'];
       echo $r['password'];
 
-      /*if ($result != null){
+      if ($r != null){
         
         $hashed_password = $r['password'];
         if(password_verify($password, $hashed_password)) {
@@ -106,7 +106,7 @@
       else {
         return "Benutzername nicht gefunden";
       }
-    */
+    
   }
 }
 ?>
