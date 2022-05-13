@@ -85,7 +85,7 @@
     $collection = getCollection();
     $result = $collection->find( [ 'username' => $username, 'type' => 'user' ] );
     var_dump($result);
-    if ($result != null){
+    if ($result -> isDead()){
       foreach ($result as $r) {
         
         $hashed_password = $r['password'];
