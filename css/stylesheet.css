@@ -70,6 +70,12 @@ button:hover {
 	bottom: 20px;
      	font-size: 0.8333333333333334vw;
 }
+#div_logout {
+	position:absolute;
+	left: 0px;
+	bottom: 100px;
+     	font-size: 0.8333333333333334vw;
+}
 
 #div_h1{
 	margin: 0 auto;
