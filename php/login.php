@@ -2,7 +2,11 @@
   
   require '../vendor/autoload.php';
   require_once 'functions.php';
-
+  
+  if(isset($_POST['submit'])) {
+      checkCredentials('hans','test');
+  }
+  
 ?>
 
 <!DOCTYPE html> 
@@ -14,13 +18,6 @@
 
     <body style="margin-top: 50px; margin-left: 100px">
     
-        <?php 
-        if(isset($_POST['submit'])) {
-            $result=checkCredentials('hans','test');
-            echo $result['username'];
-            echo $result['password'];
-        }
-        ?>
         
         <div id="loginform" align="center" class="form-style-8">
         <h2>Einloggen</h2>

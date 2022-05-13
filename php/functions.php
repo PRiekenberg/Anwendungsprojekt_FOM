@@ -84,8 +84,8 @@
   function checkCredentials($username, $password){
     $collection = getCollection();
     $result = $collection->find( [ 'username' => $username ] );
-    return $result;
-    //echo $result['password'];
+    echo $result['username'];
+    echo $result['password'];
     /*if ($result != null){
       
       $hashed_password = $result['password'];
