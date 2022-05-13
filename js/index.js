@@ -84,3 +84,13 @@ function selectCheck(that) {
 		document.getElementById("passworddiv").style.display = "initial";
     }
 }
+
+function selectCheck2(that) {
+    if (that.value == "question") {
+		$("#answercontentdiv,#anserstatediv,#answerpointsdiv.#usernamediv,#passworddiv").hide()
+    } if (that.value == "answer"){
+        $("#questioncontentdiv,#usernamediv,#passworddiv").hide()
+    } if (that.value == "user"){
+        $("#questioncontentdiv,#answercontentdiv,#anserstatediv,#answerpointsdiv,#phasediv,#scenarioiddiv").hide()
+    }
+}

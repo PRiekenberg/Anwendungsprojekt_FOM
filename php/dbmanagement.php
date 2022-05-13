@@ -50,7 +50,7 @@
 			<form id="form1" action="" method="post">
 
 				<h3><label for="type">Typ des Datenbankeintrags auswählen:</label></h3>
-				<select id="type" name="type">
+				<select id="type" name="type" onchange="selectCheck2(this);">
 					<option value="question">Frage</option>
 					<option value="answer">Antwort</option>
 					<option value="user">Benutzer</option>
