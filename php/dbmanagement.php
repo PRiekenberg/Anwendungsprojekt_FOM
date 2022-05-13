@@ -44,7 +44,7 @@
 		<title>Datenbankmanagement</title>
 	</head>
 	<body>
-		<script src="js/index.js"></script>
+		<script src="../js/index.js"></script>
 		<div align="center" class="form-style-8">
 			<h2>Daten einfügen</h2>
 			<form id="form1" action="" method="post">
