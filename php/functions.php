@@ -94,17 +94,17 @@
         
         $hashed_password = $r['password'];
         if(password_verify($password, $hashed_password)) {
-          return "Login erfolgreich!";
+          echo "Login erfolgreich!";
         } 
       
         // Else, Redirect them back to the login page.
         else {
-          return "Passwort falsch!";
+          echo "Passwort falsch!";
         }
       }
       
       else {
-        return "Benutzername nicht gefunden";
+        echo "Benutzername nicht gefunden";
       }
     
   }
