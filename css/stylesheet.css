@@ -23,6 +23,16 @@ h2 {
      	text-align: center;
      	font-size: 1.25vw;
  }
+ h3{
+	color: white;
+	text-align: center;
+	font-size: 1.25vw;
+}
+
+td,tr {
+	color: white;
+	text-align: center;
+}
 
 button {
      	width: 400px;
