@@ -39,7 +39,7 @@
 		<title>Datenbankmanagement</title>
 	</head>
 	<body>
-		<div class="form-style-8">
+		<div align="center" class="form-style-8">
 			<h2>Daten einfügen</h2>
 			<form id="form1" action="" method="post">
 
