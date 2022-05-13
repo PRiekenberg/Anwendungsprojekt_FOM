@@ -44,12 +44,13 @@
 		<title>Datenbankmanagement</title>
 	</head>
 	<body>
+		<script src="js/index.js"></script>
 		<div align="center" class="form-style-8">
 			<h2>Daten einfügen</h2>
 			<form id="form1" action="" method="post">
 
 				<h3><label for="type">Typ des Datenbankeintrags auswählen:</label></h3>
-				<select id="type" name="type">
+				<select id="type" name="type" onchange="selectCheck()">
 					<option value="question">Frage</option>
 					<option value="answer">Antwort</option>
 					<option value="user">Benutzer</option>

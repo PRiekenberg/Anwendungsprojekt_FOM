@@ -51,3 +51,35 @@ function read_counter_cookie(){
   		}
 	
 }
+
+
+function selectCheck(that) {
+    if (that.value == "question") {
+        document.getElementById("questioncontent").style.display = "block";
+		document.getElementById("answercontent").style.display = "none";
+		document.getElementById("anserstate").style.display = "none";
+		document.getElementById("answerpoints").style.display = "none";
+		document.getElementById("phase").style.display = "block";
+		document.getElementById("scenarioid").style.display = "block";
+		document.getElementById("username").style.display = "none";
+		document.getElementById("password").style.display = "none";
+    } if (that.value == "answer"){
+        document.getElementById("questioncontent").style.display = "none";
+		document.getElementById("answercontent").style.display = "block";
+		document.getElementById("anserstate").style.display = "block";
+		document.getElementById("answerpoints").style.display = "block";
+		document.getElementById("phase").style.display = "block";
+		document.getElementById("scenarioid").style.display = "block";
+		document.getElementById("username").style.display = "none";
+		document.getElementById("password").style.display = "none";
+    } if (that.value == "user"){
+        document.getElementById("questioncontent").style.display = "none";
+		document.getElementById("answercontent").style.display = "none";
+		document.getElementById("anserstate").style.display = "none";
+		document.getElementById("answerpoints").style.display = "none";
+		document.getElementById("phase").style.display = "none";
+		document.getElementById("scenarioid").style.display = "none";
+		document.getElementById("username").style.display = "block";
+		document.getElementById("password").style.display = "block";
+    }
+}
