@@ -55,14 +55,8 @@ function read_counter_cookie(){
 
 function selectCheck(that) {
     if (that.value == "question") {
-        document.getElementById("questioncontentdiv").style.display = "block";
-		document.getElementById("answercontentdiv").style.display = "none";
-		document.getElementById("anserstatediv").style.display = "none";
-		document.getElementById("answerpointsdiv").style.display = "none";
-		document.getElementById("phasediv").style.display = "block";
-		document.getElementById("scenarioiddiv").style.display = "block";
-		document.getElementById("usernamediv").style.display = "none";
-		document.getElementById("passworddiv").style.display = "none";
+        document.getElementById("questioncontentdiv","scenarioiddiv","phasediv").style.display = "block";
+		document.getElementById("answercontentdiv","anserstatediv","answerpointsdiv","usernamediv","passworddiv").style.display = "none";
     } if (that.value == "answer"){
         document.getElementById("questioncontentdiv").style.display = "none";
 		document.getElementById("answercontentdiv").style.display = "block";
