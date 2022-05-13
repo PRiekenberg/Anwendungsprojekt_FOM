@@ -56,7 +56,7 @@
             </a>
         </div>
         <div id="div_logout">
-            <a id ="logout" href="../login/logout.php">Abmelden</a>
+            <a id ="logout" href="php/logout.php">Abmelden</a>
         </div>
     </body>
 </html> 
