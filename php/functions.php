@@ -80,4 +80,26 @@
     $result = $collection->find( [ 'scenarioid' => $scenarioid, 'phase' => $phase, 'type' => 'answer' ] );
     return $result;
   }
+
+  function checkCredentials($username, $password){
+    $collection = getCollection();
+    $result = $collection->find( [ 'username' => $username ] );
+    if ($result != null){
+      
+      $hashed_password = $result['password'];
+      if(password_verify($password, $hashed_password)) {
+        echo "Login erfolgreich!"
+      } 
+    
+      // Else, Redirect them back to the login page.
+      else {
+        echo "Passwort falsch!";
+      }
+    }
+    
+    else {
+      echo "Benutzername nicht gefunden";
+    }
+
+  }
 ?>
