@@ -88,17 +88,17 @@
       
       $hashed_password = $result['password'];
       if(password_verify($password, $hashed_password)) {
-        echo "Login erfolgreich!";
+        return "Login erfolgreich!";
       } 
     
       // Else, Redirect them back to the login page.
       else {
-        echo "Passwort falsch!";
+        return "Passwort falsch!";
       }
     }
     
     else {
-      echo "Benutzername nicht gefunden";
+      return "Benutzername nicht gefunden";
     }
 
   }
