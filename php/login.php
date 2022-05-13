@@ -16,7 +16,7 @@
     
         <?php 
         if(isset($_POST['submit'])) {
-            $result=checkCredentials('hans','test']);
+            $result=checkCredentials('hans','test');
             echo $result['username'];
             echo $result['password'];
         }
