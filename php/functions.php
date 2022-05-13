@@ -88,7 +88,7 @@
       
       $hashed_password = $result['password'];
       if(password_verify($password, $hashed_password)) {
-        echo "Login erfolgreich!"
+        echo "Login erfolgreich!";
       } 
     
       // Else, Redirect them back to the login page.
