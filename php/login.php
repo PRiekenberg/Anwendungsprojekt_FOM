@@ -2,9 +2,9 @@
   
   require '../vendor/autoload.php';
   require_once 'functions.php';
-  
+
   if(isset($_POST['submit'])) {
-      checkCredentials('hans','test');
+      checkCredentials($_POST['username'],$_POST['password']);
   }
   
 ?>

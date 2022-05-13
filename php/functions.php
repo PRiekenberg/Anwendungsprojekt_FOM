@@ -84,24 +84,25 @@
   function checkCredentials($username, $password){
     $collection = getCollection();
     $result = $collection->find( [ 'username' => $username ] );
-    echo $result['username'];
-    echo $result['password'];
-    /*if ($result != null){
+    
+    foreach ($result as $r) {
+      if ($result != null){
+        
+        $hashed_password = $r['password'];
+        if(password_verify($password, $hashed_password)) {
+          return "Login erfolgreich!";
+        } 
       
-      $hashed_password = $result['password'];
-      if(password_verify($password, $hashed_password)) {
-        return "Login erfolgreich!";
-      } 
-    
-      // Else, Redirect them back to the login page.
-      else {
-        return "Passwort falsch!";
+        // Else, Redirect them back to the login page.
+        else {
+          return "Passwort falsch!";
+        }
       }
-    }
+      
+      else {
+        return "Benutzername nicht gefunden";
+      }
     
-    else {
-      return "Benutzername nicht gefunden";
-    }
-    */
   }
+}
 ?>
