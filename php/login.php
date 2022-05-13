@@ -2,7 +2,7 @@
   
   require '../vendor/autoload.php';
   require_once 'functions.php';
-
+  session_start();
   if(isset($_POST['submit'])) {
       checkCredentials(strtolower($_POST['username']),$_POST['password']);
   }
