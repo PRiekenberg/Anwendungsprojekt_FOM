@@ -10,7 +10,9 @@
 				   $_POST['answerstate'],
 				   $_POST['answerpoints'],
 				   $_POST['phase'],
-				   $_POST['scenarioid']);
+				   $_POST['scenarioid'],
+				   $_POST['username'],
+				   password_hash($_POST['password'], PASSWORD_DEFAULT))
   }
   
   if (isset($_POST['dbid'])) {
@@ -37,7 +39,7 @@
 		<title>Datenbankmanagement</title>
 	</head>
 	<body>
-		<div align="center" class="form-style-8">
+		<div class="form-style-8">
 			<h2>Daten einfügen</h2>
 			<form id="form1" action="" method="post">
 
@@ -69,6 +71,12 @@
 				<h3>Szenario ID (nur bei Typ Frage oder Antwort angeben)</h3>
 				<input id="scenarioid" type="number" name="scenarioid" placeholder="ID des Szenarios" /><br><br>
 				
+				<h3>Username (nur bei Typ Benutzer angeben)</h3>
+				<input id="username" type="text" name="username" placeholder="Username eingeben" /><br><br>
+
+				<h3>Passwort (nur bei Typ Benutzer angeben)</h3>
+				<input id="password" type="text" name="password" placeholder="Passwort eingeben" /><br><br>
+
 				<input id="firebtn" type="submit" value="Daten in Datenbank speichern"></input>
 
 			</form>
@@ -87,6 +95,8 @@
 					<th>Antwortpunkte</td>
 					<th>Phase im Szenario</td>
 					<th>Szenario ID</td>
+					<th>Username</td>
+					<th>Passwort</td>
 				</tr>
 				</thead>
 
@@ -103,7 +113,9 @@
 						echo '<td>' . $r['answerstate']; echo '</td>';  
 						echo '<td>' . $r['answerpoints']; echo '</td>'; 
 						echo '<td>' . $r['phase']; echo '</td>'; 
-						echo '<td>' . $r['scenarioid']; echo '</td>';  
+						echo '<td>' . $r['scenarioid']; echo '</td>'; 
+						echo '<td>' . $r['username']; echo '</td>';  
+						echo '<td>' . $r['password']; echo '</td>'; 
 						echo '</tr>';
 					}
 
