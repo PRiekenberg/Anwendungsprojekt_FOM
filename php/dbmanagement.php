@@ -145,7 +145,7 @@
 		</div>
 
 		<div id="div_logout" style="position:absolute;left:0px;bottom:20px;text-align:center;font-size:0.8333333333333334vw">
-            <a id ="logout" href="php/logout.php">Abmelden</a>
+            <a id ="logout" href="logout.php">Abmelden</a>
         </div>
 	</body>
  </html>
