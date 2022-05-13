@@ -1,3 +1,14 @@
+<?php
+	/* Session wieder aufnehmen */
+	session_start();
+	
+	/* Kontrolle, ob innerhalb der Session */
+	if (!isset($_SESSION['username'])) {
+		die("<p>Kein Zugang<br/><a href='php/login.php'>Zum Login</a></p>");
+	} 
+	
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
