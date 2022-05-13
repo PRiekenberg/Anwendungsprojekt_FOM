@@ -55,38 +55,38 @@
 					<option value="answer">Antwort</option>
 					<option value="user">Benutzer</option>
 				</select>
-				<div id="questioncontentdiv">
+				<div id="questioncontentdiv" class="select-default-shown select-user-hidden select-answer-hidden">
 					<h3>Inhalt Frage (nur bei Typ Frage angeben)</h3>
 					<input id="questioncontent" type="text" name="questioncontent" placeholder="Frage eingeben" /><br><br>
 				</div>
-				<div id="answercontentdiv">
+				<div id="answercontentdiv" class="select-default-shown select-user-hidden select-question-hidden">
 					<h3>Inhalt Antwort (nur bei Typ Antwort angeben)</h3>
 					<input id="answercontent" type="text" name="answercontent" placeholder="Antwort eingeben" /><br><br>
 				</div>
-				<div id="answerstatediv">
+				<div id="answerstatediv" class="select-default-shown select-user-hidden select-question-hidden">
 					<h3><label for="answerstate">Antwort Wahr oder Falsch? (nur bei Typ Antwort angeben)</label></h3>
 					<select id="answerstate" name="answerstate">
 						<option value="true">Wahr</option>
 						<option value="false">Falsch</option>
 					</select>
 				</div>
-				<div id="answerpointsdiv">
+				<div id="answerpointsdiv" class="select-default-shown select-user-hidden select-question-hidden">
 					<h3>Anzahl Punkte (nur bei Typ Antwort angeben)</h3>
 					<input id="answerpoints" type="number" name="answerpoints" placeholder="Anzahl Punkte eintragen" /><br><br>
 				</div>
-				<div id="phasediv">
+				<div id="phasediv" class="select-default-shown select-user-hidden">
 					<h3>Phase im Szenario? (nur bei Typ Frage oder Antwort angeben)</h3>
 					<input id="phase" type="number" name="phase" placeholder="Phasennummer eintragen" /><br><br>
 				</div>
-				<div id="scenarioiddiv">
+				<div id="scenarioiddiv" class="select-default-shown select-user-hidden">
 					<h3>Szenario ID (nur bei Typ Frage oder Antwort angeben)</h3>
 					<input id="scenarioid" type="number" name="scenarioid" placeholder="ID des Szenarios" /><br><br>
 				</div>
-				<div id="usernamediv">
+				<div id="usernamediv" class="select-default-shown select-question-hidden select-answer-hidden">
 					<h3>Username (nur bei Typ Benutzer angeben)</h3>
 					<input id="username" type="text" name="username" placeholder="Username eingeben" /><br><br>
 				</div>
-				<div id="passworddiv">
+				<div id="passworddiv" class="select-default-shown select-question-hidden select-answer-hidden">
 					<h3>Passwort (nur bei Typ Benutzer angeben)</h3>
 					<input id="password" type="text" name="password" placeholder="Passwort eingeben" /><br><br>
 				</div>
