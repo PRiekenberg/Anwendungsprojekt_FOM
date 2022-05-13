@@ -84,7 +84,6 @@
   function checkCredentials($username, $password){
     $collection = getCollection();
     $result = $collection->find( [ 'username' => $username, 'type' => 'user' ] );
-    var_dump($result);
     if (!$result -> isDead()){
       foreach ($result as $r) {
         
