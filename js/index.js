@@ -61,7 +61,7 @@ function selectCheck(that) {
 		document.getElementById("answerpointsdiv").style.display = "none";
 		document.getElementById("usernamediv").style.display = "none";
 		document.getElementById("passworddiv").style.display = "none";
-		 document.getElementById("questioncontentdiv").style.display = "initial";
+		document.getElementById("questioncontentdiv").style.display = "initial";
 		document.getElementById("scenarioiddiv").style.display = "initial";
 		document.getElementById("phasediv").style.display = "initial";
     } if (that.value == "answer"){
