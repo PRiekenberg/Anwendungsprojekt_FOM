@@ -12,7 +12,7 @@
 				   $_POST['phase'],
 				   $_POST['scenarioid'],
 				   $_POST['username'],
-				   password_hash($_POST['password'], PASSWORD_DEFAULT))
+				   (password_hash($_POST['password'], PASSWORD_DEFAULT)));
   }
   
   if (isset($_POST['dbid'])) {
