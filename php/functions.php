@@ -84,13 +84,8 @@
   function checkCredentials($username, $password){
     $collection = getCollection();
     $result = $collection->find( [ 'username' => $username, 'type' => 'user' ] );
-    
-    foreach ($result as $r) {
-
-      echo $r['username'];
-      echo $r['password'];
-
-      if ($r != null){
+    if ($result != null){
+      foreach ($result as $r) {
         
         $hashed_password = $r['password'];
         if(password_verify($password, $hashed_password)) {
@@ -102,11 +97,11 @@
           echo "Passwort falsch!";
         }
       }
+    }
       
       else {
         echo "Benutzername nicht gefunden";
       }
     
-  }
 }
 ?>
