@@ -55,7 +55,7 @@
                 &copy Gruppe 7: Virus zum zusammenbauen
             </a>
         </div>
-        <div id="div_logout">
+        <div id="div_logout" align="center">
             <a id ="logout" href="php/logout.php">Abmelden</a>
         </div>
     </body>
