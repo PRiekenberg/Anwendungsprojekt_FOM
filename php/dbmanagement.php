@@ -37,6 +37,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Insertdata">
 		<script src="../js/jquery.js"></script>
+		<link rel="stylesheet" media="screen" href="../css/stylesheet.css">
 		<style>
 			table, th, td {
 			border: 1px solid;
