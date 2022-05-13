@@ -90,6 +90,8 @@
         $hashed_password = $r['password'];
         if(password_verify($password, $hashed_password)) {
           echo "Login erfolgreich!";
+          $_SESSION['username'] = $username;
+          header('Location: ../index.html');
         } 
       
         // Else, Redirect them back to the login page.

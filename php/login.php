@@ -4,7 +4,7 @@
   require_once 'functions.php';
 
   if(isset($_POST['submit'])) {
-      checkCredentials($_POST['username'],$_POST['password']);
+      checkCredentials(strtolower($_POST['username']),$_POST['password']);
   }
   
 ?>
