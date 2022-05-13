@@ -43,6 +43,17 @@
 			}
 		</style>
 		<title>Datenbankmanagement</title>
+		<script>
+			$(document).ready(function(){
+				$('#type').change(function() {
+					$('.select-default-hidden').hide();
+					$('.select-default-shown').show();
+
+					$('.select-' + $(this).val() + '-shown').show();
+					$('.select-' + $(this).val() + '-hidden').hide();
+				}).change();
+			});
+		</script>
 	</head>
 	<body>
 		<script src="../js/index.js"></script>

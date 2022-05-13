@@ -1,7 +1,3 @@
-var script = document.createElement('script');
-script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
-document.getElementsByTagName('head')[0].appendChild(script);
-
 function set_h1(){
   var headline = document.querySelector('h1');
   headline.textContent = "JavaScript funktioniert!";
@@ -56,10 +52,4 @@ function read_counter_cookie(){
 	
 }
 
-$('#type').change(function() {
-    $('.select-default-hidden').hide();
-    $('.select-default-shown').show();
 
-    $('.select-' + $(this).val() + '-shown').show();
-    $('.select-' + $(this).val() + '-hidden').hide();
-}).change();
