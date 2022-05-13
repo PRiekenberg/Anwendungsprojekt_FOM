@@ -73,6 +73,7 @@ button:hover {
 #div_logout {
 	position:absolute;
 	bottom: 20px;
+	right: 100px;
 	text-align: center;
      	font-size: 0.8333333333333334vw;
 }
