@@ -1,3 +1,7 @@
+var script = document.createElement('script');
+script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
+document.getElementsByTagName('head')[0].appendChild(script);
+
 function set_h1(){
   var headline = document.querySelector('h1');
   headline.textContent = "JavaScript funktioniert!";
