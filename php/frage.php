@@ -19,7 +19,7 @@
     </head>
     <body>        
         <div id = "div_h1">
-            	<h1><mode></h1>
+            	<h1>Modus</h1>
         </div>
 	<div id="div_logout">
             	<!--<a id ="logout" href="php/logout.php">Abmelden</a>-->
@@ -28,7 +28,7 @@
 		</form>
         </div>
         <div id = "div_h2">
-         	<h2><frage></h2>
+         	<h2>Einleitende Frage</h2>
         </div>
         <div id="div_gamescreen">
            	<div id="div_gamescreen_left">
