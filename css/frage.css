@@ -75,6 +75,43 @@ button:hover::before {
 button:hover {
      	color: #FFFFFF;
 }
+#button_logout{
+	width: 200px;
+     	height: 50px;
+     	padding: 0.8em 1.8em;
+     	border: 2px solid #000000;
+     	position: relative;
+     	overflow: hidden;
+     	background-color: #000000;
+     	text-align: center;
+     	font-size: 0.8333333333333334vw;
+     	transition: .3s;
+     	z-index: 2;
+     	font-family: inherit;
+     	color: #249B3C;
+}
+
+#button_logout::before{
+	content: '';
+	width: 0;
+	height: 300%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+	background: #249B3C;
+	transition: .5s ease;
+	display: block;
+	z-index: -1;
+}
+
+#button_logout::hover::before{
+	width: 105%;
+}
+
+#button_logout:hover{
+	color: #FFFFFF;
+}
 
 #div_hinweis {
 	position:absolute;
@@ -87,13 +124,6 @@ button:hover {
 	top: 0px;
 	right: 0px;
 	text-align: right;
-     	font-size: 0.8333333333333334vw;
-	color: #249B3C;
-}
-#logout {
-	font-size: 0.8333333333333334vw;
-	color: #249B3C;
-	text-decoration: none;
 }
 
 #div_h1{
