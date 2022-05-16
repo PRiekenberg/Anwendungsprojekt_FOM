@@ -18,6 +18,11 @@
         <link rel="stylesheet" media="screen" href="../css/frage.css">
     </head>
     <body>
+	    <script>
+		<?php
+  			require_once 'functions.php';
+		?>
+	    </script>
 	<div id="div_menu">
             	<!--<a id ="logout" href="php/logout.php">Abmelden</a>-->
 		<form>
