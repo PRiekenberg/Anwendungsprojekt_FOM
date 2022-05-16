@@ -8,7 +8,8 @@
 	*/
 
 	if (isset($_POST['aw1'])) {
-		
+		$message = "wrong answer";
+		echo "<script type='text/javascript'>alert('$message');</script>";
 	}
 	if (isset($_POST['aw2'])) {
 		
@@ -19,7 +20,7 @@
 	if (isset($_POST['aw4'])) {
 		$result = queryQuestion(1,1);
 		foreach ($result as $r){
-			echo $r;
+			echo "<script type='text/javascript'>alert('$r');</script>";
 		}
 	}
 
