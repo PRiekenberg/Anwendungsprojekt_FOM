@@ -224,8 +224,7 @@ button:hover {
 
 #div_bild2{
 	width: 200px;
-	bottom: 0px;
-	right: 0px;
+	margin-top: 50px;
 }
 
 #bild1{
@@ -235,8 +234,6 @@ button:hover {
 }
 
 #bild2{
-	margin-top: 450px;
-	margin-right: 0px;
 	width:100%;
 }
 
@@ -256,7 +253,7 @@ button:hover {
 }
 
 #div_antwort4{
-	margin-top: 300px;
+	margin-top: 250px;
 	margin-left: 50px;
 }
 
