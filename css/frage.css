@@ -216,6 +216,18 @@ button:hover {
 	height: 675px;	
 }
 
+#div_bild1{
+	width: 200px;
+	top: 0px;
+	left: 0px;
+}
+
+#div_bild2{
+	width: 200px;
+	bottom: 0px;
+	right: 0px;
+}
+
 #hinweis {
 	font-size: 0.8333333333333334vw;
 	font-family: inherit;
