@@ -19,7 +19,7 @@
 	if (isset($_POST['aw4'])) {
 		$result = queryQuestion(1,1);
 		foreach ($result as $r){
-			echo $r;
+			echo '<h3>' . $r; echo '</h3>';
 		}
 	}
 
