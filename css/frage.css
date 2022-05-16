@@ -223,7 +223,6 @@ button:hover {
 }
 
 #div_bild2{
-	width: 200px;
 	margin-top: 50px;
 }
 
@@ -234,6 +233,7 @@ button:hover {
 }
 
 #bild2{
+	margin-bottom: 0px;
 	width:100%;
 }
 
