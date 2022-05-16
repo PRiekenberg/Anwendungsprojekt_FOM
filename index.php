@@ -36,7 +36,7 @@
                 		<button id="button_firmennetz" formaction="/php/frage.php">Firmennetz</button>
 			</form>	
 			<form>
-                		<button id="button_krypto" onclick=formaction="/php/frage.php">Krypto</button>
+                		<button id="button_krypto" formaction="/php/frage.php">Krypto</button>
 			</form>
             	</div>
             	<div id="div_gamescreen_center">
