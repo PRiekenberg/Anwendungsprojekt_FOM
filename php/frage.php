@@ -6,9 +6,8 @@
 		die("<p>Kein Zugang<br/><a href='php/login.php'>Zum Login</a></p>");
 	} 
 	*/
-
-	if (isset($_POST['AW3'])) {
-		echo "Hello world!";
+	if (isset($_POST['submit'])) {
+		echo '<p>Hallo Welt</p>';
 	}
 ?>
 
@@ -57,7 +56,7 @@
 				<!--<button id="button_antwort3">Antwort3<br></button>-->
 				<form method="post" action="frage.php">
 					<!--<input type="Button" name="sent">-->
-					<button id="button_antwort2" name="AW3">Antwort3<br></button>
+					<button id="button_antwort2" name="submit">Antwort3<br></button>
 				</form>
 			</div>
             	</div>
