@@ -11,11 +11,6 @@
 		$message = "wrong answer";
 		echo "<script type='text/javascript'>alert('$message');</script>";
 	}
-	if (isset($_POST['sent'])) {
-		$message = "correct answer";
-		echo "<script type='text/javascript'>alert('$message');</script>";
-	}
-
 ?>
 
 <!DOCTYPE html>
@@ -61,8 +56,7 @@
 			</div>
 			<div id ="div_antwort3">
 				<form method="post" action="frage.php">
-					<input type="Button" name="sent">
-					<button id="button_antwort2" name="aw3">Antwort3<br></button>
+					<button id="button_antwort3" name="aw3">Antwort3<br></button>
 				</form>
 			</div>
             	</div>
