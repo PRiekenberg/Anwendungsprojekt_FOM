@@ -6,8 +6,6 @@
 		die("<p>Kein Zugang<br/><a href='php/login.php'>Zum Login</a></p>");
 	} 
 	*/
-	$_result =  queryAnswers(1, 1);
-	echo $_result;
 
 	if (isset($_POST['aw1'])) {
 		
