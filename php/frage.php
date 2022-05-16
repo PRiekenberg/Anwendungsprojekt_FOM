@@ -8,7 +8,8 @@
 	*/
 
 	if (isset($_POST['submit'])) {
-		echo '<p>Hallo Welt</p>';
+		$message = "wrong answer";
+		echo "<script type='text/javascript'>alert('$message');</script>";
 	}
 
 ?>
