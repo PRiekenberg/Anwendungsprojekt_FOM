@@ -1,7 +1,7 @@
 <?php
-	/* 
-	session_start();
 	
+	session_start();
+	/*
 	if (!isset($_SESSION['username'])) {
 		die("<p>Kein Zugang<br/><a href='php/login.php'>Zum Login</a></p>");
 	} 
