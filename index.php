@@ -32,17 +32,25 @@
         </div>
         <div id="div_gamescreen">
            	<div id="div_gamescreen_left">
-                	<button id="button_firmennetz" type="submit">Firmennetz</button>
-                	<button id="button_krypto" onclick="increment_counter()">Krypto</button>
+			<form>
+                		<button id="button_firmennetz" formaction="/php/frage.php">Firmennetz</button>
+			</form>	
+			<form>
+                		<button id="button_krypto" onclick=formaction="/php/frage.php">Krypto</button>
+			</form>
             	</div>
             	<div id="div_gamescreen_center">
-               		<button id="button_social" type="submit">Social Engineering</button>
+			<form>
+               			<button id="button_social" formaction="/php/frage.php">Social Engineering</button>
+			</form>
                 	<div id="div_hacker_menu">
                     		<img id="img_hacker_menu" src="images/hacker_startmenu.jpeg" alt="hacker">
                 	</div>
             	</div>
             	<div id="div_gamescreen_right">
-                	<button id="button_banking" onclick="set_h1()">Online Banking</button>
+			<form>
+                		<button id="button_banking" formaction="/php/frage.php">Online Banking</button>
+			</form>
 	 		<form>
                 		<button id="button_passwort" formaction="/php/frage.php">Passwörter<br></button>
 			</form>
