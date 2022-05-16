@@ -41,12 +41,20 @@
 			<div id ="div_bild1">
 				<img id="bild1" src="../images/hacker.jpeg" alt="bild1">
 			</div>
+			<div id ="div_frage1">
+			</div>
             	</div>
             	<div id="div_gamescreen_center">
+			<div id ="div_frage2">
+			</div>
+			<div id ="div_frage3">
+			</div>
             	</div>
             	<div id="div_gamescreen_right">
 			<div id ="div_bild2">
 				<img id="bild2" src="../images/user.jpeg" alt="bild2">
+			</div>
+			<div id ="div_frage4">
 			</div>
             	</div> 
         </div>
