@@ -79,7 +79,7 @@
             	<div id="div_gamescreen_right">
 			<div id ="div_antwort4">
 				<form method="post" action="">
-					<button id="button_antwort4" type="submit" name="aw4">Antwort4<br></button>
+					<input id="button_antwort4" type="submit" name="aw4">Antwort4<br></input>
 				</form>
 			</div>
 			<div id ="div_bild2">
