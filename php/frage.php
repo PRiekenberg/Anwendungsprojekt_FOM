@@ -7,9 +7,6 @@
 	} 
 	*/
 	
-	result = queryAnswers(1, 1);
-	echo result;
-	
 	if (isset($_POST['aw1'])) {
 		
 	}
