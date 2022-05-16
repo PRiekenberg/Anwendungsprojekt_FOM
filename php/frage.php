@@ -1,5 +1,5 @@
 <?php
-	
+	require_once functions.php;
 	session_start();
 	/*
 	if (!isset($_SESSION['username'])) {
@@ -17,7 +17,8 @@
 		
 	}
 	if (isset($_POST['aw4'])) {
-		
+		$result = queryQuestion(1,1);
+		echo $result;
 	}
 
 ?>
