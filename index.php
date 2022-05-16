@@ -40,7 +40,9 @@
             </div>
             <div id="div_gamescreen_right">
                 <button id="button_banking" onclick="set_h1()">Online Banking</button>
-                <button id="button_passwort" onclick="set_h1()">Passwörter<br></button>
+	 	<form>
+                	<button id="button_passwort" formaction="/html/frage.html">Passwörter<br></button>
+		</form>
             </div> 
         </div>
         <div id="div_hinweis">
