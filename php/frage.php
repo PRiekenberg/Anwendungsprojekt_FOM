@@ -17,7 +17,13 @@
         <meta name="description" content="Virus zum Zusammenbauen">
         <link rel="stylesheet" media="screen" href="../css/frage.css">
     </head>
-    <body>        
+    <body>
+	<div id="div_menu">
+            	<!--<a id ="logout" href="php/logout.php">Abmelden</a>-->
+		<form>
+                	<button id="button_menu" formaction="../index.php">Menü<br></button>
+		</form>
+        </div>
         <div id = "div_h1">
             	<h1>Modus</h1>
         </div>
