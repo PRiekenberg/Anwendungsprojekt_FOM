@@ -47,10 +47,10 @@
             	</div>
             	<div id="div_gamescreen_center">
 			<div id ="div_antwort2">
-				<button id="button_antwort2">Antwort1<br></button>
+				<button id="button_antwort2">Antwort2<br></button>
 			</div>
 			<div id ="div_antwort3">
-				<button id="button_antwort3">Antwort1<br></button>
+				<button id="button_antwort3">Antwort3<br></button>
 			</div>
             	</div>
             	<div id="div_gamescreen_right">
@@ -58,7 +58,7 @@
 				<img id="bild2" src="../images/user.jpeg" alt="bild2">
 			</div>
 			<div id ="div_antwort4">
-				<button id="button_antwort4">Antwort1<br></button>
+				<button id="button_antwort4">Antwort4<br></button>
 			</div>
             	</div> 
         </div>
