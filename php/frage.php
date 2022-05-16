@@ -8,8 +8,8 @@
 	*/
 
 	if (isset($_POST['aw1'])) {
-		$message = "wrong answer";
-		echo "<script type='text/javascript'>alert('$message');</script>";
+		$result = queryQuestion(1,1);
+		echo "<script type='text/javascript'>alert('$result');</script>";
 	}
 	if (isset($_POST['aw2'])) {
 		
