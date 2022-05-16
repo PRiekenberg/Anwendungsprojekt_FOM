@@ -19,7 +19,7 @@
 	if (isset($_POST['aw4'])) {
 		$result = queryQuestion(1,1);
 		foreach ($result as $r){
-			echo "<script type='text/javascript'>alert('$r');</script>";
+			echo $r;
 		}
 	}
 
