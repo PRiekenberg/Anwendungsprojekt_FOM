@@ -229,31 +229,29 @@ button:hover {
 }
 
 #bild1{
+	margin-left: 0px;
 	width:100%;
 }
 
 #bild2{
+	margin-right: 0px;
 	width:100%;
 }
 
 #div_antwort1{
-	top: 450px;
-	right: 100px;
+	margin-top: 450px;
 }
 
 #div_antwort2{
-	top: 50px;
-	right: 100px;
+	margin-top: 50px;
 }
 
 #div_antwort3{
-	top: 625px;
-	left: 100px;
+	margin-top: 625px;
 }
 
 #div_antwort4{
-	top: 225px;
-	left: 100px;
+	margin-top: 225px;
 }
 
 #hinweis {
