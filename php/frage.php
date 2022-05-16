@@ -18,7 +18,9 @@
 	}
 	if (isset($_POST['aw4'])) {
 		$result = queryQuestion(1,1);
-		echo $result;
+		foreach ($result as $r){
+			echo $r;
+		}
 	}
 
 ?>
