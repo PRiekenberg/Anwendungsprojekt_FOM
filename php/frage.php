@@ -8,7 +8,7 @@
 	*/
 
 	if (isset($_POST['AW3'])) {
-		callEnde();
+		echo "Hello world!";
 	}
 ?>
 
