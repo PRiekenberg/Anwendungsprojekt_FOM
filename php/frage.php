@@ -18,11 +18,6 @@
         <link rel="stylesheet" media="screen" href="../css/frage.css">
     </head>
     <body>
-	    <script>
-		<?php
-  			require_once 'functions.php';
-		?>
-	    </script>
 	<div id="div_menu">
             	<!--<a id ="logout" href="php/logout.php">Abmelden</a>-->
 		<form>
@@ -55,7 +50,7 @@
 				<button id="button_antwort2">Antwort2<br></button>
 			</div>
 			<div id ="div_antwort3">
-				<button id="button_antwort3" onclick = "callEnde()">Antwort3<br></button>
+				<button id="button_antwort3">Antwort3<br></button>
 			</div>
             	</div>
             	<div id="div_gamescreen_right">
