@@ -1,1 +1,205 @@
+body {
+    	/*background-image: url('../images/background.jpg');*/
+    	background-size: auto;
+    	background-repeat: no-repeat;
+    	background-color: #202020;
+    	font-family: "Roboto", helvetica, arial, sans-serif;
+    	font-size: 0.8333333333333334vw;
+    	font-weight: 400;
+    	text-rendering: optimizeLegibility;
+   	margin-bottom: 5%;
+    	margin-left: 5%;
+    	margin-right:5%;
+}
 
+h1 {
+    	color: white;
+    	text-align: center;
+    	font-size: 1.6666666666666667vw;
+}
+
+h2 {
+     	color: white;
+     	text-align: center;
+     	font-size: 1.25vw;
+ }
+
+h3{
+	color: white;
+	text-align: center;
+	font-size: 1.25vw;
+}
+
+td,tr {
+	color: white;
+	text-align: center;
+	border-color: white;
+}
+
+button {
+     	width: 400px;
+     	height: 102px;
+     	padding: 0.8em 1.8em;
+     	border: 2px solid #000000;
+     	position: relative;
+     	overflow: hidden;
+     	background-color: #FFFFFF;
+     	text-align: center;
+     	font-size: 0.8333333333333334vw;
+     	transition: .3s;
+     	z-index: 2;
+     	font-family: inherit;
+     	color: #000000;
+	border-radius: 50%; 
+}
+
+
+button::before {
+	content: '';
+	width: 0;
+	height: 300%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+	background: #787878;
+	transition: .5s ease;
+	display: block;
+	z-index: -1;
+}
+
+button:hover::before {
+     	width: 105%;
+}
+
+button:hover {
+     	color: #FFFFFF;
+}
+
+#div_hinweis {
+	position:absolute;
+	left: 0px;
+	bottom: 20px;
+     	font-size: 0.8333333333333334vw;
+}
+#div_logout {
+	position:absolute;
+	bottom: 20px;
+	right: 800px;
+	text-align: center;
+     	font-size: 0.8333333333333334vw;
+}
+
+#div_h1{
+	margin: 0 auto;
+}
+
+#div_h2{
+	margin: 0 auto;
+}
+#div_gamescreen{
+	z-index: 1;
+	background-color: #FFFFFF;
+	margin: auto;
+	width: 1200px;
+	height: 675px;	
+}
+
+#div_gamescreen_left{
+	float: left;
+	z-index: 1;
+	background-color: #FFFFFF;
+	margin: auto;
+	width: 400px;
+	height: 675px;	
+}
+
+#div_gamescreen_center{
+	float: left;
+	z-index: 1;
+	background-color: #FFFFFF;
+	margin: auto;
+	width: 400px;
+	height: 675px;	
+}
+#div_gamescreen_right{
+	float: left;
+	z-index: 1;
+	background-color: #FFFFFF;
+	margin: auto;
+	width: 400px;
+	height: 675px;	
+}
+
+#hinweis {
+	font-size: 0.8333333333333334vw;
+	font-family: inherit;
+	color: #249B3C;
+}
+
+#div_copyright {
+	text-align: right;
+	position:absolute;
+	right: 0px;
+	bottom: 20px;
+}
+
+#copyrigth {
+	text-align: right;
+	font-size: 0.8333333333333334vw;
+	font-family: inherit;
+	color: #249B3C;
+}
+
+#counter{
+	background-color: #000000;
+	text-align: center;
+     	font-size: 20pt;
+     	font-family: inherit;
+     	color: #FFFFFF;
+}
+#button_krypto{
+	left: 10px;
+	top: 300px;
+}
+
+#button_firmennetz{
+	left: 10px;
+	top: 200px;
+	transform: rotate(16deg);
+}
+
+#button_social{
+	margin: 0 auto;
+	top: 100px;
+}
+
+#button_banking{
+	right: 10px;
+	top: 200px;
+	transform: rotate(-16deg);
+}
+
+#button_passwort{
+	right: 10px;
+	top: 300px;
+}
+
+#div_hacker_menu{
+	position: relative;
+	top: 200px;
+	width: 300px;
+	margin: 0 auto;
+}
+
+#img_hacker_menu{
+	height: auto;
+      	width: 300px;
+}
+
+@media only screen and (max-width: 620px) {
+     	/* For mobile phones: */
+     	body {
+       		width: 100%;
+     	}
+}
