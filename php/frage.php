@@ -6,13 +6,20 @@
 		die("<p>Kein Zugang<br/><a href='php/login.php'>Zum Login</a></p>");
 	} 
 	*/
-
+	
+	if (isset($_POST['aw1'])) {
+		
+	}
+	if (isset($_POST['aw2'])) {
+		
+	}
 	if (isset($_POST['aw3'])) {
-		$message = "wrong answer";
-		echo "<script type='text/javascript'>alert('$message');</script>";
+		
+	}
+	if (isset($_POST['aw4'])) {
+		
 	}
 
-	unset($_POST);
 ?>
 
 <!DOCTYPE html>
@@ -49,12 +56,16 @@
 				<img id="bild1" src="../images/hacker.jpeg" alt="bild1">
 			</div>
 			<div id ="div_antwort1">
-				<button id="button_antwort1">Antwort1<br></button>
+				<form method="post" action="frage.php">
+					<button id="button_antwort1" name="aw1">Antwort1<br></button>
+				<form>
 			</div>
             	</div>
             	<div id="div_gamescreen_center">
 			<div id ="div_antwort2">
-				<button id="button_antwort2">Antwort2<br></button>
+				<form method="post" action="frage.php">
+					<button id="button_antwort2" name="aw2">Antwort2<br></button>
+				</form>
 			</div>
 			<div id ="div_antwort3">
 				<form method="post" action="frage.php">
@@ -64,7 +75,9 @@
             	</div>
             	<div id="div_gamescreen_right">
 			<div id ="div_antwort4">
-				<button id="button_antwort4">Antwort4<br></button>
+				<form method="post" action="frage.php">
+					<button id="button_antwort4" name="aw4">Antwort4<br></button>
+				</form>
 			</div>
 			<div id ="div_bild2">
 				<img id="bild2" src="../images/user.jpeg" alt="bild2">
