@@ -6,11 +6,11 @@
 		die("<p>Kein Zugang<br/><a href='php/login.php'>Zum Login</a></p>");
 	} 
 	*/
-	/*
+
 	if (isset($_POST['submit'])) {
 		echo '<p>Hallo Welt</p>';
 	}
-	*/
+
 ?>
 
 <!DOCTYPE html>
