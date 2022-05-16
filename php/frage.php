@@ -78,7 +78,7 @@
             	</div>
             	<div id="div_gamescreen_right">
 			<div id ="div_antwort4">
-				<form method="post" action="frage.php">
+				<form method="post" action="">
 					<button id="button_antwort4" name="aw4">Antwort4<br></button>
 				</form>
 			</div>
