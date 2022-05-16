@@ -50,7 +50,10 @@
 				<button id="button_antwort2">Antwort2<br></button>
 			</div>
 			<div id ="div_antwort3">
-				<button id="button_antwort3">Antwort3<br></button>
+				<!--<button id="button_antwort3">Antwort3<br></button>-->
+				<form method="post" action="fragen.php">
+					<input type="Button" name="sent">
+				</form>
 			</div>
             	</div>
             	<div id="div_gamescreen_right">
