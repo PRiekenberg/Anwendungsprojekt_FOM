@@ -228,6 +228,26 @@ button:hover {
 	right: 0px;
 }
 
+#div_frage1{
+	top: 450px;
+	right: 100px;
+}
+
+#div_frage2{
+	top: 50px;
+	right: 100px;
+}
+
+#div_frage3{
+	bottom: 50px;
+	left: 100px;
+}
+
+#div_frage4{
+	top: 225px;
+	left: 100px;
+}
+
 #hinweis {
 	font-size: 0.8333333333333334vw;
 	font-family: inherit;
