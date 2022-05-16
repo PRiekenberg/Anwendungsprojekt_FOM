@@ -7,7 +7,7 @@
 	} 
 	*/
 
-	if (isset($_POST['submit'])) {
+	if (isset($_POST['aw3'])) {
 		$message = "wrong answer";
 		echo "<script type='text/javascript'>alert('$message');</script>";
 	}
@@ -62,7 +62,7 @@
 			<div id ="div_antwort3">
 				<form method="post" action="frage.php">
 					<input type="Button" name="sent">
-					<button id="button_antwort2" name="submit">Antwort3<br></button>
+					<button id="button_antwort2" name="aw3">Antwort3<br></button>
 				</form>
 			</div>
             	</div>
