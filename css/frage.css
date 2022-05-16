@@ -217,12 +217,14 @@ button:hover {
 }
 
 #div_bild1{
+	position: absolute;
 	width: 200px;
 	top: 0px;
 	left: 0px;
 }
 
 #div_bild2{
+	position: absolute;
 	width: 200px;
 	bottom: 0px;
 	right: 0px;
@@ -237,21 +239,25 @@ button:hover {
 }
 
 #div_antwort1{
+	position: relative;
 	top: 450px;
 	right: 100px;
 }
 
 #div_antwort2{
+	position: relative;
 	top: 50px;
 	right: 100px;
 }
 
 #div_antwort3{
+	position: relative;
 	bottom: 50px;
 	left: 100px;
 }
 
 #div_antwort4{
+	position: relative;
 	top: 225px;
 	left: 100px;
 }
