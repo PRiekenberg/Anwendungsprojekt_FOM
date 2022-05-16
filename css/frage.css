@@ -233,7 +233,8 @@ button:hover {
 }
 
 #bild2{
-	object-fit: cover;
+	width: 100px;
+	margin-top: 50px;
 }
 
 #div_antwort1{
