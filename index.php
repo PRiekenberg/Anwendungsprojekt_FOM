@@ -24,6 +24,9 @@
         <div id = "div_h1">
             <h1>VIRUS ZUM ZUSAMMENBAUEN</h1>
         </div>
+	<div id="div_logout">
+            <a id ="logout" href="php/logout.php">Abmelden</a>
+        </div>
         <div id = "div_h2">
             <h2>Wähle ein Szenario aus:</h2>
         </div>
@@ -56,9 +59,6 @@
             <a id="copyrigth">
                 &copy Gruppe 7: Virus zum zusammenbauen
             </a>
-        </div>
-        <div id="div_logout">
-            <a id ="logout" href="php/logout.php">Abmelden</a>
-        </div>
+	</div>
     </body>
 </html> 
