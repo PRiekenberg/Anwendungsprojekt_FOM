@@ -124,4 +124,8 @@
     }
     
 }
+
+function callEnde(){
+  header("Location: ../php/ende.php");
+}
 ?>
