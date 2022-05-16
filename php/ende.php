@@ -34,7 +34,7 @@
 		</form>
         </div>
         <div id = "div_h2">
-        <h2>Sie haben & Punkte von & möglichen Punkte erreicht</h2>
+        	<h2>Sie haben & Punkte von & möglichen Punkte erreicht</h2>
         </div>
         <div id="div_gamescreen">
         </div>
