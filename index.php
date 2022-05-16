@@ -17,9 +17,7 @@
         <meta name="description" content="Virus zum Zusammenbauen">
         <link rel="stylesheet" media="screen" href="css/stylesheet.css">
     </head>
-    <body>
-        <script src="js/index.js"></script>
-        
+    <body>        
         <div id = "div_h1">
             	<h1>VIRUS ZUM ZUSAMMENBAUEN</h1>
         </div>
