@@ -108,7 +108,7 @@
 			</form>
 
 			<br><br>
-			<h2>Datenbankdaten</h2>
+			<h2>Fragen in der Datenbank</h2>
 
 			<table>
 				<thead>
@@ -116,11 +116,73 @@
 					<th>ID</td>
 					<th>Typ</td>
 					<th>Frageninhalt</td>
+					<th>Phase im Szenario</td>
+					<th>Szenario ID</td>
+				</tr>
+				</thead>
+
+				<tbody>
+				
+				<?php 
+					$result = getallQuestions();
+					foreach ($result as $r){						
+						echo '<tr>';
+						echo '<td>' . $r['_id']; echo '</td>';  
+						echo '<td>' . $r['type']; echo '</td>';  
+						echo '<td>' . $r['questioncontent']; echo '</td>';  
+						echo '<td>' . $r['phase']; echo '</td>'; 
+						echo '<td>' . $r['scenarioid']; echo '</td>'; 
+						echo '</tr>';
+					}
+
+					?>
+				</tbody>
+			</table>
+
+			<br><br>
+			<h2>Antworten in der Datenbank</h2>
+
+			<table>
+				<thead>
+				<tr>
+					<th>ID</td>
+					<th>Typ</td>
 					<th>Antwortinhalt</td>
 					<th>Antwortstatus</td>
 					<th>Antwortpunkte</td>
 					<th>Phase im Szenario</td>
 					<th>Szenario ID</td>
+				</tr>
+				</thead>
+
+				<tbody>
+				
+				<?php 
+					$result = getallAnswers();
+					foreach ($result as $r){						
+						echo '<tr>';
+						echo '<td>' . $r['_id']; echo '</td>';  
+						echo '<td>' . $r['type']; echo '</td>';   
+						echo '<td>' . $r['answercontent']; echo '</td>';
+						echo '<td>' . $r['answerstate']; echo '</td>';  
+						echo '<td>' . $r['answerpoints']; echo '</td>'; 
+						echo '<td>' . $r['phase']; echo '</td>'; 
+						echo '<td>' . $r['scenarioid']; echo '</td>'; 
+						echo '</tr>';
+					}
+
+					?>
+				</tbody>
+			</table>
+
+			<br><br>
+			<h2>Benutzer in der Datenbank</h2>
+
+			<table>
+				<thead>
+				<tr>
+					<th>ID</td>
+					<th>Typ</td>
 					<th>Username</td>
 					<th>Passwort</td>
 				</tr>
@@ -129,17 +191,11 @@
 				<tbody>
 				
 				<?php 
-					$result = getallDocuments();
+					$result = getallUsers();
 					foreach ($result as $r){						
 						echo '<tr>';
 						echo '<td>' . $r['_id']; echo '</td>';  
 						echo '<td>' . $r['type']; echo '</td>';  
-						echo '<td>' . $r['questioncontent']; echo '</td>';  
-						echo '<td>' . $r['answercontent']; echo '</td>';
-						echo '<td>' . $r['answerstate']; echo '</td>';  
-						echo '<td>' . $r['answerpoints']; echo '</td>'; 
-						echo '<td>' . $r['phase']; echo '</td>'; 
-						echo '<td>' . $r['scenarioid']; echo '</td>'; 
 						echo '<td>' . $r['username']; echo '</td>';  
 						echo '<td>' . $r['password']; echo '</td>'; 
 						echo '</tr>';

@@ -57,6 +57,24 @@
     return $result;
   }
 
+  function getallQuestions(){
+    $collection = getCollection();
+    $result = $collection->find([ 'type' => 'question' ]);
+    return $result;
+  }
+
+  function getallAnswers(){
+    $collection = getCollection();
+    $result = $collection->find([ 'type' => 'answer' ]);
+    return $result;
+  }
+
+  function getallUsers(){
+    $collection = getCollection();
+    $result = $collection->find([ 'type' => 'user' ]);
+    return $result;
+  }
+
   // Delete all documents in collection
   function deleteallDocuments() {
     $collection = getCollection(); 
