@@ -90,6 +90,11 @@ button:hover {
      	font-size: 0.8333333333333334vw;
 	color: #249B3C;
 }
+#logout {
+	font-size: 0.8333333333333334vw;
+	color: #249B3C;
+	text-decoration: none;
+}
 
 #div_h1{
 	margin: 0 auto;
