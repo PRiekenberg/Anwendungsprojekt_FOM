@@ -8,7 +8,7 @@
 	die("<p>Kein Zugang<br/><a href='login.php'>Zum Login</a></p>");
   } 
 
-  if (isset($_POST['firebtn'])) {
+  if (isset($_POST['scenarioid'])) {
     insertDocument($_POST['type'],
 				   $_POST['questioncontent'],
 				   $_POST['answercontent'],
@@ -103,7 +103,7 @@
 					<h3>Passwort</h3>
 					<input id="password" type="text" name="password" placeholder="Passwort eingeben" /><br><br>
 				</div>
-				<input id="firebtn" name="firebtn" type="submit" value="Daten in Datenbank speichern"></input>
+				<input id="firebtn" type="submit" value="Daten in Datenbank speichern"></input>
 
 			</form>
 
