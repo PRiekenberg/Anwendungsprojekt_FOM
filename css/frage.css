@@ -182,7 +182,7 @@ button:hover {
 	margin: 0 auto;
 }
 #div_gamescreen{
-	background-image: url('../images/game_background.jpg');*/
+	background-image: url('../images/game_background.gif');
 	z-index: 1;
 	background-color: #FFFFFF;
 	margin: auto;
