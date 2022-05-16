@@ -41,20 +41,24 @@
 			<div id ="div_bild1">
 				<img id="bild1" src="../images/hacker.jpeg" alt="bild1">
 			</div>
-			<div id ="div_frage1">
+			<div id ="div_antwort1">
+				<button id="button_antwort1">Antwort1<br></button>
 			</div>
             	</div>
             	<div id="div_gamescreen_center">
-			<div id ="div_frage2">
+			<div id ="div_antwort2">
+				<button id="button_antwort2">Antwort1<br></button>
 			</div>
-			<div id ="div_frage3">
+			<div id ="div_antwort3">
+				<button id="button_antwort3">Antwort1<br></button>
 			</div>
             	</div>
             	<div id="div_gamescreen_right">
 			<div id ="div_bild2">
 				<img id="bild2" src="../images/user.jpeg" alt="bild2">
 			</div>
-			<div id ="div_frage4">
+			<div id ="div_antwort4">
+				<button id="button_antwort4">Antwort1<br></button>
 			</div>
             	</div> 
         </div>
