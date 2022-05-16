@@ -16,7 +16,6 @@ h1 {
     	color: white;
     	text-align: left;
     	font-size: 1.6666666666666667vw;
-	padding-left: 20px;
 }
 
 h2 {
@@ -174,15 +173,13 @@ button:hover {
 }
 
 #div_h1{
-	width: 1200px;
+	width: 800px;
 	margin: 0 auto;
-	padding-left: 20px;
 }
 
 #div_h2{
-	width: 1200px;
+	width: 800px;
 	margin: 0 auto;
-	padding-right: 20px;
 }
 #div_gamescreen{
 	z-index: 1;
