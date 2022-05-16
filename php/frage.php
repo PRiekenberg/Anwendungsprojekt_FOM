@@ -38,10 +38,16 @@
         </div>
         <div id="div_gamescreen">
            	<div id="div_gamescreen_left">
+			<div id ="div_bild1">
+				<img id="bild1" src="../images/hacker.jpeg" alt="bild1">
+			</div>
             	</div>
             	<div id="div_gamescreen_center">
             	</div>
             	<div id="div_gamescreen_right">
+			<div id ="div_bild2">
+				<img id="bild2" src="../images/user.jpeg" alt="bild2">
+			</div>
             	</div> 
         </div>
         <div id="div_hinweis">
