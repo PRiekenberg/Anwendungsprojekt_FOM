@@ -235,25 +235,45 @@ button:hover {
 }
 
 #bild2{
-	margin-bottom: 0px;
+	margin-top: 450px;
 	margin-right: 0px;
 	width:100%;
 }
 
 #div_antwort1{
-	margin-bottom: 100px;
+	margin-top: 100px;
+	margin-left: 50px;
 }
 
 #div_antwort2{
 	margin-top: 50px;
+	margin-left: 100px;
 }
 
 #div_antwort3{
-	margin-bottom: 50px;
+	margin-top: 375px;
+	margin-left: 0px;
 }
 
 #div_antwort4{
-	margin: 0 auto;
+	margin-top: 300px;
+	margin-left: 50px;
+}
+
+#antwort1{
+	width: 300px;
+}
+
+#antwort2{
+	width: 300px;
+}
+
+#antwort3{
+	width: 300px;
+}
+
+#antwort4{
+	width: 300px;
 }
 
 #hinweis {
