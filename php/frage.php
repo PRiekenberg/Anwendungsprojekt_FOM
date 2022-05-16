@@ -54,11 +54,11 @@
 			</div>
             	</div>
             	<div id="div_gamescreen_right">
-			<div id ="div_bild2">
-				<img id="bild2" src="../images/user.jpeg" alt="bild2">
-			</div>
 			<div id ="div_antwort4">
 				<button id="button_antwort4">Antwort4<br></button>
+			</div>
+			<div id ="div_bild2">
+				<img id="bild2" src="../images/user.jpeg" alt="bild2">
 			</div>
             	</div> 
         </div>
