@@ -44,7 +44,7 @@
             	<div id="div_gamescreen_right">
                 	<button id="button_banking" onclick="set_h1()">Online Banking</button>
 	 		<form>
-                		<button id="button_passwort" formaction="/html/frage.html">Passwörter<br></button>
+                		<button id="button_passwort" formaction="/php/frage.php">Passwörter<br></button>
 			</form>
             	</div> 
         </div>
