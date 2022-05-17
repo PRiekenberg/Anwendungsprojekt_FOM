@@ -94,7 +94,6 @@
 					echo '<form>';
 					echo '</div>';
 					$counter++;
-					echo '</div';
 				}
 			}
 		?>
@@ -127,7 +126,7 @@
 		<div id ="div_bild2">
 			<img id="bild2" src="../images/user.jpeg" alt="bild2">
 		</div>
-			</div> 
+		</div> 
 	</div>
 	<div id="div_hinweis">
 		<a id ="hinweis">
