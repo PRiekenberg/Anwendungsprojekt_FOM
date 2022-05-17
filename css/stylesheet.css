@@ -76,7 +76,7 @@ input:hover {
      	color: #FFFFFF;
 }
 
-#button_logout{
+#button_logout, #button_next{
 	width: 200px;
      	height: 50px;
      	padding: 0.8em 1.8em;
@@ -93,7 +93,7 @@ input:hover {
 	border-radius: 0px;
 }
 
-#button_logout::before{
+#button_logout::before, #button_next::before{
 	content: '';
 	width: 0;
 	height: 300%;
@@ -107,11 +107,11 @@ input:hover {
 	z-index: -1;
 }
 
-#button_logout::hover::before{
+#button_logout::hover::before, #button_next::hover::before{
 	width: 105%;
 }
 
-#button_logout:hover{
+#button_logout:hover, #button_next::hover {
 	color: #FFFFFF;
 }
 
