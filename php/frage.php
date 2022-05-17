@@ -153,17 +153,19 @@
 				<input type="submit" id="button_next" value="Weiter">
 			</form>
 
-
 			<form action="/php/frage.php">
-						<input type="hidden"
-								name="scenarioid"
-								value="1">
-								<input type="hidden"
-								name="phase"
-								value="2">
-						<input type="submit" id="button_firmennetz"
-								value="Firmennetz">
-				</form>
+			<?php
+					$new_phase=$_GET['phase'] + 1;
+					echo '<input type="hidden"';
+					echo 'name="scenarioid"';
+					echo 'value="'.$_GET['scenarioid'];echo'">';
+					echo '<input type="hidden"';
+					echo 'name="phase"';
+					echo 'value="'.$new_phase; echo '">';
+				?>
+					<input type="submit" id="button_banking"
+							value="Online Banking">
+			</form>
 		</div>
     </body>
 </html> 
