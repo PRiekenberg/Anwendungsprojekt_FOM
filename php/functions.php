@@ -33,7 +33,17 @@
                                         'phase' => $phase,
                                         'scenarioid' => $scenarioid ,
                                         'username' => $username,
-                                        'password' => $password
+                                        'password' => $password,
+                                        'scenario1_phase' => "1",
+                                        'scenario1_points' => "0",
+                                        'scenario2_phase' => "1",
+                                        'scenario2_points' => "0",
+                                        'scenario3_phase' => "1",
+                                        'scenario3_points' => "0",
+                                        'scenario4_phase' => "1",
+                                        'scenario4_points' => "0",
+                                        'scenario5_phase' => "1",
+                                        'scenario5_points' => "0",
                                       ]);
   }
 

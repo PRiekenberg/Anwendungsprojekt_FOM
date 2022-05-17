@@ -185,6 +185,16 @@
 					<th>Typ</td>
 					<th>Username</td>
 					<th>Passwort</td>
+					<th>Szenario 1 Phase</td>
+					<th>Szenario 1 Punkte</td>
+					<th>Szenario 2 Phase</td>
+					<th>Szenario 2 Punkte</td>
+					<th>Szenario 3 Phase</td>
+					<th>Szenario 3 Punkte</td>
+					<th>Szenario 4 Phase</td>
+					<th>Szenario 4 Punkte</td>
+					<th>Szenario 5 Phase</td>
+					<th>Szenario 5 Punkte</td>
 				</tr>
 				</thead>
 
@@ -198,6 +208,16 @@
 						echo '<td>' . $r['type']; echo '</td>';  
 						echo '<td>' . $r['username']; echo '</td>';  
 						echo '<td>' . $r['password']; echo '</td>'; 
+						echo '<td>' . $r['scenario1_phase']; echo '</td>'; 
+						echo '<td>' . $r['scenario1_points']; echo '</td>'; 
+						echo '<td>' . $r['scenario2_phase']; echo '</td>'; 
+						echo '<td>' . $r['scenario2_points']; echo '</td>'; 
+						echo '<td>' . $r['scenario3_phase']; echo '</td>'; 
+						echo '<td>' . $r['scenario3_points']; echo '</td>'; 
+						echo '<td>' . $r['scenario4_phase']; echo '</td>'; 
+						echo '<td>' . $r['scenario4_points']; echo '</td>'; 
+						echo '<td>' . $r['scenario5_phase']; echo '</td>'; 
+						echo '<td>' . $r['scenario5_points']; echo '</td>'; 
 						echo '</tr>';
 					}
 

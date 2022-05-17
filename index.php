@@ -36,7 +36,7 @@
                 		<button id="button_firmennetz" formaction="/php/frage.php">Firmennetz</button>
 			</form>	
 			<form>
-                		<button id="button_krypto" formaction="/php/frage.php">Krypto</button>
+                		<button id="button_krypto" formaction="/php/frage.php?scenarioid=1&phase=1">Krypto</button>
 			</form>
             	</div>
             	<div id="div_gamescreen_center">
@@ -52,7 +52,7 @@
                 		<button id="button_banking" formaction="/php/frage.php">Online Banking</button>
 			</form>
 	 		<form>
-                		<button id="button_passwort" formaction="/php/frage.php?scenarioid=1?phase=1">Passwörter<br></button>
+                		<button id="button_passwort" formaction="/php/frage.php?scenarioid=5&phase=1">Passwörter<br></button>
 			</form>
             	</div> 
         </div>
