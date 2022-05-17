@@ -68,12 +68,34 @@
 
 			$counter=1;
 			foreach ($answers as $a){
-				echo '<div id ="div_antwort'.$counter; echo '">';
-				echo '<form method="post" action="frage.php">';
-				echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
-				echo '<form>';
-				echo '</div>';
-				$counter++;
+				
+				if ($counter == 1) {
+					echo '<div id ="div_antwort'.$counter; echo '">';
+					echo '<form method="post" action="frage.php">';
+					echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
+					echo '<form>';
+					echo '</div>';
+					$counter++;
+					echo '</div';
+				} if ($counter == 2 or $counter == 3) {
+					echo '<div id="div_gamescreen_center">';
+					echo '<div id ="div_antwort'.$counter; echo '">';
+					echo '<form method="post" action="frage.php">';
+					echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
+					echo '<form>';
+					echo '</div>';
+					$counter++;
+					echo '</div';
+				} if ($counter == 4) {
+					echo '<div id="div_gamescreen_right">';
+					echo '<div id ="div_antwort'.$counter; echo '">';
+					echo '<form method="post" action="frage.php">';
+					echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
+					echo '<form>';
+					echo '</div>';
+					$counter++;
+					echo '</div';
+				}
 			}
 		?>
 			<!--
