@@ -55,7 +55,11 @@
 		</form>
         </div>
         <div id = "div_h2">
-         	<h2>Einleitende Frage</h2>
+			<?php
+				foreach ($q as $q) {
+					echo '<h2>' . $q['questioncontent']; echo '</h2>';
+				}
+			?>
         </div>
         <div id="div_gamescreen">
            	<div id="div_gamescreen_left">
