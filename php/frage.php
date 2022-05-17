@@ -10,8 +10,6 @@
 	$question=queryQuestion($_GET['scenarioid'],$_GET['phase']);
 	$answers=queryAnswers($_GET['scenarioid'],$_GET['phase']);
 
-	$question=array_values($question);
-	$answers=array_values($answers);
 
 	if (isset($_POST['aw1'])) {
 		
