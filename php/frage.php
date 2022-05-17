@@ -10,6 +10,9 @@
 	$question=queryQuestion($_GET['scenarioid'],$_GET['phase']);
 	$answers=queryAnswers($_GET['scenarioid'],$_GET['phase']);
 
+	$question=array_values($question);
+	$answers=array_values($answers);
+
 	if (isset($_POST['aw1'])) {
 		
 	}
@@ -52,11 +55,9 @@
 	</div>
 	<div id = "div_h2">
 			<?php
-				//foreach ($question as $q) {
-				//	echo '<h2>' . $q['questioncontent']; echo '</h2>';
-				//}
-
-				echo '<h2>' . $question[0]['questioncontent']; echo '</h2>';
+				foreach ($question as $q) {
+					echo '<h2>' . $q['questioncontent']; echo '</h2>';
+				}
 			?>
 	</div>
 	<div id="div_gamescreen">
