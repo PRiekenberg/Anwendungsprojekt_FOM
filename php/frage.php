@@ -140,7 +140,7 @@
 		</a>
 	</div>
 	<div id="div_nextphase">
-		<form action="/php/frage.php">
+		<form action="frage.php">
 			<?php
 			$new_phase=$_GET['phase'] + 1;
 			echo '<input type="hidden"';
@@ -150,7 +150,7 @@
 			echo 'name="phase"';
 			echo 'value="'.$new_phase; echo '">';
 			?>
-			<input type="submit" id="button_passwort" value="Weiter">
+			<input type="submit" id="button_next" value="Weiter">
 		</form>
 	</div>
     </body>
