@@ -65,7 +65,7 @@
 								value="Social Engineering">
 				</form>
 				<div id="div_hacker_menu">
-									<img id="img_hacker_menu" src="images/hacker_startmenu.jpeg" alt="hacker">
+					<img id="img_hacker_menu" src="images/hacker_startmenu.jpeg" alt="hacker">
 				</div>
             </div>
             <div id="div_gamescreen_right">
