@@ -51,7 +51,7 @@
 			<form>
                 		<button id="button_banking" formaction="/php/frage.php">Online Banking</button>
 			</form>
-			<form action="/social/tracking/new/">
+			<form action="/php/frage.php">
 				<input type="hidden"
 						name="scenario"
 						value="1">
