@@ -75,7 +75,6 @@
 					echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
 					echo '<form>';
 					echo '</div>';
-					$counter++;
 					echo '</div';
 					echo '<div id="div_gamescreen_center">';
 				} if ($counter == 2 or $counter == 3) {
@@ -84,7 +83,6 @@
 					echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
 					echo '<form>';
 					echo '</div>';
-					$counter++;
 					echo '</div';
 				} if ($counter == 4) {
 					echo '<div id="div_gamescreen_right">';
@@ -93,8 +91,9 @@
 					echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
 					echo '<form>';
 					echo '</div>';
-					$counter++;
-				}
+
+				} 
+				$counter++;
 			}
 		?>
 			<!--
