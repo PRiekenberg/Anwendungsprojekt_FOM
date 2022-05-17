@@ -32,36 +32,64 @@
         </div>
         <div id="div_gamescreen">
            	<div id="div_gamescreen_left">
-			<form>
-                		<button id="button_firmennetz" formaction="/php/frage.php">Firmennetz</button>
-			</form>	
-			<form>
-                		<button id="button_krypto" formaction="/php/frage.php?scenarioid=1&phase=1" value="scenarioid=1&phase=1">Krypto</button>
-			</form>
-            	</div>
-            	<div id="div_gamescreen_center">
-			<form>
-               			<button id="button_social" formaction="/php/frage.php">Social Engineering</button>
-			</form>
-                	<div id="div_hacker_menu">
-                    		<img id="img_hacker_menu" src="images/hacker_startmenu.jpeg" alt="hacker">
-                	</div>
-            	</div>
-            	<div id="div_gamescreen_right">
-			<form>
-                		<button id="button_banking" formaction="/php/frage.php">Online Banking</button>
-			</form>
-			<form action="/php/frage.php">
-				<input type="hidden"
-						name="scenario"
-						value="1">
+				<form action="/php/frage.php">
 						<input type="hidden"
-						name="phase"
-						value="1">
-				<input type="submit" id="button_passwort"
-						value="Passwort">
-			</form>
-            	</div> 
+								name="scenarioid"
+								value="3">
+								<input type="hidden"
+								name="phase"
+								value="1">
+						<input type="submit" id="button_firmennetz"
+								value="Passwort">
+				</form>
+				<form action="/php/frage.php">
+						<input type="hidden"
+								name="scenarioid"
+								value="1">
+								<input type="hidden"
+								name="phase"
+								value="1">
+						<input type="submit" id="button_crypto"
+								value="Passwort">
+				</form>
+        	</div>
+            <div id="div_gamescreen_center">
+				<form action="/php/frage.php">
+						<input type="hidden"
+								name="scenarioid"
+								value="3">
+								<input type="hidden"
+								name="phase"
+								value="1">
+						<input type="submit" id="button_social"
+								value="Passwort">
+				</form>
+				<div id="div_hacker_menu">
+									<img id="img_hacker_menu" src="images/hacker_startmenu.jpeg" alt="hacker">
+				</div>
+            </div>
+            <div id="div_gamescreen_right">
+				<form action="/php/frage.php">
+					<input type="hidden"
+							name="scenarioid"
+							value="4">
+							<input type="hidden"
+							name="phase"
+							value="1">
+					<input type="submit" id="button_banking"
+							value="Passwort">
+				</form>
+				<form action="/php/frage.php">
+					<input type="hidden"
+							name="scenarioid"
+							value="1">
+							<input type="hidden"
+							name="phase"
+							value="1">
+					<input type="submit" id="button_passwort"
+							value="Passwort">
+				</form>
+            </div> 
         </div>
         <div id="div_hinweis">
             	<a id ="hinweis">
