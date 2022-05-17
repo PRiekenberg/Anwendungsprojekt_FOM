@@ -145,7 +145,7 @@
 			$new_phase=$_GET['phase'] + 1;
 			echo '<input type="hidden"';
 			echo 'name="scenarioid"';
-			echo 'value="5">';
+			echo 'value="'.$_GET['scenarioid'];echo'">';
 			echo '<input type="hidden"';
 			echo 'name="phase"';
 			echo 'value="'.$new_phase; echo '">';
