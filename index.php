@@ -35,10 +35,10 @@
 				<form action="/php/frage.php">
 						<input type="hidden"
 								name="scenarioid"
-								value="1">
+								value="2">
 								<input type="hidden"
 								name="phase"
-								value="2">
+								value="1">
 						<input type="submit" id="button_firmennetz"
 								value="Firmennetz">
 				</form>
