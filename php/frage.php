@@ -139,5 +139,19 @@
 			&copy Gruppe 7: Virus zum zusammenbauen
 		</a>
 	</div>
+	<div id="div_nextphase">
+		<form action="/php/frage.php">
+			<?php
+			$new_phase=$_GET['phase'] + 1;
+			echo '<input type="hidden"';
+			echo 'name="scenarioid"';
+			echo 'value="5">';
+			echo '<input type="hidden"';
+			echo 'name="phase"';
+			echo 'value="'.$new_phase; echo '">';
+			?>
+			<input type="submit" id="button_passwort" value="Weiter">
+		</form>
+	</div>
     </body>
 </html> 
