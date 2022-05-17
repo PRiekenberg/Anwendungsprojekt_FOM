@@ -84,6 +84,7 @@
 					echo '<form>';
 					echo '</div>';
 				} if ($counter == 4) {
+					echo '</div>';
 					echo '<div id="div_gamescreen_right">';
 					echo '<div id ="div_antwort'.$counter; echo '">';
 					echo '<form method="post" action="frage.php">';
