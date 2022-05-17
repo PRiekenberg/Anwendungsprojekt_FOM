@@ -26,10 +26,10 @@
 		<form>
                 	<button id="button_logout" formaction="php/logout.php">Abmelden<br></button>
 		</form>
-        </div>
-        <div id = "div_h2">
-         	<h2>Wähle ein Szenario aus:</h2>
-        </div>
+	</div>
+	<div id = "div_h2">
+		<h2>Wähle ein Szenario aus:</h2>
+	</div>
         <div id="div_gamescreen">
            	<div id="div_gamescreen_left">
 				<form action="/php/frage.php">
@@ -40,7 +40,7 @@
 								name="phase"
 								value="1">
 						<input type="submit" id="button_firmennetz"
-								value="Passwort">
+								value="Firmennetz">
 				</form>
 				<form action="/php/frage.php">
 						<input type="hidden"
@@ -50,7 +50,7 @@
 								name="phase"
 								value="1">
 						<input type="submit" id="button_crypto"
-								value="Passwort">
+								value="Krypto">
 				</form>
         	</div>
             <div id="div_gamescreen_center">
@@ -62,7 +62,7 @@
 								name="phase"
 								value="1">
 						<input type="submit" id="button_social"
-								value="Passwort">
+								value="Social Engineering">
 				</form>
 				<div id="div_hacker_menu">
 									<img id="img_hacker_menu" src="images/hacker_startmenu.jpeg" alt="hacker">
@@ -77,7 +77,7 @@
 							name="phase"
 							value="1">
 					<input type="submit" id="button_banking"
-							value="Passwort">
+							value="Online Banking">
 				</form>
 				<form action="/php/frage.php">
 					<input type="hidden"
