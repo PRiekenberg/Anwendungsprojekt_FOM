@@ -49,7 +49,7 @@
 								<input type="hidden"
 								name="phase"
 								value="1">
-						<input type="submit" id="button_crypto"
+						<input type="submit" id="button_krypto"
 								value="Krypto">
 				</form>
         	</div>
