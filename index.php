@@ -52,7 +52,7 @@
                 		<button id="button_banking" formaction="/php/frage.php">Online Banking</button>
 			</form>
 	 		<form>
-                		<button id="button_passwort" formaction="/php/frage.php">Passwörter<br></button>
+                		<button id="button_passwort" formaction="/php/frage.php?scenarioid=1?phase=1">Passwörter<br></button>
 			</form>
             	</div> 
         </div>
