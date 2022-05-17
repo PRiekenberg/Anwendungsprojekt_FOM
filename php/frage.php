@@ -87,7 +87,7 @@
 					if ($counter == 1) {
 						echo '<div id ="div_antwort'.$counter; echo '">';
 						echo '<form method="post" action="">';
-						echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
+						echo '<input type="checkbox" id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></input>';
 						echo '<form>';
 						echo '</div>';
 						echo '</div>';
