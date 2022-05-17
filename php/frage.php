@@ -56,7 +56,7 @@
         </div>
         <div id = "div_h2">
 			<?php
-				foreach ($q as $q) {
+				foreach ($question as $q) {
 					echo '<h2>' . $q['questioncontent']; echo '</h2>';
 				}
 			?>
