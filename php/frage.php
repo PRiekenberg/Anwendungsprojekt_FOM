@@ -7,6 +7,9 @@
 	} 
 	*/
 
+	$question=queryQuestion($_GET['scenarioid'],$_GET['phase']);
+	$answers=queryAnswers($_GET['scenarioid'],$_GET['phase']);
+
 	if (isset($_POST['aw1'])) {
 		$message = "wrong answer";
 		echo "<script type='text/javascript'>alert('$message');</script>";
