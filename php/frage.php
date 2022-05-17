@@ -60,28 +60,29 @@
 				<img id="bild1" src="../images/hacker.jpeg" alt="bild1">
 			</div>
 			<div id ="div_antwort1">
-				<form method="post" action="frage.php">
+				<!--<form method="post" action="frage.php">
 					<button id="button_antwort1" name="aw1">Antwort1<br></button>
-				<form>
+				<form>-->
 			</div>
             	</div>
             	<div id="div_gamescreen_center">
 			<div id ="div_antwort2">
-				<form method="post" action="frage.php">
+				<!--<form method="post" action="frage.php">
 					<button id="button_antwort2" name="aw2">Antwort2<br></button>
-				</form>
+				</form>-->
+			</div>
 			</div>
 			<div id ="div_antwort3">
-				<form method="post" action="frage.php">
+				<!--<<form method="post" action="frage.php">
 					<button id="button_antwort3" name="aw3">Antwort3<br></button>
-				</form>
+				</form>-->
 			</div>
             	</div>
             	<div id="div_gamescreen_right">
 			<div id ="div_antwort4">
-				<form method="post" action="">
+				<!--<<form method="post" action="">
 					<input id="button_antwort4" type="submit" name="aw4">Antwort4<br></input>
-				</form>
+				</form>-->
 			</div>
 			<div id ="div_bild2">
 				<img id="bild2" src="../images/user.jpeg" alt="bild2">
