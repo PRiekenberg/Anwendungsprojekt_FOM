@@ -68,7 +68,7 @@
 
 			$counter=1;
 			foreach ($answers as $a){
-				echo '<div id ="div_antwort'.$counter; echo'">';
+				echo '<div id ="div_antwort'.$counter; echo '">';
 				echo '<form method="post" action="frage.php">';
 				echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
 				echo '<form>';
