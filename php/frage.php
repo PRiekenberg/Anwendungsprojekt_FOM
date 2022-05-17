@@ -120,10 +120,10 @@
 					?>
 					<input type="hidden"
 							name="scenarioid"
-							value="<?php echo $_GET['scenarioid']; ?>">
+							value="<?php $_GET['scenarioid']; ?>">
 							<input type="hidden"
 							name="phase"
-							value="<?php echo $new_phase; ?>">
+							value="<?php $new_phase; ?>">
 					<input type="submit" id="button_next"
 							value="Weiter">
 			</form>
