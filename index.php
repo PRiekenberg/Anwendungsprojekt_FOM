@@ -51,8 +51,15 @@
 			<form>
                 		<button id="button_banking" formaction="/php/frage.php">Online Banking</button>
 			</form>
-	 		<form action="/php/frage.php">
-                		<button id="button_passwort" value="scenarioid=5&phase=1">Passwörter<br></button>
+			<form action="/social/tracking/new/">
+				<input type="hidden"
+						name="scenario"
+						value="1">
+						<input type="hidden"
+						name="phase"
+						value="1">
+				<input type="submit" 
+						value="Passwort">
 			</form>
             	</div> 
         </div>
