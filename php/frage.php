@@ -41,21 +41,21 @@
 		<form>
                 	<button id="button_menu" formaction="../index.php">Menü<br></button>
 		</form>
-        </div>
-        <div id = "div_h1">
-            	<h1>Modus</h1>
-        </div>
+    </div>
+    <div id = "div_h1">
+        <h1>Modus</h1>
+    </div>
 	<div id="div_logout">
             	<!--<a id ="logout" href="php/logout.php">Abmelden</a>-->
 		<form>
                 	<button id="button_logout" formaction="php/logout.php">Abmelden<br></button>
 		</form>
-        </div>
-        <div id = "div_h2">
-         	<h2>Einleitende Frage</h2>
-        </div>
-        <div id="div_gamescreen">
-           	<div id="div_gamescreen_left">
+    </div>
+    <div id = "div_frage">
+       	<h2>Einleitende Frage</h2>
+    </div>
+    <div id="div_gamescreen">
+       	<div id="div_gamescreen_left">
 			<div id ="div_bild1">
 				<img id="bild1" src="../images/hacker.jpeg" alt="bild1">
 			</div>
@@ -100,6 +100,7 @@
             	<a id="copyrigth">
                 	&copy Gruppe 7: Virus zum zusammenbauen
             	</a>
+		</div>
 	</div>
     </body>
 </html> 
