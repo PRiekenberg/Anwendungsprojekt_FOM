@@ -36,7 +36,7 @@ td,tr {
 	border-color: white;
 }
 
-button {
+input {
      	width: 400px;
      	height: 102px;
      	padding: 0.8em 1.8em;
@@ -54,7 +54,7 @@ button {
 }
 
 
-button::before {
+input::before {
 	content: '';
 	width: 0;
 	height: 300%;
@@ -68,11 +68,11 @@ button::before {
 	z-index: -1;
 }
 
-button:hover::before {
+input:hover::before {
      	width: 105%;
 }
 
-button:hover {
+input:hover {
      	color: #FFFFFF;
 }
 
