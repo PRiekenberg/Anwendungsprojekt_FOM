@@ -56,7 +56,7 @@
 				//	echo '<h2>' . $q['questioncontent']; echo '</h2>';
 				//}
 
-				echo '<h2>' . $question[0].['questioncontent']; echo '</h2>';
+				echo '<h2>' . $question[0]['questioncontent']; echo '</h2>';
 			?>
 	</div>
 	<div id="div_gamescreen">
