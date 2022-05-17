@@ -96,32 +96,6 @@
 					$counter++;
 				}
 			?>
-				<!--
-						<div id ="div_antwort1">
-							<form method="post" action="frage.php">
-								<button id="button_antwort1" name="aw1">Antwort1<br></button>
-							<form>
-						</div>
-							</div>
-							<div id="div_gamescreen_center">
-						<div id ="div_antwort2">
-							<form method="post" action="frage.php">
-								<button id="button_antwort2" name="aw2">Antwort2<br></button>
-							</form>
-						</div>
-						<div id ="div_antwort3">
-							<form method="post" action="frage.php">
-								<button id="button_antwort3" name="aw3">Antwort3<br></button>
-							</form>
-						</div>
-							</div>
-							<div id="div_gamescreen_right">
-						<div id ="div_antwort4">
-							<form method="post" action="">
-								<input id="button_antwort4" type="submit" name="aw4">Antwort4<br></input>
-							</form>
-						</div>
-				-->
 			<div id ="div_bild2">
 				<img id="bild2" src="../images/user.jpeg" alt="bild2">
 			</div>
@@ -140,21 +114,19 @@
 			</a>
 		</div>
 		<div id="div_nextphase">
-			<?php
+			<form action="frage.php">
+					<?php
 					$new_phase=$_GET['phase'] + 1;
-					echo 'form action="/php/frage.php">';
-					echo '<input type="hidden"';
-					echo 'name="scenarioid"';
-					echo 'value="'.$_GET['scenarioid'];echo'">';
-					echo '<input type="hidden"';
-					echo 'name="phase"';
-					echo 'value="'.$new_phase; echo '">';
-				
-					echo '<input type="submit" id="button_next"
-							value="Weiter">';
-			
-					echo '</form>';
-			?>
+					?>
+					<input type="hidden"
+							name="scenarioid"
+							value="<?php $_GET['scenarioid'] ?>">
+							<input type="hidden"
+							name="phase"
+							value="<?php $new_phase ?>">
+					<input type="submit" id="button_next"
+							value="Weiter">
+			</form>
 		</div>
     </body>
 </html> 
