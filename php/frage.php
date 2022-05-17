@@ -140,19 +140,6 @@
 			</a>
 		</div>
 		<div id="div_nextphase">
-			<form action="../php/frage.php">
-				<?php
-					$new_phase=$_GET['phase'] + 1;
-					echo '<input type="hidden"';
-					echo 'name="scenarioid"';
-					echo 'value="'.$_GET['scenarioid'];echo'">';
-					echo '<input type="hidden"';
-					echo 'name="phase"';
-					echo 'value="'.$new_phase; echo '">';
-				?>
-				<input type="submit" id="button_next" value="Weiter">
-			</form>
-
 			<form action="/php/frage.php">
 			<?php
 					$new_phase=$_GET['phase'] + 1;
@@ -163,8 +150,8 @@
 					echo 'name="phase"';
 					echo 'value="'.$new_phase; echo '">';
 				?>
-					<input type="submit" id="button_banking"
-							value="Online Banking">
+					<input type="submit" id="button_next"
+							value="Weiter">
 			</form>
 		</div>
     </body>
