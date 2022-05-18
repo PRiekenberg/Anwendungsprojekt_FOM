@@ -18,17 +18,17 @@
             $result=queryQuestion($_SESSION['scenarioid'],$_SESSION['phase']);
 
 
-            echo 'Scenarioid'.$_SESSION['scenarioid'];
+            echo 'Scenarioid: '.$_SESSION['scenarioid'];
             echo '<br><br>';
             echo 'phase'.$_SESSION['phase'];
             echo '<br><br>';
-            echo 'Antwort 1:'.$_POST['antwort1'];
+            echo 'Antwort 1: '.$_POST['antwort1'];
             echo '<br><br>';
-            echo 'Antwort 2:'.$_POST['antwort2'];
+            echo 'Antwort 2: '.$_POST['antwort2'];
             echo '<br><br>';
-            echo 'Antwort 3:'.$_POST['antwort2'];
+            echo 'Antwort 3: '.$_POST['antwort2'];
             echo '<br><br>';
-            echo 'Antwort 4:'.$_POST['antwort2'];
+            echo 'Antwort 4: '.$_POST['antwort2'];
             echo '<br><br>';
         ?>
     </body>
