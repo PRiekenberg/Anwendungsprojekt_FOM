@@ -91,7 +91,7 @@
 						echo '<input type="checkbox" value="Test"><span>'. $a['answercontent']; echo '</span>';
 						echo '</label>';
 						//echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
-						echo '<form>';
+						echo '</form>';
 						echo '</div>';
 						echo '</div>';
 						echo '<div id="div_gamescreen_center">';
@@ -102,7 +102,7 @@
 						echo '<input type="checkbox" value="Test"><span>'. $a['answercontent']; echo '</span>';
 						echo '</label>';
 						//echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
-						echo '<form>';
+						echo '</form>';
 						echo '</div>';
 					} if ($counter == 4) {
 						echo '</div>';
@@ -113,7 +113,7 @@
 						echo '<input type="checkbox" value="Test"><span>'. $a['answercontent']; echo '</span>';
 						echo '</label>';
 						//echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
-						echo '<form>';
+						echo '</form>';
 						echo '</div>';
 
 					} 
