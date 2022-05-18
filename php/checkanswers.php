@@ -14,9 +14,9 @@
     </head>
     <body>
         <?php
-            echo $_POST['antwort1'];
-            echo $_POST['antwort2'];
-            echo $_POST['antwort3'];
-            echo $_POST['antwort4'];
+            echo 'Antwort 1:'.$_POST['antwort1'];
+            echo 'Antwort 2:'.$_POST['antwort2'];
+            echo 'Antwort 3:'.$_POST['antwort2'];
+            echo 'Antwort 4:'.$_POST['antwort2'];
         ?>
     </body>
