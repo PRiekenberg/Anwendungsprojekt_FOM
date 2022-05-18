@@ -55,7 +55,7 @@
                     } else {
                         echo 'Antwort '.$counter; echo ' war falsch!';
                         echo'<br>';
-                        echo 'Hier werden 10 punkte abgezogen!';
+                        echo 'Hier werden 5 punkte abgezogen!';
                     }
                     echo '<br><br>';
                     $counter++;
@@ -66,7 +66,7 @@
               if (count($richtigeantworten) > 0) {
                   echo 'Sie haben '.count($richtigeantworten); echo ' richtige Antworten vergessen';
                   echo'<br>';
-                  echo 'Hier werden '.count($richtigeantworten);echo' * 10 punkte abgezogen!';
+                  echo 'Hier werden '.count($richtigeantworten);echo' * 5 punkte abgezogen!';
               } else {
                   echo 'Alle richtigen Antworten wurden angegeben!';
               }
