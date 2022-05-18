@@ -54,10 +54,14 @@
                         echo 'Antwort '.$counter; echo ' war richtig!';
                         echo'<br>';
                         echo 'Hier werden '.$answerpoints; echo' punkte hinzugefügt!';
+
+                        setUserPoints($_SESSION['scenarioid'],10,$_SESSION['username']);
                     } else {
                         echo 'Antwort '.$counter; echo ' war falsch!';
                         echo'<br>';
                         echo 'Hier werden 5 punkte abgezogen!';
+
+                        setUserPoints($_SESSION['scenarioid'],-5,$_SESSION['username']);
                     }
                     echo '<br><br>';
                     $counter++;
@@ -69,6 +73,8 @@
                   echo 'Sie haben '.count($richtigeantworten); echo ' richtige Antworten vergessen';
                   echo'<br>';
                   echo 'Hier werden '.count($richtigeantworten);echo' * 5 punkte abgezogen!';
+                  $punkte=count($richtigeantworten)*-5;
+                  setUserPoints($_SESSION['scenarioid'],$punkte,$_SESSION['username']);
               } else {
                   echo 'Alle richtigen Antworten wurden angegeben!';
               }
