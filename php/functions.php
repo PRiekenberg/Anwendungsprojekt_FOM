@@ -162,7 +162,7 @@
     $collection = getCollection();
     $collection->updateOne(
       [ 'username' => $username ],
-      [ '$set' => [ 'scenario'.$scenarioid.'points' => $neuepunke ]]
+      [ '$set' => [ 'scenario'.$scenarioid.'_points' => $neuepunke ]]
    );
   }
 
