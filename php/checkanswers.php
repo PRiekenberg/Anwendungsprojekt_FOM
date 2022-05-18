@@ -14,6 +14,9 @@
     </head>
     <body>
         <?php
+            $result=queryQuestion($_SESSION['scenarioid'],$_SESSION['phase']);
+            echo 'Scenarioid'.$_SESSION['scenarioid'];
+            echo 'phase'.$_SESSION['phase'];
             echo 'Antwort 1:'.$_POST['antwort1'];
             echo 'Antwort 2:'.$_POST['antwort2'];
             echo 'Antwort 3:'.$_POST['antwort2'];
