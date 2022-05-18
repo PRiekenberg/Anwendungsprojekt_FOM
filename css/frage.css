@@ -306,7 +306,7 @@ button:hover {
 	border-radius: 4px;
 	border: 1px solid #fff;
 	overflow: hidden;
-	float: left;
+	/*float: left;*/
   }
   
 .antwort label {
