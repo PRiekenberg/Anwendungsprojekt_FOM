@@ -52,13 +52,14 @@
                     }
                     echo '<br><br>';
                     $counter++;
-                
-                    if (count($richtigeantworten) > 0) {
-                        echo 'Sie haben '.count($richtigeantworten); echo ' richtige Antworten vergessen';
-                    } else {
-                        echo 'Alle richtigen Antworten wurden angegeben!';
-                    }
-                }
+                } 
+              
+              
+              if (count($richtigeantworten) > 0) {
+                  echo 'Sie haben '.count($richtigeantworten); echo ' richtige Antworten vergessen';
+              } else {
+                  echo 'Alle richtigen Antworten wurden angegeben!';
+              }
             }
         ?>
     </body>
