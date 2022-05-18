@@ -39,14 +39,13 @@
             echo 'Antwort 4: '.$_POST['antwort4'];
             echo '<br><br>';
 
-
+            $counter=1;
             foreach($_POST as $key => $value) {
-                $counter=1;
                 //prüfe ob Post Value in Array 
                 if (in_array($value, $richtigeantworten)){
-                    echo 'Antwort '.$counter; echo 'war richtig!';
+                    echo 'Antwort '.$counter; echo ' war richtig!';
                 } else {
-                    echo 'Antwort '.$counter; echo 'war falsch!';
+                    echo 'Antwort '.$counter; echo ' war falsch!';
                 }
                 echo '<br><br>';
                 $counter++;
