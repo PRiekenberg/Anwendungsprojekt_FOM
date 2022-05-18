@@ -94,7 +94,7 @@
 								echo '</label>';
 								echo '</div>';
 							} if ($counter == 4) {
-								echo '</div>';
+								//echo '</div>';
 								echo '<div id="div_gamescreen_right">';
 								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
 								echo '<label>';
