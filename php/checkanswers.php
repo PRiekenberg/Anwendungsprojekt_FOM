@@ -16,11 +16,11 @@
         <?php
             //hole alle Fragen für die Phase und das Szenario
             $result=queryRightAnswers($_SESSION['scenarioid'],$_SESSION['phase']);
+
+            //erstelle leeren Array für die richtigen Antworten
             $richtigeantworten=[];
 
             foreach ($result as $r){
-                //echo $r['answercontent'];
-                //echo '<br><br>';
                 array_push($richtigeantworten, $r['answercontent']);
             }
 
@@ -39,10 +39,12 @@
             echo 'Antwort 4: '.$_POST['antwort4'];
             echo '<br><br>';
 
+
+            echo '<h1>Auswertung:</h1>';
             $counter=1;
             foreach($_POST as $key => $value) {
                 //prüfe ob Post Value in Array 
-                if (in_array($value, $richtigeantworten)){
+                if (in_array($value, $richtigeantworten) and $value != null){
                     echo 'Antwort '.$counter; echo ' war richtig!';
                 } else {
                     echo 'Antwort '.$counter; echo ' war falsch!';
