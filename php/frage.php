@@ -46,6 +46,11 @@
 					}
 				?>
 		</div>
+		<div id = "aktuellepunktzahl">
+			<?php
+				echo '<h1>Aktuelle Punkzahl für den Benutzer '.$_SESSION['username']; echo': '.getUserPoints($_SESSION['scenarioid'],$_SESSION['username']); echo '</h1>';
+			?>
+		</div>
 		
 		<form method="post" action="checkanswers.php">
 			<div id="div_gamescreen">
