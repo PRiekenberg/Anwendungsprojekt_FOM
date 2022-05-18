@@ -47,21 +47,21 @@
 				?>
 		</div>
 		<?php
-			echo '<div id="div_nextphase">';
-				echo '<form action="/php/frage.php">';
-					$new_phase=$_GET['phase'] + 1;
-					$scenarioid= $_GET['scenarioid'];
-					echo '<input type="hidden"';
-					echo 'name="scenarioid"';
-					echo 'value="'.$scenarioid; echo'">';
-					echo '<input type="hidden"';
-					echo 'name="phase"';
-					echo 'value="'.$new_phase; echo '">';
-				
-					echo '<input type="submit" id="button_next"
-							value="Weiter">';
-					echo '</form>';
-			echo '</div>';
+	//		echo '<div id="div_nextphase">';
+	//			echo '<form action="/php/frage.php">';
+	//				$new_phase=$_GET['phase'] + 1;
+	//				$scenarioid= $_GET['scenarioid'];
+	//				echo '<input type="hidden"';
+	//				echo 'name="scenarioid"';
+	//				echo 'value="'.$scenarioid; echo'">';
+	//				echo '<input type="hidden"';
+	//				echo 'name="phase"';
+	//				echo 'value="'.$new_phase; echo '">';
+	//			
+	//				echo '<input type="submit" id="button_next"
+	//						value="Weiter">';
+	//				echo '</form>';
+	//		echo '</div>';
 
 			?>
 		<form method="post" action="checkanswers.php">
