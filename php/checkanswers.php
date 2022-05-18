@@ -16,11 +16,14 @@
         <?php
             //hole alle Fragen für die Phase und das Szenario
             $result=queryRightAnswers($_SESSION['scenarioid'],$_SESSION['phase']);
-            echo '<h1>Richtige Antworten für diese Frage:</h1>';
+            $richtigeantworten=[];
+
             foreach ($result as $r){
-                echo $r['answercontent'];
-                echo '<br><br>';
+                //echo $r['answercontent'];
+                //echo '<br><br>';
+                array_push($richtigeantworten, $r['answercontent']);
             }
+
 
             echo '<h1>Gegebene Antworten:</h1>';
             echo 'Scenarioid: '.$_SESSION['scenarioid'];
@@ -35,5 +38,16 @@
             echo '<br><br>';
             echo 'Antwort 4: '.$_POST['antwort4'];
             echo '<br><br>';
+
+
+            foreach($_POST as $key => $value) {
+                //echo "POST parameter '$key' has '$value'";
+                $counter=1;
+                if (in_array($value, $richtigeantworten)){
+                    echo 'Antwort '.$counter; echo 'war richtig!';
+                } else {
+                    echo 'Antwort '.$counter; echo 'war falsch!';
+                }
+              }
         ?>
     </body>
