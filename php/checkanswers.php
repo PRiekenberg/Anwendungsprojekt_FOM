@@ -25,9 +25,6 @@
                 array_push($richtigeantworten, $r['answercontent']);
             }
 
-            echo '<h1>Aktuelle Punkte Benutzer</h1>';
-            echo getUserPoints($_SESSION['scenarioid'],$_SESSION['username']);
-
             echo '<h1>Gegebene Antworten:</h1>';
             echo 'Antwort 1: '.$_POST['antwort1'];
             echo '<br><br>';
@@ -79,6 +76,9 @@
                   echo 'Alle richtigen Antworten wurden angegeben!';
               }
             
+            echo '<h1>Aktuelle Punkte Benutzer</h1>';
+            echo getUserPoints($_SESSION['scenarioid'],$_SESSION['username']);
+
         ?>
         <?php
 			echo '<div id="div_nextphase">';
