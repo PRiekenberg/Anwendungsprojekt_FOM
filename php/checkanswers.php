@@ -17,7 +17,6 @@
 
             $gegebeneantworten=[$_POST['antwort1'],$_POST['antwort2'],$_POST['antwort3'],$_POST['antwort4']];
             arsort($gegebeneantworten);
-            var_dump($gegebeneantworten);
 
             //hole alle Fragen für die Phase und das Szenario
             $result=queryRightAnswers($_SESSION['scenarioid'],$_SESSION['phase']);
@@ -26,16 +25,6 @@
             foreach ($result as $r){
                 array_push($richtigeantworten, $r['answercontent']);
             }
-
-
-            $result=queryWrongAnswers($_SESSION['scenarioid'],$_SESSION['phase']);
-            //erstelle leeren Array für die richtigen Antworten
-            $falscheantworten=[];
-            foreach ($result as $r){
-                array_push($falscheantworten, $r['answercontent']);
-            }
-
-            
 
 
             echo '<h1>Gegebene Antworten:</h1>';
@@ -53,15 +42,18 @@
             $counter=1;
             foreach($gegebeneantworten as $antwort) {
                 //prüfe ob gegebene Antwort in Array mit richtigen Antworten
-                if (($key = array_search($antwort, $richtigeantworten)) !== false) {
-                    unset($richtigeantworten[$key]);
-                    echo 'Antwort '.$counter; echo ' war richtig!';
-                } else {
-                    echo 'Antwort '.$counter; echo ' war falsch!';
-                }
-                echo '<br><br>';
-                $counter++;
-              } 
+
+                if ($antwort != null) {
+                    if (($key = array_search($antwort, $richtigeantworten)) !== false) {
+                        unset($richtigeantworten[$key]);
+                        echo 'Antwort '.$counter; echo ' war richtig!';
+                    } else {
+                        echo 'Antwort '.$counter; echo ' war falsch!';
+                    }
+                    echo '<br><br>';
+                    $counter++;
+                } 
+            }
               
               
               if (count($richtigeantworten) > 0) {
