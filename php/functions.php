@@ -115,6 +115,12 @@
     return $result;
   }
 
+  function queryWrongAnswers($scenarioid, $phase) {
+    $collection = getCollection();
+    $result = $collection->find( [ 'scenarioid' => $scenarioid, 'phase' => $phase, 'type' => 'answer', 'answerstate' => 'true' ] );
+    return $result;
+  }
+
   function checkCredentials($username, $password){
     $collection = getCollection();
     $result = $collection->find( [ 'username' => $username, 'type' => 'user' ] );
