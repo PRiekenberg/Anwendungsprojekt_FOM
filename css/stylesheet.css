@@ -279,4 +279,14 @@ input:hover {
 	  color: #ffffff;
 	  text-shadow: 0 0  6px rgba(0, 0, 0, 0.8);
   }
+
+  /* selects all of the text within the input element and changes the color of the text */
+.antwort label input + span{color: #fff;}
+
+
+/* This will declare how a selected input will look giving generic properties */
+.antwort input:checked + span {
+    color: #ffffff;
+    text-shadow: 0 0  6px rgba(0, 0, 0, 0.8);
+}
   
