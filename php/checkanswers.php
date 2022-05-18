@@ -26,9 +26,9 @@
             echo '<br><br>';
             echo 'Antwort 2: '.$_POST['antwort2'];
             echo '<br><br>';
-            echo 'Antwort 3: '.$_POST['antwort2'];
+            echo 'Antwort 3: '.$_POST['antwort3'];
             echo '<br><br>';
-            echo 'Antwort 4: '.$_POST['antwort2'];
+            echo 'Antwort 4: '.$_POST['antwort4'];
             echo '<br><br>';
         ?>
     </body>
