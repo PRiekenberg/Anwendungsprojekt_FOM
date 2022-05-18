@@ -12,7 +12,7 @@
 
 
 	if (isset($_POST['checkbutton'])) {
-		queryAnwerstate($_GET['scenarioid'],$_GET['phase'],$_POST[])
+		queryAnwerstate($_GET['scenarioid'],$_GET['phase'],$_POST['antwort1'])
 	}
 
 ?>
