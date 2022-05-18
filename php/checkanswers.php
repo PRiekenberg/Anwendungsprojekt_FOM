@@ -43,7 +43,8 @@
                 //prüfe ob gegebene Antwort in Array mit richtigen Antworten
 
                 if ($antwort != null) {
-
+                    
+                    //punkte für die aktuelle Antwort abrufen
                     $answerpoints = queryAnswersPoints($_SESSION['scenarioid'],$_SESSION['phase'],$antwort);
 
                     if (($key = array_search($antwort, $richtigeantworten)) !== false) {
@@ -54,7 +55,7 @@
                     } else {
                         echo 'Antwort '.$counter; echo ' war falsch!';
                         echo'<br>';
-                        echo 'Hier werden '.$answerpoints; echo' punkte abgezogen!';
+                        echo 'Hier werden 10 punkte abgezogen!';
                     }
                     echo '<br><br>';
                     $counter++;
