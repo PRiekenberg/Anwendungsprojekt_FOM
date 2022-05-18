@@ -12,7 +12,7 @@
 
 
 	if (isset($_POST['checkbutton'])) {
-		
+		queryAnwerstate($_GET['scenarioid'],$_GET['phase'],$_POST[])
 	}
 
 ?>
@@ -82,7 +82,7 @@
 							if ($counter == 1) {
 								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
 								echo '<label>';
-								echo '<input type="checkbox" value="'. $a['answercontent']; echo'"><span>'. $a['answercontent']; echo '</span>';
+								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
 								echo '</label>';
 								echo '</div>';
 								echo '</div>';
@@ -90,7 +90,7 @@
 							} if ($counter == 2 or $counter == 3) {
 								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
 								echo '<label>';
-								echo '<input type="checkbox" value="'. $a['answercontent']; echo'"><span>'. $a['answercontent']; echo '</span>';
+								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
 								echo '</label>';
 								echo '</div>';
 							} if ($counter == 4) {
@@ -98,7 +98,7 @@
 								echo '<div id="div_gamescreen_right">';
 								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
 								echo '<label>';
-								echo '<input type="checkbox" value="'. $a['answercontent']; echo'"><span>'. $a['answercontent']; echo '</span>';
+								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
 								echo '</label>';
 								echo '</div>';
 							} 

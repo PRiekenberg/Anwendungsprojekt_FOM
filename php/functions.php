@@ -109,6 +109,12 @@
     return $result;
   }
 
+  function queryAnwerstate ($scenarioid, $phase, $answercontent) {
+    $collection = getCollection();
+    $result = $collection->find( [ 'scenarioid' => $scenarioid, 'phase' => $phase, 'type' => 'answer', 'answercontent' => $answercontent ] );
+    return $result;
+  }
+
   function checkCredentials($username, $password){
     $collection = getCollection();
     $result = $collection->find( [ 'username' => $username, 'type' => 'user' ] );
