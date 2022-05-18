@@ -48,6 +48,7 @@
                 } else {
                     echo 'Antwort '.$counter; echo 'war falsch!';
                 }
+                echo '<br><br>';
                 $counter++;
               }
         ?>
