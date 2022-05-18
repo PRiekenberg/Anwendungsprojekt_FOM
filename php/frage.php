@@ -1,11 +1,11 @@
 <?php
 	require_once 'functions.php';
 	session_start();
-	/*
+	
 	if (!isset($_SESSION['username'])) {
-		die("<p>Kein Zugang<br/><a href='php/login.php'>Zum Login</a></p>");
+		die("<p>Kein Zugang<br/><a href='/php/login.php'>Zum Login</a></p>");
 	} 
-	*/
+	
 
 	$question=queryQuestion($_GET['scenarioid'],$_GET['phase']);
 	$answers=queryAnswers($_GET['scenarioid'],$_GET['phase']);
