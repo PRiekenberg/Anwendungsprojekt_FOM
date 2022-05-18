@@ -115,10 +115,13 @@
     return $result;
   }
 
-  function queryWrongAnswers($scenarioid, $phase) {
+  function queryAnswersPoints($scenarioid, $phase, $answercontent) {
     $collection = getCollection();
-    $result = $collection->find( [ 'scenarioid' => $scenarioid, 'phase' => $phase, 'type' => 'answer', 'answerstate' => 'true' ] );
-    return $result;
+    $result = $collection->find( [ 'scenarioid' => $scenarioid, 'phase' => $phase, 'type' => 'answer', 'answercontent' => $answercontent ] );
+    foreach ($result as $r) {
+      $punkte=$r['answerpoints'];
+    }
+    return intval($punkte);
   }
 
   function checkCredentials($username, $password){
