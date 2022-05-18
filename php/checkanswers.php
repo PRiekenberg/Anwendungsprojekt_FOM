@@ -15,9 +15,13 @@
     <body>
         <?php
             //hole alle Fragen für die Phase und das Szenario
-            $result=queryQuestion($_SESSION['scenarioid'],$_SESSION['phase']);
+            $result=queryRightAnswers($_SESSION['scenarioid'],$_SESSION['phase']);
+            echo '<h1>Richtige Antworten für diese Frage:</h1>';
+            foreach ($result as $r){
+                echo $r['answercontent'];
+            }
 
-
+            echo '<h1>Gegebene Antworten:</h1>';
             echo 'Scenarioid: '.$_SESSION['scenarioid'];
             echo '<br><br>';
             echo 'phase'.$_SESSION['phase'];

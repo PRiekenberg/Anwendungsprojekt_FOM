@@ -109,9 +109,9 @@
     return $result;
   }
 
-  function queryAnwerstate ($scenarioid, $phase, $answercontent) {
+  function queryRightAnswers($scenarioid, $phase) {
     $collection = getCollection();
-    $result = $collection->find( [ 'scenarioid' => $scenarioid, 'phase' => $phase, 'type' => 'answer', 'answercontent' => $answercontent ] );
+    $result = $collection->find( [ 'scenarioid' => $scenarioid, 'phase' => $phase, 'type' => 'answer', 'answerstate' => 'true' ] );
     return $result;
   }
 
