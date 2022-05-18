@@ -14,8 +14,9 @@
     </head>
     <body>
         <?php
-        echo $_POST['scenarioid'];
-        echo $_POST['phase'];
-        echo $_POST['answercontent'];
+            echo $_POST['antwort1'];
+            echo $_POST['antwort2'];
+            echo $_POST['antwort3'];
+            echo $_POST['antwort4'];
         ?>
     </body>
