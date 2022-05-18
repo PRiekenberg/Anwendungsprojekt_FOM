@@ -47,8 +47,10 @@
                     if (($key = array_search($antwort, $richtigeantworten)) !== false) {
                         unset($richtigeantworten[$key]);
                         echo 'Antwort '.$counter; echo ' war richtig!';
+                        echo 'Hier werden 10 punkte hinzugefügt!';
                     } else {
                         echo 'Antwort '.$counter; echo ' war falsch!';
+                        echo 'Hier werden 10 punkte abgezogen!';
                     }
                     echo '<br><br>';
                     $counter++;
@@ -60,6 +62,7 @@
                   echo 'Sie haben '.count($richtigeantworten); echo ' richtige Antworten vergessen';
               } else {
                   echo 'Alle richtigen Antworten wurden angegeben!';
+                  echo 'Hier werden'.count($richtigeantworten);echo' 10 punkte abgezogen!';
               }
             
         ?>
