@@ -299,6 +299,7 @@ button:hover {
        		width: 100%;
      	}
 }
+
 .antwort{
 	margin: 4px;
 	background-color: #104068;
@@ -308,28 +309,28 @@ button:hover {
 	float: left;
   }
   
-  .antwort label {
+.antwort label {
 	float: left; line-height: 3.0em;
 	width: 8.0em; height: 3.0em;
-  }
+}
   
-  .antwort label span {
+.antwort label span {
 	text-align: center;
 	padding: 3px 0;
 	display: block;
-  }
+}
   
-  .antwort label input {
+.antwort label input {
 	position: absolute;
 	display: none;
 	color: #fff !important;
-  }
+}
   /* selects all of the text within the input element and changes the color of the text */
-  .antwort label input + span{color: #fff;}
+.antwort label input + span{color: #fff;}
   
   
   /* This will declare how a selected input will look giving generic properties */
-  .antwort input:checked + span {
+.antwort input:checked + span {
 	  color: #ffffff;
 	  text-shadow: 0 0  6px rgba(0, 0, 0, 0.8);
-  }
+ }
