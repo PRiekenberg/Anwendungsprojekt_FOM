@@ -58,70 +58,74 @@
 					}
 				?>
 		</div>
+		<?php
+			echo '<div id="div_nextphase">';
+				echo '<form action="/php/frage.php">';
+					$new_phase=$_GET['phase'] + 1;
+					$scenarioid= $_GET['scenarioid'];
+					echo '<input type="hidden"';
+					echo 'name="scenarioid"';
+					echo 'value="'.$scenarioid; echo'">';
+					echo '<input type="hidden"';
+					echo 'name="phase"';
+					echo 'value="'.$new_phase; echo '">';
+				
+					echo '<input type="submit" id="button_next"
+							value="Weiter">';
+					echo '</form>';
+			echo '</div>';
+
+			?>
 		<div id="div_gamescreen">
 			<div id="div_gamescreen_left">
 			<div id ="div_bild1">
 				<img id="bild1" src="../images/hacker.jpeg" alt="bild1">
 			</div>
 
+			
 			<?php
-				echo '<div id="div_nextphase">';
-					echo '<form action="/php/frage.php">';
-						$new_phase=$_GET['phase'] + 1;
-						$scenarioid= $_GET['scenarioid'];
-						echo '<input type="hidden"';
-						echo 'name="scenarioid"';
-						echo 'value="'.$scenarioid; echo'">';
-						echo '<input type="hidden"';
-						echo 'name="phase"';
-						echo 'value="'.$new_phase; echo '">';
-					
-						echo '<input type="submit" id="button_next"
-								value="Weiter">';
-						echo '</form>';
-				echo '</div>';
-				echo '<form method="post" action="">';
-				$counter=1;
-				foreach ($answers as $a){
-					
-					if ($counter == 1) {
-						echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
-						//echo '<form method="post" action="">';
-						echo '<label>';
-						echo '<input type="checkbox" value="Test"><span>'. $a['answercontent']; echo '</span>';
-						echo '</label>';
-						//echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
-						//echo '</form>';
-						echo '</div>';
-						echo '</div>';
-						echo '<div id="div_gamescreen_center">';
-					} if ($counter == 2 or $counter == 3) {
-						echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
-						//echo '<form method="post" action="">';
-						echo '<label>';
-						echo '<input type="checkbox" value="Test"><span>'. $a['answercontent']; echo '</span>';
-						echo '</label>';
-						//echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
-						//echo '</form>';
-						echo '</div>';
-					} if ($counter == 4) {
-						echo '</div>';
-						echo '<div id="div_gamescreen_right">';
-						echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
-						//echo '<form method="post" action="">';
-						echo '<label>';
-						echo '<input type="checkbox" value="Test"><span>'. $a['answercontent']; echo '</span>';
-						echo '</label>';
-						//echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
-						//echo '</form>';
-						echo '</div>';
-
-					} 
-					$counter++;
-				}
-				echo '</form>';
+			echo '<form method="post" action="">';
+			$counter=1;
+			foreach ($answers as $a){
 				
-			?>
+				if ($counter == 1) {
+					echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
+					//echo '<form method="post" action="">';
+					echo '<label>';
+					echo '<input type="checkbox" value="Test"><span>'. $a['answercontent']; echo '</span>';
+					echo '</label>';
+					//echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
+					//echo '</form>';
+					echo '</div>';
+					echo '</div>';
+					echo '<div id="div_gamescreen_center">';
+				} if ($counter == 2 or $counter == 3) {
+					echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
+					//echo '<form method="post" action="">';
+					echo '<label>';
+					echo '<input type="checkbox" value="Test"><span>'. $a['answercontent']; echo '</span>';
+					echo '</label>';
+					//echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
+					//echo '</form>';
+					echo '</div>';
+				} if ($counter == 4) {
+					echo '</div>';
+					echo '<div id="div_gamescreen_right">';
+					echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
+					//echo '<form method="post" action="">';
+					echo '<label>';
+					echo '<input type="checkbox" value="Test"><span>'. $a['answercontent']; echo '</span>';
+					echo '</label>';
+					//echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
+					//echo '</form>';
+					echo '</div>';
+
+				} 
+				$counter++;
+			}
+			echo '</form>';
+			
+		?>
 			<div id ="div_bild2">
 				<img id="bild2" src="../images/user.jpeg" alt="bild2">
 			</div>
