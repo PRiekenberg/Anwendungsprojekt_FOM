@@ -72,8 +72,8 @@
         <?php
 			echo '<div id="div_nextphase">';
 				echo '<form action="/php/frage.php">';
-					$new_phase=$_GET['phase'] + 1;
-					$scenarioid= $_GET['scenarioid'];
+					$new_phase=$_SESSION['phase'] + 1;
+					$scenarioid= $_SESSION['scenarioid'];
 					echo '<input type="hidden"';
 					echo 'name="scenarioid"';
 					echo 'value="'.$scenarioid; echo'">';
