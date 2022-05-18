@@ -53,6 +53,7 @@
                     echo '<br><br>';
                     $counter++;
                 } 
+            }
               
               
               if (count($richtigeantworten) > 0) {
@@ -60,6 +61,6 @@
               } else {
                   echo 'Alle richtigen Antworten wurden angegeben!';
               }
-            }
+            
         ?>
     </body>
