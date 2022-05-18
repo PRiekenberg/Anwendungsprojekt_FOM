@@ -21,6 +21,7 @@
             $result=queryRightAnswers($_SESSION['scenarioid'],$_SESSION['phase']);
             //erstelle leeren Array für die richtigen Antworten
             $richtigeantworten=[];
+            //schreibe richtige Antworten in den Array
             foreach ($result as $r){
                 array_push($richtigeantworten, $r['answercontent']);
             }
