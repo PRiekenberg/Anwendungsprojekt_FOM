@@ -120,6 +120,9 @@
 						<img id="bild2" src="../images/user.jpeg" alt="bild2">
 					</div>
 			</div> 
+		<div id="button_checkantworten">
+			<input name="checkbutton" id="checkbutton" type="submit" value="Antworten prüfen"></input>
+		</div>
 		</form>
 		</div>
 		<div id="div_hinweis">
