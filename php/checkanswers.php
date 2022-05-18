@@ -47,7 +47,6 @@
                 //prüfe ob Post Value in Array 
                 if (in_array($antwort, $richtigeantworten)){
                     echo 'Antwort '.$counter; echo ' war richtig!';
-                    unset($richtigeantworten)
                 } else {
                     echo 'Antwort '.$counter; echo ' war falsch!';
                 }
