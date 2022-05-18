@@ -19,6 +19,7 @@
             echo '<h1>Richtige Antworten für diese Frage:</h1>';
             foreach ($result as $r){
                 echo $r['answercontent'];
+                echo '<br><br>';
             }
 
             echo '<h1>Gegebene Antworten:</h1>';
