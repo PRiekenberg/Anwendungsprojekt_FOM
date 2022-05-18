@@ -11,17 +11,8 @@
 	$answers=queryAnswers($_GET['scenarioid'],$_GET['phase']);
 
 
-	if (isset($_POST['aw1'])) {
+	if (isset($_POST['checkbutton'])) {
 		
-	}
-	if (isset($_POST['aw2'])) {
-		
-	}
-	if (isset($_POST['aw3'])) {
-		
-	}
-	if (isset($_POST['aw4'])) {
-	
 	}
 
 ?>
