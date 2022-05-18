@@ -115,7 +115,7 @@
 				<input name="checkbutton" id="checkbutton" type="submit" value="Antworten prüfen"></input>
 			</div>
 		</form>
-		</div>
+		
 		<div id="div_hinweis">
 			<a id ="hinweis">
 				Hinweis!
