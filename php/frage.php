@@ -10,11 +10,6 @@
 	$question=queryQuestion($_GET['scenarioid'],$_GET['phase']);
 	$answers=queryAnswers($_GET['scenarioid'],$_GET['phase']);
 
-
-	if (isset($_POST['checkbutton'])) {
-		$result=queryAnwerstate($_GET['scenarioid'],$_GET['phase'],$_POST['antwort1']);
-	}
-
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +62,7 @@
 			echo '</div>';
 
 			?>
-		<form method="post" action="">
+		<form method="post" action="checkanswers.php">
 			<div id="div_gamescreen">
 				<div id="div_gamescreen_left">
 					<div id ="div_bild1">
