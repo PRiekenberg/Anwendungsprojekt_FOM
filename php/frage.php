@@ -83,7 +83,7 @@
 			</div>
 
 			
-			<?php
+		<?php
 			echo '<form method="post" action="">';
 			$counter=1;
 			foreach ($answers as $a){
