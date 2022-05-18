@@ -45,13 +45,18 @@
             $counter=1;
             foreach($gegebeneantworten as $antwort) {
                 //prüfe ob Post Value in Array 
-                if (in_array($antwort, $richtigeantworten)){
+                if (($key = array_search($antwort, $richtigeantworten)) !== false) {
+                    unset($richtigeantworten[$key]);
                     echo 'Antwort '.$counter; echo ' war richtig!';
                 } else {
                     echo 'Antwort '.$counter; echo ' war falsch!';
                 }
                 echo '<br><br>';
                 $counter++;
+              } if (count($richtigeantworten) > 0) {
+                  echo 'Sie haben '.count($richtigeantworten); echo ' richtige Antworten vergessen';
+              } else {
+                  echo 'Alle richtigen Antworten wurden angegeben!';
               }
         ?>
     </body>
