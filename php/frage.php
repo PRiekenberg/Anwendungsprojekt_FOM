@@ -88,7 +88,7 @@
 						echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
 						echo '<form method="post" action="">';
 						echo '<label>';
-						echo '<input class="antwort" type="checkbox" value="Test"><span>'. $a['answercontent']; echo '</span>';
+						echo '<input type="checkbox" value="Test"><span>'. $a['answercontent']; echo '</span>';
 						echo '</label>';
 						//echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
 						echo '<form>';
@@ -99,7 +99,7 @@
 						echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
 						echo '<form method="post" action="">';
 						echo '<label>';
-						echo '<input class="antwort" type="checkbox" value="Test"><span>'. $a['answercontent']; echo '</span>';
+						echo '<input type="checkbox" value="Test"><span>'. $a['answercontent']; echo '</span>';
 						echo '</label>';
 						//echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
 						echo '<form>';
@@ -110,7 +110,7 @@
 						echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
 						echo '<form method="post" action="">';
 						echo '<label>';
-						echo '<input class="antwort" type="checkbox" value="Test"><span>'. $a['answercontent']; echo '</span>';
+						echo '<input type="checkbox" value="Test"><span>'. $a['answercontent']; echo '</span>';
 						echo '</label>';
 						//echo '<button id="button_antwort'.$counter; echo '" name="aw'.$counter; echo '">'. $a['answercontent']; echo '<br></button>';
 						echo '<form>';
