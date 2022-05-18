@@ -85,6 +85,38 @@
     return $result;
   }
 
+  function getUserPoints($scenarioid,$username){
+    $collection = getCollection();
+    $result = $collection->find( [ 'username' => $username, 'type' => 'user' ] );
+    switch ($scenarioid) {
+      case "1":
+        foreach ($result as $r) {
+          return intval($r['scenario1_points']);
+        }
+        break;
+      case "2":
+        foreach ($result as $r) {
+          return intval($r['scenario2_points']);
+        }
+        break;
+      case "3":
+        foreach ($result as $r) {
+          return intval($r['scenario3_points']);
+        }
+        break;
+      case "4":
+        foreach ($result as $r) {
+          return intval($r['scenario4_points']);
+        }
+        break;
+      case "5":
+        foreach ($result as $r) {
+          return intval($r['scenario5_points']);
+        }
+        break;
+    }
+  }
+
   // Delete all documents in collection
   function deleteallDocuments() {
     $collection = getCollection(); 
@@ -122,6 +154,16 @@
       $punkte=$r['answerpoints'];
     }
     return intval($punkte);
+  }
+
+  function setUserPoints($scenarioid,$points,$username){
+    $aktuellepunkte=getUserPoints($scenarioid,$username);
+    $neuepunke=$aktuellepunkte+$points;
+    $collection = getCollection();
+    $collection->updateOne(
+      [ 'username' => $username ],
+      [ '$set' => [ 'scenario'.$scenarioid.'points' => $neuepunke ]]
+   );
   }
 
   function checkCredentials($username, $password){
