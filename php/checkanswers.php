@@ -19,6 +19,7 @@
 
             //erstelle leeren Array für die richtigen Antworten
             $richtigeantworten=[];
+            $gegebeneantworten=[$_POST['antwort1'],$_POST['antwort2'],$_POST['antwort3'],$_POST['antwort4']];
 
             foreach ($result as $r){
                 array_push($richtigeantworten, $r['answercontent']);
@@ -42,9 +43,9 @@
 
             echo '<h1>Auswertung:</h1>';
             $counter=1;
-            foreach($_POST as $key => $value) {
+            foreach($gegebeneantworten as $antwort) {
                 //prüfe ob Post Value in Array 
-                if (in_array($value, $richtigeantworten) and $value != null){
+                if (in_array($antwort, $richtigeantworten)){
                     echo 'Antwort '.$counter; echo ' war richtig!';
                 } else {
                     echo 'Antwort '.$counter; echo ' war falsch!';
