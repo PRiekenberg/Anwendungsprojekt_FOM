@@ -62,10 +62,10 @@
               
               if (count($richtigeantworten) > 0) {
                   echo 'Sie haben '.count($richtigeantworten); echo ' richtige Antworten vergessen';
-              } else {
-                  echo 'Alle richtigen Antworten wurden angegeben!';
                   echo'<br>';
                   echo 'Hier werden '.count($richtigeantworten);echo' * 10 punkte abgezogen!';
+              } else {
+                  echo 'Alle richtigen Antworten wurden angegeben!';
               }
             
         ?>
