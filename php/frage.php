@@ -76,6 +76,7 @@
 			echo '</div>';
 
 			?>
+		<form method="post" action="">
 		<div id="div_gamescreen">
 			<div id="div_gamescreen_left">
 			<div id ="div_bild1">
@@ -84,7 +85,6 @@
 
 			
 		<?php
-			echo '<form method="post" action="">';
 			$counter=1;
 			foreach ($answers as $a){
 				
@@ -123,13 +123,13 @@
 				} 
 				$counter++;
 			}
-			echo '</form>';
 			
 		?>
 			<div id ="div_bild2">
 				<img id="bild2" src="../images/user.jpeg" alt="bild2">
 			</div>
 			</div> 
+		</form>
 		</div>
 		<div id="div_hinweis">
 			<a id ="hinweis">
