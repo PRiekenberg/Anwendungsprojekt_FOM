@@ -301,17 +301,19 @@ button:hover {
 }
 
 .antwort{
-	margin: 4px;
-	background-color: #104068;
+	/*margin: 4px;*/
+	background-color: #0c1218;
 	border-radius: 4px;
 	border: 1px solid #fff;
 	overflow: hidden;
-	float: left;
+	/*float: left;*/
   }
   
 .antwort label {
-	float: left; line-height: 3.0em;
-	width: 8.0em; height: 3.0em;
+	float: left;
+	line-height: 3.0em;
+	width: 8.0em;
+	height: 3.0em;
 }
   
 .antwort label span {
