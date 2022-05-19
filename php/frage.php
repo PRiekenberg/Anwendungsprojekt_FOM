@@ -16,7 +16,15 @@
 
 	//wenn keine Fragen mehr im Szenario vorhanden sind
 	if ($question -> isDead()){
-		die ("Es sind keine Fragen in dem Szenario mehr vorhanden");
+		die ('
+		<div align="center">
+		<h1>Es sind keine Fragen in dem Szenario mehr vorhanden</h1>
+		<br><br>
+		<form>
+                	<button id="button_homescreen" formaction="/index.php">Zurück zur Startseite<br></button>
+		</form>
+		</div>
+		');
 	}
 
 ?>
