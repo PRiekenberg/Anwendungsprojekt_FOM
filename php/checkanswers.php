@@ -31,6 +31,7 @@
                 array_push($richtigeantworten, $r['answercontent']);
             }
 
+            $fehlergemacht = 0;
 
             echo '<h1>Auswertung:</h1>';
             foreach($gegebeneantworten as $antwort) {
@@ -52,6 +53,7 @@
                         echo 'Antwort "'.$antwort; echo '" war falsch!';
                         echo'<br>';
                         echo 'Hier werden 5 punkte abgezogen!';
+                        $fehlergemacht=1;
 
                         setUserPoints($_SESSION['scenarioid'],-5,$_SESSION['username']);
                     }
@@ -82,7 +84,9 @@
 							value="Nochmal probieren">';
 					echo '</form>';
 			      echo '</div>';
-              } else {
+              } 
+              
+              if ($richtigeantworten == 0 and $fehlergemacht == 0) {
                   echo 'Alle richtigen Antworten wurden angegeben!';
 
                   echo '<div id="div_nextphase">';
