@@ -88,7 +88,7 @@
 
               echo $fehlergemacht;
               // alle richtigen Antworten waren dabei aber es wurden auch falsche angekreuzt
-              if ($richtigeantworten == 0 and $fehlergemacht == 1) {
+              if (count($richtigeantworten) == 0 and $fehlergemacht == 1) {
                 echo 'Alle richtigen antworten wurden angegeben, aber es waren auch falsche dabei!';
 
                 echo '<div id="div_tryagain">';
@@ -109,7 +109,7 @@
               }
               
               // alle richtigen Antworten waren dabei und es wurden keine falschen angekreuzt
-              if ($richtigeantworten == 0 and $fehlergemacht == 0) {
+              if (count($richtigeantworten) == 0 and $fehlergemacht == 0) {
                   echo 'Alles richtig!';
 
                   echo '<div id="div_nextphase">';
