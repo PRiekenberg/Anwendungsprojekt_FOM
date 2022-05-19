@@ -73,7 +73,6 @@
         <?php
 
               if ($count($richtigeantworten) > 0) {
-
                 echo '<div id="div_tryagain">';
 				echo '<form action="/php/frage.php">';
 					$new_phase = $_SESSION['phase'];
