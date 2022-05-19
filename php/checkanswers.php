@@ -71,23 +71,10 @@
 
         ?>
         <?php
-			echo '<div id="div_nextphase">';
-				echo '<form action="/php/frage.php">';
-					$new_phase = $_SESSION['phase'] + 1;
-					$scenarioid = $_SESSION['scenarioid'];
-					echo '<input type="hidden"';
-					echo 'name="scenarioid"';
-					echo 'value="'.$scenarioid; echo'">';
-					echo '<input type="hidden"';
-					echo 'name="phase"';
-					echo 'value="'.$new_phase; echo '">';
-				
-					echo '<input type="submit" id="button_next"
-							value="Weiter zur nächsten Frage">';
-					echo '</form>';
-			echo '</div>';
 
-            echo '<div id="div_tryagain">';
+              if ($richtigeantworten > 0) {
+
+                echo '<div id="div_tryagain">';
 				echo '<form action="/php/frage.php">';
 					$new_phase = $_SESSION['phase'];
 					$scenarioid = $_SESSION['scenarioid'];
@@ -101,7 +88,25 @@
 					echo '<input type="submit" id="button_next"
 							value="Nochmal probieren">';
 					echo '</form>';
-			echo '</div>';
+			    echo '</div>';
+              } else {
+                echo '<div id="div_nextphase">';
+				echo '<form action="/php/frage.php">';
+					$new_phase = $_SESSION['phase'] + 1;
+					$scenarioid = $_SESSION['scenarioid'];
+					echo '<input type="hidden"';
+					echo 'name="scenarioid"';
+					echo 'value="'.$scenarioid; echo'">';
+					echo '<input type="hidden"';
+					echo 'name="phase"';
+					echo 'value="'.$new_phase; echo '">';
+				
+					echo '<input type="submit" id="button_next"
+							value="Weiter zur nächsten Frage">';
+					echo '</form>';
+			    echo '</div>';
+              }
+            
 
 		?>
     </body>
