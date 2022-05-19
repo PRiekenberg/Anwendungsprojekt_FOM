@@ -5,7 +5,8 @@
   session_start();
 	/* Kontrolle, ob innerhalb der Session */
   if (!isset($_SESSION['username'])) {
-	die("<p>Kein Zugang<br/><a href='login.php'>Zum Login</a></p>");
+	header("Location: /php/login.php");
+	exit();
   } 
 
   if (isset($_POST['scenarioid'])) {
