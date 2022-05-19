@@ -30,7 +30,7 @@
                 array_push($richtigeantworten, $r['answercontent']);
             }
 
-            
+
             echo '<h1>Auswertung:</h1>';
             foreach($gegebeneantworten as $antwort) {
                 //prüfe ob gegebene Antwort in Array mit richtigen Antworten
@@ -68,9 +68,6 @@
               } else {
                   echo 'Alle richtigen Antworten wurden angegeben!';
               }
-            
-            echo '<h1>Aktuelle Punkte Benutzer</h1>';
-            echo getUserPoints($_SESSION['scenarioid'],$_SESSION['username']);
 
         ?>
         <?php
@@ -87,6 +84,22 @@
 				
 					echo '<input type="submit" id="button_next"
 							value="Weiter zur nächsten Frage">';
+					echo '</form>';
+			echo '</div>';
+
+            echo '<div id="div_tryagain">';
+				echo '<form action="/php/frage.php">';
+					$new_phase = $_SESSION['phase'];
+					$scenarioid = $_SESSION['scenarioid'];
+					echo '<input type="hidden"';
+					echo 'name="scenarioid"';
+					echo 'value="'.$scenarioid; echo'">';
+					echo '<input type="hidden"';
+					echo 'name="phase"';
+					echo 'value="'.$new_phase; echo '">';
+				
+					echo '<input type="submit" id="button_next"
+							value="Nochmal probieren">';
 					echo '</form>';
 			echo '</div>';
 
