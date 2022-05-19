@@ -19,7 +19,7 @@
     <body>
         <?php
 
-            $gegebeneantworten=[$_POST['antwort1'],$_POST['antwort2'],$_POST['antwort3'],$_POST['antwort4']];
+            $gegebeneantworten=[$_POST['antwort1'],$_POST['antwort2'],$_POST['antwort3'],$_POST['antwort4'],$_POST['antwort5']];
 
             //hole alle Fragen für die Phase und das Szenario
             $result=queryRightAnswers($_SESSION['scenarioid'],$_SESSION['phase']);
