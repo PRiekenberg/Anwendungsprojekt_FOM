@@ -39,6 +39,8 @@
             echo '<br><br>';
             echo 'Antwort 4: '.$_POST['antwort4'];
             echo '<br><br>';
+            echo 'Antwort 5: '.$_POST['antwort5'];
+            echo '<br><br>';
 
 
             echo '<h1>Auswertung:</h1>';
