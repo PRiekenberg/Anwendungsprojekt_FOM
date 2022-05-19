@@ -72,7 +72,7 @@
         ?>
         <?php
 
-              if ($richtigeantworten > 0) {
+              if ($count($richtigeantworten) > 0) {
 
                 echo '<div id="div_tryagain">';
 				echo '<form action="/php/frage.php">';
