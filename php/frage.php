@@ -23,6 +23,9 @@
 		<form>
                 	<button id="button_homescreen" formaction="/index.php">Zurück zur Startseite<br></button>
 		</form>
+		<form>
+                	<button id="button_homescreen" formaction="/php/bestenliste.php">Zur Bestenliste für dieses Szenario<br></button>
+		</form>
 		</div>
 		');
 	}
