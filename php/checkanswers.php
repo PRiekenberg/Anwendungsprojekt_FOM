@@ -67,7 +67,7 @@
                   echo'<br>';
                   echo 'Hier werden '.count($richtigeantworten);echo' * 5 punkte abgezogen!';
                   $punkte=count($richtigeantworten)*-5;
-                  setUserPoints($_SESSION['scenarioid'],$punkte,$_SESSION['username']);
+                  setUserPoints($_SESSION['scenarioid'], $punkte, $_SESSION['username']);
 
                   echo '<div id="div_tryagain">';
 				  echo '<form action="/php/frage.php">';
@@ -85,9 +85,29 @@
 					echo '</form>';
 			      echo '</div>';
               } 
+
+              if ($richtigeantworten == 0 and $fehlergemacht == 1) {
+                echo 'Alle richtigen antworten wurden angegeben, aber es waren auch falsche dabei!';
+
+                echo '<div id="div_tryagain">';
+                echo '<form action="/php/frage.php">';
+                  $new_phase = $_SESSION['phase'];
+                  $scenarioid = $_SESSION['scenarioid'];
+                  echo '<input type="hidden"';
+                  echo 'name="scenarioid"';
+                  echo 'value="'.$scenarioid; echo'">';
+                  echo '<input type="hidden"';
+                  echo 'name="phase"';
+                  echo 'value="'.$new_phase; echo '">';
+              
+                  echo '<input type="submit" id="button_next"
+                          value="Nochmal probieren">';
+                  echo '</form>';
+                echo '</div>';
+              }
               
               if ($richtigeantworten == 0 and $fehlergemacht == 0) {
-                  echo 'Alle richtigen Antworten wurden angegeben!';
+                  echo 'Alles richtig!';
 
                   echo '<div id="div_nextphase">';
                   echo '<form action="/php/frage.php">';
