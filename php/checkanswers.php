@@ -86,6 +86,7 @@
 			      echo '</div>';
               } 
 
+              echo $fehlergemacht;
               // alle richtigen Antworten waren dabei aber es wurden auch falsche angekreuzt
               if ($richtigeantworten == 0 and $fehlergemacht == 1) {
                 echo 'Alle richtigen antworten wurden angegeben, aber es waren auch falsche dabei!';
