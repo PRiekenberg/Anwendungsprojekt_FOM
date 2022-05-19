@@ -61,7 +61,7 @@
                 } 
             }
               
-              
+              //nicht alle richtigen Antworten waren dabei
               if (count($richtigeantworten) > 0) {
                   echo 'Sie haben '.count($richtigeantworten); echo ' richtige Antworten vergessen';
                   echo'<br>';
@@ -86,6 +86,7 @@
 			      echo '</div>';
               } 
 
+              // alle richtigen Antworten waren dabei aber es wurden auch falsche angekreuzt
               if ($richtigeantworten == 0 and $fehlergemacht == 1) {
                 echo 'Alle richtigen antworten wurden angegeben, aber es waren auch falsche dabei!';
 
@@ -106,6 +107,7 @@
                 echo '</div>';
               }
               
+              // alle richtigen Antworten waren dabei und es wurden keine falschen angekreuzt
               if ($richtigeantworten == 0 and $fehlergemacht == 0) {
                   echo 'Alles richtig!';
 
