@@ -30,21 +30,8 @@
                 array_push($richtigeantworten, $r['answercontent']);
             }
 
-            echo '<h1>Gegebene Antworten:</h1>';
-            echo 'Antwort 1: '.$_POST['antwort1'];
-            echo '<br><br>';
-            echo 'Antwort 2: '.$_POST['antwort2'];
-            echo '<br><br>';
-            echo 'Antwort 3: '.$_POST['antwort3'];
-            echo '<br><br>';
-            echo 'Antwort 4: '.$_POST['antwort4'];
-            echo '<br><br>';
-            echo 'Antwort 5: '.$_POST['antwort5'];
-            echo '<br><br>';
-
-
+            
             echo '<h1>Auswertung:</h1>';
-            $counter=1;
             foreach($gegebeneantworten as $antwort) {
                 //prüfe ob gegebene Antwort in Array mit richtigen Antworten
 
@@ -55,20 +42,19 @@
 
                     if (($key = array_search($antwort, $richtigeantworten)) !== false) {
                         unset($richtigeantworten[$key]);
-                        echo 'Antwort '.$counter; echo ' war richtig!';
+                        echo 'Antwort "'.$antwort; echo '" war richtig!';
                         echo'<br>';
                         echo 'Hier werden '.$answerpoints; echo' punkte hinzugefügt!';
 
                         setUserPoints($_SESSION['scenarioid'],10,$_SESSION['username']);
                     } else {
-                        echo 'Antwort '.$counter; echo ' war falsch!';
+                        echo 'Antwort "'.$antwort; echo '" war falsch!';
                         echo'<br>';
                         echo 'Hier werden 5 punkte abgezogen!';
 
                         setUserPoints($_SESSION['scenarioid'],-5,$_SESSION['username']);
                     }
                     echo '<br><br>';
-                    $counter++;
                 } 
             }
               
