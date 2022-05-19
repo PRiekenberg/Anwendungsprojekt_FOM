@@ -13,6 +13,12 @@
 	$_SESSION['scenarioid'] = $_GET['scenarioid'];
 	$_SESSION['phase'] = $_GET ['phase'];
 
+
+	//wenn keine Fragen mehr im Szenario vorhanden sind
+	if ($question -> isDead()){
+		die ("Es sind keine Fragen in dem Szenario mehr vorhanden");
+	}
+
 ?>
 
 <!DOCTYPE html>
