@@ -184,7 +184,7 @@
         $hashed_password = $r['password'];
         if(password_verify($password, $hashed_password)) {
           //echo "Login erfolgreich!";
-          $login_result = 1;
+          $login_result = 0;
           $_SESSION['username'] = $username;
           header('Location: ../index.php');
         } 
@@ -192,14 +192,14 @@
         // Else, Redirect them back to the login page.
         else {
           //echo "Passwort falsch!";
-          $login_result = 0;
+          $login_result = 1;
         }
       }
     }
       
     else {
       //echo "Benutzername nicht gefunden";
-      $login_result = 0;
+      $login_result = 1;
     }
 
     return $login_result;

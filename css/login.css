@@ -64,3 +64,9 @@ h1{
 	font-family: "Roboto";
 	color: red;
 }
+#div_login_result{
+	margin-top: 30px;
+	text-align: center;
+	width: 100%;
+	height: 30px;
+}
