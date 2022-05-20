@@ -221,7 +221,7 @@ input:hover {
 	transform: rotate(-16deg);
 }
 
-#button_passwort{
+#button_password{
 	right: 10px;
 	top: 300px;
 }
@@ -246,8 +246,7 @@ input:hover {
 }
 
   
-
-#button_password {
+.button_menu {
 	width: 400px;
 	height: 102px;
 	padding: 0.8em 1.8em;
@@ -265,7 +264,7 @@ input:hover {
 }
 
 
-#button_password:before {
+.button_menu:before {
 	content: '';
 	width: 0;
 	height: 300%;
@@ -279,10 +278,10 @@ input:hover {
 	z-index: -1;
 }
 
-#button_password:hover:before {
+.button_menu:hover:before {
 	width: 105%;
 }
 
-#button_password:hover {
+.button_menu:hover {
 	color: #FFFFFF;
 }
