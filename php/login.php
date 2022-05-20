@@ -42,8 +42,9 @@
                 <br>
                 <br>
                 <div id = "div_login_button">
-                    <input type="submit" name ="submit" id="login" value="Login"/>
+                    <input type="submit" name ="submit" id="login" value="Login"/><br>
                 </div>
+                <a id = "login_result"> &nbsp <?php if $login_result = 0{echo "Zugangsdaten fehlerhaft!"} ?> </a>
                 <div id = "div_login_img">
                     <img id="img_lock" src="../images/lock_icon.jpg"/>
                 </div>
