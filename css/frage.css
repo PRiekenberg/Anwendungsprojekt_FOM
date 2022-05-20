@@ -36,63 +36,24 @@ td,tr {
 	border-color: white;
 }
 
-button {
-     	width: 400px;
-     	height: 102px;
-     	padding: 0.8em 1.8em;
-     	border: 2px solid #000000;
-     	position: relative;
-     	overflow: hidden;
-     	background-color: #FFFFFF;
-     	text-align: center;
-     	font-size: 0.8333333333333334vw;
-     	transition: .3s;
-     	z-index: 2;
-     	font-family: inherit;
-     	color: #000000;
-	border-radius: 50%; 
-}
-
-
-button::before {
-	content: '';
-	width: 0;
-	height: 300%;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) rotate(0deg);
-	background: #787878;
-	transition: .5s ease;
-	display: block;
-	z-index: -1;
-}
-
-button:hover::before {
-     	width: 105%;
-}
-
-button:hover {
-     	color: #FFFFFF;
-}
 #button_logout{
 	width: 200px;
-     	height: 50px;
-     	padding: 0.8em 1.8em;
-     	border: 2px solid #249B3C;
-     	position: relative;
-     	overflow: hidden;
-     	background-color: #202020;
-     	text-align: center;
-     	font-size: 0.8333333333333334vw;
-     	transition: .3s;
-     	z-index: 2;
-     	font-family: inherit;
-     	color: #249B3C;
+	height: 50px;
+	padding: 0.8em 1.8em;
+	border: 2px solid #249B3C;
+	position: relative;
+	overflow: hidden;
+	background-color: #202020;
+	text-align: center;
+	font-size: 0.8333333333333334vw;
+	transition: .3s;
+	z-index: 2;
+	font-family: inherit;
+	color: #249B3C;
 	border-radius: 0px;
 }
 
-#button_logout::before{
+#button_logout:before{
 	content: '';
 	width: 0;
 	height: 300%;
@@ -106,32 +67,32 @@ button:hover {
 	z-index: -1;
 }
 
-#button_logout::hover::before{
+#button_logout:hover:before{
 	width: 105%;
 }
 
-#button_logout:hover{
+#button_logout:hover {
 	color: #FFFFFF;
 }
 
 #button_menu{
 	width: 200px;
-     	height: 50px;
-     	padding: 0.8em 1.8em;
-     	border: 2px solid #249B3C;
-     	position: relative;
-     	overflow: hidden;
-     	background-color: #202020;
-     	text-align: center;
-     	font-size: 0.8333333333333334vw;
-     	transition: .3s;
-     	z-index: 2;
-     	font-family: inherit;
-     	color: #249B3C;
+	height: 50px;
+	padding: 0.8em 1.8em;
+	border: 2px solid #249B3C;
+	position: relative;
+	overflow: hidden;
+	background-color: #202020;
+	text-align: center;
+	font-size: 0.8333333333333334vw;
+	transition: .3s;
+	z-index: 2;
+	font-family: inherit;
+	color: #249B3C;
 	border-radius: 0px;
 }
 
-#button_menu::before{
+#button_menu:before{
 	content: '';
 	width: 0;
 	height: 300%;
@@ -145,11 +106,11 @@ button:hover {
 	z-index: -1;
 }
 
-#button_menu::hover::before{
+#button_menu:hover:before{
 	width: 105%;
 }
 
-#button_menu:hover{
+#button_menu:hover {
 	color: #FFFFFF;
 }
 
