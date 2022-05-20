@@ -202,7 +202,7 @@
       $login_result = 0;
     }
 
-    return &login_result;
+    return $login_result;
 }
 
 function callEnde(){
