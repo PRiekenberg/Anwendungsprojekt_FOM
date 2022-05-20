@@ -43,7 +43,8 @@
                                 echo '<tr>';
                                 echo '<td>' . $counter; echo '</td>';  
                                 echo '<td>' . $r['username']; echo '</td>';  
-                                echo '<td>' . $r['scenario'.$_SESSION['scenarioid'].'_points']; echo '</td>'; 
+                                echo '<td>' . $r['scenario'.$_SESSION['scenarioid'].'_points']; echo '</td>';
+                                echo '<td>' . var_dump($r['scenario'.$_SESSION['scenarioid'].'_points']); echo '</td>'; 
                                 echo '</tr>';
                                 $counter++;
                             }
