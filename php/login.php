@@ -35,6 +35,8 @@
         <div id = "div_login">
             <h1> Virus zum Zusammenbauen </h1>
             <form action="" method="post">
+                <br>
+                <br>
                 <input id="username" name="username" type="username" placeholder="Benutzername" />
                 <br>
                 <br>
