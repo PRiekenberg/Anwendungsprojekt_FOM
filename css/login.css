@@ -57,3 +57,10 @@ h1{
 #img_lock{
 	width: 100%;
 }
+#login_result{
+	margin-top: 10px;
+	text-align: center;
+	font-size: 0.8333333333333334vw;
+	font-family: "Roboto";
+	color: red;
+}
