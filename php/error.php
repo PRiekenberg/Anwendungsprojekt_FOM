@@ -29,7 +29,7 @@
 			<h1>Fehler:</h1>
         </div>
         <div id = "div_h2">
-            <h2>Es sind keine Fragen in dem Szenario mehr vorhanden</h2>
+            <h2>Es sind keine Fragen für dieses Szenario vorhanden!</h2>
 	    </div>
 		<div id="div_logout">
 			<form>

@@ -6,6 +6,19 @@ body{
     text-rendering: optimizeLegibility;
 }
 
+#div_menu {
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	text-align: left;
+}
+#div_logout {
+	position:absolute;
+	top: 0px;
+	right: 0px;
+	text-align: right;
+}
+
 #button_logout{
 	width: 200px;
      	height: 50px;
@@ -114,11 +127,13 @@ h2 {
 	width: 1200px;
 	height: 675px;
     text-align: center;
+    vertical-align: center;
 }
 
 #error{
-    font-size: 25;
+    font-size: 50pt;;
     text-align: center;
+    vertical-align: center;
 }
 
 #div_hinweis {
