@@ -22,7 +22,7 @@
     <body>
 		<div id="div_menu">
 			<form>
-						<button id="button_menu" formaction="../index.php">Menü<br></button>
+					<button id="button_menu" formaction="../index.php">Menü<br></button>
 			</form>
 		</div>
 		<div id = "div_h1">
@@ -33,7 +33,7 @@
 	    </div>
 		<div id="div_logout">
 			<form>
-						<button id="button_logout" formaction="/php/logout.php">Abmelden<br></button>
+					<button id="button_logout" formaction="/php/logout.php">Abmelden<br></button>
 			</form>
 		</div>
 		<div id="div_gamescreen">
