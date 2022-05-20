@@ -70,3 +70,31 @@ h1{
 	width: 100%;
 	height: 30px;
 }
+
+#div_hinweis {
+	position:absolute;
+	left: 0px;
+	bottom: 20px;
+     	font-size: 0.8333333333333334vw;
+}
+
+#hinweis {
+	font-size: 0.8333333333333334vw;
+	font-family: inherit;
+	color: #249B3C;
+}
+
+
+#div_copyright {
+	text-align: right;
+	position:absolute;
+	right: 0px;
+	bottom: 20px;
+}
+
+#copyrigth {
+	text-align: right;
+	font-size: 0.8333333333333334vw;
+	font-family: inherit;
+	color: #249B3C;
+}

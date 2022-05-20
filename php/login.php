@@ -60,6 +60,17 @@
                 </div>
             </form>
         </div>
-
+        <div id="div_hinweis">
+            	<a id ="hinweis">
+                	Hinweis!
+                	<br>
+                	Dies ist keine Webseite um einen echten Virus zu bauen!
+            	</a>
+        </div>
+        <div id ="div_copyright">
+            	<a id="copyrigth">
+                	&copy Gruppe 7: Virus zum zusammenbauen
+            	</a>
+		</div>                    
     </body>
 </html>

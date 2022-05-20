@@ -102,6 +102,6 @@
             	<a id="copyrigth">
                 	&copy Gruppe 7: Virus zum zusammenbauen
             	</a>
-	</div>
+		</div>
     </body>
 </html> 
