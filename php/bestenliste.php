@@ -36,7 +36,7 @@
                         
                         $result = getallUsers();
                         // sortiere Datensätze nach der Punktzahl absteigend für diese Szenario
-                        $result->sort(array('scenario'.$_SESSION['scenarioid'].'_points' => -1));
+                        //$result->sort(array('scenario'.$_SESSION['scenarioid'].'_points' => -1));
                         $counter=1;
                         foreach ($result as $r){
                             
