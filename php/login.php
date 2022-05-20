@@ -3,7 +3,7 @@
   require '../vendor/autoload.php';
   require_once 'functions.php';
   session_start();
-  if(isset($_POST['submit'])) {
+  if(isset($_POST['login'])) {
       checkCredentials(strtolower($_POST['username']),$_POST['password']);
   }
   
@@ -42,7 +42,7 @@
                 <br>
                 <br>
                 <div id = "div_login_button">
-                    <input type="submit" id="login" value="Login"/>
+                    <input type="submit" id="login" name="login" value="Login"/>
                 </div>
                 <div id = "div_login_img">
                     <img id="img_lock" src="../images/lock_icon.jpg"/>
