@@ -6,6 +6,85 @@ body{
     text-rendering: optimizeLegibility;
 }
 
+#button_logout{
+	width: 200px;
+     	height: 50px;
+     	padding: 0.8em 1.8em;
+     	border: 2px solid #249B3C;
+     	position: relative;
+     	overflow: hidden;
+     	background-color: #202020;
+     	text-align: center;
+     	font-size: 0.8333333333333334vw;
+     	transition: .3s;
+     	z-index: 2;
+     	font-family: inherit;
+     	color: #249B3C;
+	border-radius: 0px;
+}
+
+#button_logout::before{
+	content: '';
+	width: 0;
+	height: 300%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+	background: #249B3C;
+	transition: .5s ease;
+	display: block;
+	z-index: -1;
+}
+
+#button_logout::hover::before{
+	width: 105%;
+}
+
+#button_logout:hover{
+	color: #FFFFFF;
+}
+
+#button_menu{
+	width: 200px;
+     	height: 50px;
+     	padding: 0.8em 1.8em;
+     	border: 2px solid #249B3C;
+     	position: relative;
+     	overflow: hidden;
+     	background-color: #202020;
+     	text-align: center;
+     	font-size: 0.8333333333333334vw;
+     	transition: .3s;
+     	z-index: 2;
+     	font-family: inherit;
+     	color: #249B3C;
+	border-radius: 0px;
+}
+
+#button_menu::before{
+	content: '';
+	width: 0;
+	height: 300%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+	background: #249B3C;
+	transition: .5s ease;
+	display: block;
+	z-index: -1;
+}
+
+#button_menu::hover::before{
+	width: 105%;
+}
+
+#button_menu:hover{
+	color: #FFFFFF;
+}
+
+
 #div_h1{
 	width: 800px;
 	margin: 0 auto;
@@ -29,10 +108,43 @@ h2 {
 }
 
 #div_gamescreen{
-	background-image: url('../images/game_background.gif');
 	z-index: 1;
 	background-color: #FFFFFF;
 	margin: auto;
 	width: 1200px;
-	height: 675px;	
+	height: 675px;
+    text-align: center;
+}
+
+#error{
+    font-size: 25;
+    text-align: center;
+}
+
+#div_hinweis {
+	position:absolute;
+	left: 0px;
+	bottom: 20px;
+     	font-size: 0.8333333333333334vw;
+}
+
+#hinweis {
+	font-size: 0.8333333333333334vw;
+	font-family: inherit;
+	color: #249B3C;
+}
+
+
+#div_copyright {
+	text-align: right;
+	position:absolute;
+	right: 0px;
+	bottom: 20px;
+}
+
+#copyright {
+	text-align: right;
+	font-size: 0.8333333333333334vw;
+	font-family: inherit;
+	color: #249B3C;
 }

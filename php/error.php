@@ -49,7 +49,7 @@
 			</a>
 		</div>
 		<div id ="div_copyright">
-			<a id="copyrigth">
+			<a id="copyright">
 				&copy Gruppe 7: Virus zum zusammenbauen
 			</a>
 		</div>
