@@ -23,7 +23,6 @@
             	<h1>VIRUS ZUM ZUSAMMENBAUEN</h1>
         </div>
 	<div id="div_logout">
-            	<!--<a id ="logout" href="php/logout.php">Abmelden</a>-->
 		<form>
                 	<button id="button_logout" formaction="php/logout.php">Abmelden<br></button>
 		</form>
