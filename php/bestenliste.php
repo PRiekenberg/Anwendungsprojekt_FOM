@@ -21,7 +21,7 @@
     <body>
 
         <?php 
-            echo'<h1>Bestenliste</h1>';
+            echo'<h1>Bestenliste Szenario '.$_SESSION['scenarioid'];echo'</h1>';
             echo'<table>';
                 echo'<thead>';
                     echo '<tr>';
