@@ -32,7 +32,7 @@
   echo 'applicaton setting:';
   echo getenv('connection_string');
   echo 'connection string';
-  echo getenv(' CUSTOMCONNSTR_connection_string');
+  echo getenv('CUSTOMCONNSTR_connection_string');
 
 ?>
 
