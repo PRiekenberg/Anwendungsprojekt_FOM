@@ -40,7 +40,7 @@
                     foreach ($result as $r){
                         
                         //nur die Benutzer deren Punktzahl ungleich 0 ist
-                        if ($r['scenario'.$_SESSION['scenarioid'].'_points'] != 0) {
+                        if ($r['scenario'.$_SESSION['scenarioid'].'_points'] !== 0) {
                             echo '<tr>';
                             echo '<td>' . $counter; echo '</td>';  
                             echo '<td>' . $r['username']; echo '</td>';  
