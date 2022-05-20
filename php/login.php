@@ -42,7 +42,7 @@
                 <br>
                 <br>
                 <div id = "div_login_button">
-                    <input type="submit" id="login" value="Login"/>
+                    <input type="submit" name ="submit" id="login" value="Login"/>
                 </div>
                 <div id = "div_login_img">
                     <img id="img_lock" src="../images/lock_icon.jpg"/>
