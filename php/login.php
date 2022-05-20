@@ -45,7 +45,7 @@
                 <br>
                 <div id = "div_login_button">
                     <!--<input type="submit" name ="submit" id="login" value="Login"/><br>-->
-                    <button id ="login" name="submit" >Login</button>
+                    <button id ="button_login" name="submit" >Login</button>
                 </div>
                 <div id = "div_login_result">
                     <a id = "login_result">
