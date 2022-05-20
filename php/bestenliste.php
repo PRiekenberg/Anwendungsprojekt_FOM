@@ -24,43 +24,29 @@
             echo'<table>';
                 echo'<thead>';
                     echo '<tr>';
-                        echo '<th>ID</td>';
-                        echo '<th>Typ</td>';
+                        echo '<th>Platzierung</td>';
                         echo '<th>Username</td>';
-                        echo '<th>Passwort</td>';
-                        echo '<th>Szenario 1 Phase</td>';
-                        echo '<th>Szenario 1 Punkte</td>';
-                        echo '<th>Szenario 2 Phase</td>';
-                        echo '<th>Szenario 2 Punkte</td>';
-                        echo '<th>Szenario 3 Phase</td>';
-                        echo '<th>Szenario 3 Punkte</td>';
-                        echo '<th>Szenario 4 Phase</td>';
-                        echo '<th>Szenario 4 Punkte</td>';
-                        echo '<th>Szenario 5 Phase</td>';
-                        echo '<th>Szenario 5 Punkte</td>';
+                        echo '<th>Punktzahl</td>';
                     echo '</tr>';
                 echo '</thead>';
 
                 echo '<tbody>';
                     
                     $result = getallUsers();
-                    foreach ($result as $r){						
-                        echo '<tr>';
-                        echo '<td>' . $r['_id']; echo '</td>';  
-                        echo '<td>' . $r['type']; echo '</td>';  
-                        echo '<td>' . $r['username']; echo '</td>';  
-                        echo '<td>' . $r['password']; echo '</td>'; 
-                        echo '<td>' . $r['scenario1_phase']; echo '</td>'; 
-                        echo '<td>' . $r['scenario1_points']; echo '</td>'; 
-                        echo '<td>' . $r['scenario2_phase']; echo '</td>'; 
-                        echo '<td>' . $r['scenario2_points']; echo '</td>'; 
-                        echo '<td>' . $r['scenario3_phase']; echo '</td>'; 
-                        echo '<td>' . $r['scenario3_points']; echo '</td>'; 
-                        echo '<td>' . $r['scenario4_phase']; echo '</td>'; 
-                        echo '<td>' . $r['scenario4_points']; echo '</td>'; 
-                        echo '<td>' . $r['scenario5_phase']; echo '</td>'; 
-                        echo '<td>' . $r['scenario5_points']; echo '</td>'; 
-                        echo '</tr>';
+                    // sortiere Datensätze nach der Punktzahl absteigend für diese Szenario
+                    $result->sort(array('scenario'.$_SESSION['scenarioid'].'_points' => -1));
+                    $counter=1;
+                    foreach ($result as $r){
+                        
+                        //nur die Benutzer deren Punktzahl ungleich 0 ist
+                        if ($r['scenario'.$_SESSION['scenarioid'].'_points'] != 0) {
+                            echo '<tr>';
+                            echo '<td>' . $counter; echo '</td>';  
+                            echo '<td>' . $r['username']; echo '</td>';  
+                            echo '<td>' . $r['scenario'.$_SESSION['scenarioid'].'_points']; echo '</td>'; 
+                            echo '</tr>';
+                            $counter++;
+                        }
                     }
 
                 echo '</tbody>';
