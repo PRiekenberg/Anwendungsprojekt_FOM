@@ -1,0 +1,38 @@
+body{
+	background-color: #202020;
+	font-family: "Roboto", helvetica, arial, sans-serif;
+    font-size: 0.8333333333333334vw;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}
+
+#div_h1{
+	width: 800px;
+	margin: 0 auto;
+}
+
+#div_h2{
+	width: 800px;
+	margin: 0 auto;
+}
+
+h1 {	
+    color: white;
+    text-align: left;
+    font-size: 1.6666666666666667vw;
+}
+
+h2 {
+    color: white;
+    text-align: right;
+    font-size: 1.25vw;
+}
+
+#div_gamescreen{
+	background-image: url('../images/game_background.gif');
+	z-index: 1;
+	background-color: #FFFFFF;
+	margin: auto;
+	width: 1200px;
+	height: 675px;	
+}
