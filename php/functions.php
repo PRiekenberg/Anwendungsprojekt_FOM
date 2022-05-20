@@ -85,6 +85,15 @@
     return $result;
   }
 
+  function getUsersPointsforScenario($scenarioid){
+    $collection = getCollection();
+    $options = $options = array(
+      "sort" => array('scenario'.$scenarioid.'_points' => -1),
+    );
+    $result = $collection->find([ 'type' => 'user' ],$options);
+    return $result;
+  }
+
   function getUserPoints($scenarioid,$username){
     $collection = getCollection();
     $result = $collection->find( [ 'username' => $username, 'type' => 'user' ] );
