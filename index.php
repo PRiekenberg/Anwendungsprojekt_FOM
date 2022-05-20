@@ -86,8 +86,9 @@
 							<input type="hidden"
 							name="phase"
 							value="1">
-					<input type="submit" id="button_passwort"
-							value="Passwort">
+					<!--<input type="submit" id="button_passwort"
+							value="Passwort">-->
+					<button id="button_password" name="submit">Passwort</button>
 				</form>
             </div> 
         </div>

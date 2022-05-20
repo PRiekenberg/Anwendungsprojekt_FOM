@@ -40,7 +40,7 @@ h1{
 }
 
 #button_login{
-	width: 200px;
+	width: 150px;
 	height: 50px;
 	padding: 0.8em 1.8em;
 	border: 2px solid #249B3C;
@@ -48,7 +48,7 @@ h1{
 	overflow: hidden;
 	background-color: #202020;
 	text-align: center;
-	font-size: 0.8333333333333334vw;
+	font-size: 15;
 	transition: .3s;
 	z-index: 2;
 	font-family: inherit;
