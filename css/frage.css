@@ -227,8 +227,8 @@ td,tr {
 #div_antwort4{
 	position: absolute;
 	width: 300px;
-	top: 250px;
-	left: 200px;
+	top: 200px;
+	right: 0px;
 }
 
 #div_antwort5{
@@ -258,11 +258,55 @@ td,tr {
 	width: 300px;
 }
 
+#div_button_checkantworten{
+	left: 0px;
+	bottom: 0px;
+}
+
+#button_checkantworten{
+	width: 200px;
+	height: 50px;
+	padding: 0.8em 1.8em;
+	border: 2px solid #249B3C;
+	position: relative;
+	overflow: hidden;
+	background-color: #202020;
+	text-align: center;
+	font-size: 0.8333333333333334vw;
+	transition: .3s;
+	z-index: 2;
+	font-family: inherit;
+	color: #249B3C;
+	border-radius: 0px;
+}
+
+#button_checkantworten:before{
+	content: '';
+	width: 0;
+	height: 300%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+	background: #249B3C;
+	transition: .5s ease;
+	display: block;
+	z-index: -1;
+}
+
+#button_checkantworten:hover:before{
+	width: 105%;
+}
+
+#button_checkantworten:hover {
+	color: #FFFFFF;
+}
+
 #div_hinweis {
 	position:absolute;
 	left: 0px;
 	bottom: 20px;
-     	font-size: 0.8333333333333334vw;
+    font-size: 0.8333333333333334vw;
 }
 
 #hinweis {

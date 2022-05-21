@@ -76,8 +76,10 @@
 					<div id ="div_bild1">
 						<img id="bild1" src="../images/hacker.jpeg" alt="bild1">
 					</div>
-
-				
+					<div id="div_button_checkanswers">
+						<!--<input name="button_checkbutton" id="checkbutton" type="submit" value="Antworten prüfen"></input>-->
+						<button id="button_checkanswers" name="checkanswers">Antworten prüfen<br></button>
+					</div>
 					<?php
 						$counter=1;
 						foreach ($answers as $a){
@@ -119,9 +121,6 @@
 						<img id="bild2" src="../images/user.jpeg" alt="bild2">
 					</div>
 				</div> 
-			</div>
-			<div id="button_checkantworten">
-				<input name="checkbutton" id="checkbutton" type="submit" value="Antworten prüfen"></input>
 			</div>
 		</form>
 		
