@@ -258,12 +258,13 @@ td,tr {
 	width: 300px;
 }
 
-#div_button_checkantworten{
+#div_button_checkanswers{
+	position: absolute;
 	left: 0px;
 	bottom: 0px;
 }
 
-#button_checkantworten{
+#button_checkanswers{
 	width: 200px;
 	height: 50px;
 	padding: 0.8em 1.8em;
