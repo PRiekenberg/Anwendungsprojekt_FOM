@@ -35,7 +35,7 @@
 				<form action="/php/frage.php">
 						<input type="hidden"
 								name="scenarioid"
-								value="2">
+								value="3">
 								<input type="hidden"
 								name="phase"
 								value="1">
@@ -59,7 +59,7 @@
 				<form action="/php/frage.php">
 						<input type="hidden"
 								name="scenarioid"
-								value="3">
+								value="2">
 								<input type="hidden"
 								name="phase"
 								value="1">
