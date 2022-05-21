@@ -45,26 +45,24 @@
     </head>
     <body>
 		<div id="div_menu">
-					<!--<a id ="logout" href="php/logout.php">Abmelden</a>-->
 			<form>
-						<button id="button_menu" formaction="../index.php">Menü<br></button>
+				<button id="button_menu" formaction="../index.php">Menü<br></button>
 			</form>
 		</div>
 		<div id = "div_h1">
-					<h1>Modus</h1>
+			<h1>Modus</h1>
 		</div>
 		<div id="div_logout">
-					<!--<a id ="logout" href="php/logout.php">Abmelden</a>-->
 			<form>
-						<button id="button_logout" formaction="/php/logout.php">Abmelden<br></button>
+				<button id="button_logout" formaction="/php/logout.php">Abmelden<br></button>
 			</form>
 		</div>
 		<div id = "div_h2">
-				<?php
-					foreach ($question as $q) {
-						echo '<h2>' . $q['questioncontent']; echo '</h2>';
-					}
-				?>
+			<?php
+				foreach ($question as $q) {
+					echo '<h2>' . $q['questioncontent']; echo '</h2>';
+				}
+			?>
 		</div>
 		<div id = "aktuellepunktzahl">
 			<?php
@@ -120,7 +118,8 @@
 					<div id ="div_bild2">
 						<img id="bild2" src="../images/user.jpeg" alt="bild2">
 					</div>
-			</div> 
+				</div> 
+			</div>
 			<div id="button_checkantworten">
 				<input name="checkbutton" id="checkbutton" type="submit" value="Antworten prüfen"></input>
 			</div>

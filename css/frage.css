@@ -1,27 +1,37 @@
 body {
-    	/*background-image: url('../images/game_background.jpg');*/
-    	background-size: auto;
-    	background-repeat: no-repeat;
-    	background-color: #202020;
-    	font-family: "Roboto", helvetica, arial, sans-serif;
-    	font-size: 0.8333333333333334vw;
-    	font-weight: 400;
-    	text-rendering: optimizeLegibility;
+	/*background-image: url('../images/game_background.jpg');*/
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-color: #202020;
+	font-family: "Roboto", helvetica, arial, sans-serif;
+	font-size: 0.8333333333333334vw;
+	font-weight: 400;
+	text-rendering: optimizeLegibility;
    	margin-bottom: 5%;
-    	margin-left: 5%;
-    	margin-right:5%;
+	margin-left: 5%;
+	margin-right:5%;
+}
+
+#div_h1{
+	width: 800px;
+	margin: 0 auto;
+}
+
+#div_h2{
+	width: 800px;
+	margin: 0 auto;
 }
 
 h1 {	
-    	color: white;
-    	text-align: left;
-    	font-size: 1.6666666666666667vw;
+	color: white;
+	text-align: left;
+	font-size: 1.6666666666666667vw;
 }
 
 h2 {
-     	color: white;
-     	text-align: right;
-     	font-size: 1.25vw;
+	color: white;
+	text-align: right;
+	font-size: 1.25vw;
  }
 
 h3{
@@ -36,43 +46,18 @@ td,tr {
 	border-color: white;
 }
 
-#button_logout{
-	width: 200px;
-	height: 50px;
-	padding: 0.8em 1.8em;
-	border: 2px solid #249B3C;
-	position: relative;
-	overflow: hidden;
-	background-color: #202020;
-	text-align: center;
-	font-size: 0.8333333333333334vw;
-	transition: .3s;
-	z-index: 2;
-	font-family: inherit;
-	color: #249B3C;
-	border-radius: 0px;
+#div_menu {
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	text-align: left;
 }
 
-#button_logout:before{
-	content: '';
-	width: 0;
-	height: 300%;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) rotate(0deg);
-	background: #249B3C;
-	transition: .5s ease;
-	display: block;
-	z-index: -1;
-}
-
-#button_logout:hover:before{
-	width: 105%;
-}
-
-#button_logout:hover {
-	color: #FFFFFF;
+#div_logout {
+	position:absolute;
+	top: 0px;
+	right: 0px;
+	text-align: right;
 }
 
 #button_menu{
@@ -114,35 +99,48 @@ td,tr {
 	color: #FFFFFF;
 }
 
-#div_hinweis {
-	position:absolute;
-	left: 0px;
-	bottom: 20px;
-     	font-size: 0.8333333333333334vw;
-}
-#div_menu {
-	position:absolute;
-	top: 0px;
-	left: 0px;
-	text-align: left;
-}
-#div_logout {
-	position:absolute;
-	top: 0px;
-	right: 0px;
-	text-align: right;
+#button_logout{
+	width: 200px;
+	height: 50px;
+	padding: 0.8em 1.8em;
+	border: 2px solid #249B3C;
+	position: relative;
+	overflow: hidden;
+	background-color: #202020;
+	text-align: center;
+	font-size: 0.8333333333333334vw;
+	transition: .3s;
+	z-index: 2;
+	font-family: inherit;
+	color: #249B3C;
+	border-radius: 0px;
 }
 
-#div_h1{
-	width: 800px;
-	margin: 0 auto;
+#button_logout:before{
+	content: '';
+	width: 0;
+	height: 300%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+	background: #249B3C;
+	transition: .5s ease;
+	display: block;
+	z-index: -1;
 }
 
-#div_h2{
-	width: 800px;
-	margin: 0 auto;
+#button_logout:hover:before{
+	width: 105%;
 }
+
+#button_logout:hover {
+	color: #FFFFFF;
+}
+
+
 #div_gamescreen{
+	position: relative;
 	background-image: url('../images/game_background.gif');
 	z-index: 1;
 	background-color: #FFFFFF;
@@ -152,6 +150,7 @@ td,tr {
 }
 
 #div_gamescreen_left{
+	position: relative;
 	float: left;
 	z-index: 2;
 	background-color: transparent;
@@ -161,6 +160,7 @@ td,tr {
 }
 
 #div_gamescreen_center{
+	position: relative;
 	float: left;
 	z-index: 2;
 	background-color: transparent;
@@ -169,6 +169,7 @@ td,tr {
 	height: 675px;	
 }
 #div_gamescreen_right{
+	position: relative;
 	float: left;
 	z-index: 2;
 	background-color: transparent;
@@ -178,12 +179,17 @@ td,tr {
 }
 
 #div_bild1{
+	position: absolute;
 	width: 200px;
 	top: 0px;
 	left: 0px;
 }
 
 #div_bild2{
+	position: absolute;
+	width: 200px;
+	bottom: 0px;
+	right: 0px;
 }
 
 #bild1{
@@ -194,8 +200,7 @@ td,tr {
 }
 
 #bild2{
-	width: 400px;
-	margin-top: 50px;
+	width: 100%;
 }
 
 #div_antwort1{
@@ -234,6 +239,13 @@ td,tr {
 	width: 300px;
 }
 
+#div_hinweis {
+	position:absolute;
+	left: 0px;
+	bottom: 20px;
+     	font-size: 0.8333333333333334vw;
+}
+
 #hinweis {
 	font-size: 0.8333333333333334vw;
 	font-family: inherit;
@@ -252,13 +264,6 @@ td,tr {
 	font-size: 0.8333333333333334vw;
 	font-family: inherit;
 	color: #249B3C;
-}
-
-@media only screen and (max-width: 620px) {
-     	/* For mobile phones: */
-     	body {
-       		width: 100%;
-     	}
 }
 
 .antwort{
@@ -299,3 +304,10 @@ td,tr {
  }
 
 input:checked + span{background-color: #249B3C;};
+
+@media only screen and (max-width: 620px) {
+	/* For mobile phones: */
+	body {
+		  width: 100%;
+	}
+}
