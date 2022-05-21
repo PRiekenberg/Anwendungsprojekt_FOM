@@ -34,12 +34,6 @@ h2 {
 	font-size: 1.25vw;
  }
 
-h3{
-	color: white;
-	text-align: center;
-	font-size: 1.25vw;
-}
-
 td,tr {
 	color: white;
 	text-align: center;
@@ -281,7 +275,7 @@ td,tr {
 	border-radius: 0px;
 }
 
-#button_checkantworten:before{
+#button_checkanswers:before{
 	content: '';
 	width: 0;
 	height: 300%;
@@ -295,11 +289,11 @@ td,tr {
 	z-index: -1;
 }
 
-#button_checkantworten:hover:before{
+#button_checkanswers:hover:before{
 	width: 105%;
 }
 
-#button_checkantworten:hover {
+#button_checkanswers:hover {
 	color: #FFFFFF;
 }
 

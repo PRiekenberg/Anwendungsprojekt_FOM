@@ -64,17 +64,20 @@
 				}
 			?>
 		</div>
-		<div id = "aktuellepunktzahl">
-			<?php
-				echo '<h3>Aktuelle Punkzahl für den Benutzer '.$_SESSION['username']; echo': '.getUserPoints($_SESSION['scenarioid'],$_SESSION['username']); echo ' für dieses Szenario</h3>';
-			?>
-		</div>
-		
 		<form method="post" action="checkanswers.php">
 			<div id="div_gamescreen">
 				<div id="div_gamescreen_left">
 					<div id ="div_bild1">
 						<img id="bild1" src="../images/hacker.jpeg" alt="bild1">
+					</div>
+					<div id = "aktuellepunktzahl">
+						<?php
+							echo '<a>';
+							echo 'Benutzer: '.$_SESSION['username']; 
+							echo '<br>';
+							echo'Punkte: '.getUserPoints($_SESSION['scenarioid'],$_SESSION['username']); 
+							echo '</a>';
+						?>
 					</div>
 					<div id="div_button_checkanswers">
 						<!--<input name="button_checkbutton" id="checkbutton" type="submit" value="Antworten prüfen"></input>-->
