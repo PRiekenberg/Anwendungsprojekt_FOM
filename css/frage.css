@@ -204,23 +204,29 @@ td,tr {
 }
 
 #div_antwort1{
-	margin-top: 100px;
-	margin-left: 50px;
+	position: absolute;
+	top: 400px;
+	left: 50px;
 }
 
 #div_antwort2{
-	margin-top: 50px;
-	margin-left: 100px;
+	top: 50px;
+	left: 100px;
 }
 
 #div_antwort3{
-	margin-top: 375px;
-	margin-left: 0px;
+	bottom: 50px;
+	left: 0px;
 }
 
 #div_antwort4{
-	margin-top: 250px;
-	margin-left: 50px;
+	top: 250px;
+	left: 200px;
+}
+
+#div_antwort5{
+	top: 400px;
+	right: 50px;
 }
 
 #button_antwort1{
@@ -236,6 +242,10 @@ td,tr {
 }
 
 #button_antwort4{
+	width: 300px;
+}
+
+#button_antwort5{
 	width: 300px;
 }
 
