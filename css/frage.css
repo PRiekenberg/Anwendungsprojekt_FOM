@@ -252,6 +252,18 @@ td,tr {
 	width: 300px;
 }
 
+#div_aktuellepunktzahl{
+	position:absolute;
+	top:220px;
+}
+
+#aktuellepunktzahl{
+	text-align: left;
+	font-size: 0.8333333333333334vw;
+	font-family: inherit;
+	color: black;
+}
+
 #div_button_checkanswers{
 	position: absolute;
 	left: 0px;

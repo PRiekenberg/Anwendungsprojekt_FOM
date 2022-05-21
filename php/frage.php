@@ -70,9 +70,9 @@
 					<div id ="div_bild1">
 						<img id="bild1" src="../images/hacker.jpeg" alt="bild1">
 					</div>
-					<div id = "aktuellepunktzahl">
+					<div id = "div_aktuellepunktzahl">
 						<?php
-							echo '<a>';
+							echo '<a id ="aktuellepunktzahl">';
 							echo 'Benutzer: '.$_SESSION['username']; 
 							echo '<br>';
 							echo'Punkte: '.getUserPoints($_SESSION['scenarioid'],$_SESSION['username']); 
