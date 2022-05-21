@@ -66,7 +66,7 @@
 		</div>
 		<div id = "aktuellepunktzahl">
 			<?php
-				echo '<h3>Aktuelle Punkzahl für den Benutzer '.$_SESSION['username']; echo': '.getUserPoints($_SESSION['scenarioid'],$_SESSION['username']); echo ' für dieses Szenario</h3>';
+				echo '<h3>Aktuelle Punkzahl für den Benutzer '.$_SESSION['username']; echo': '.getUserPoints($_SESSION['scenarioid'],$_SESSION['username']); echo '</h3>';
 			?>
 		</div>
 		
