@@ -205,26 +205,35 @@ td,tr {
 
 #div_antwort1{
 	position: absolute;
+	width: 300px;
 	top: 400px;
 	left: 50px;
 }
 
 #div_antwort2{
+	position: absolute;
+	width: 300px;
 	top: 50px;
 	left: 100px;
 }
 
 #div_antwort3{
+	position: absolute;
+	width: 300px;
 	bottom: 50px;
 	left: 0px;
 }
 
 #div_antwort4{
+	position: absolute;
+	width: 300px;
 	top: 250px;
 	left: 200px;
 }
 
 #div_antwort5{
+	position: absolute;
+	width: 300px;
 	top: 400px;
 	right: 50px;
 }
@@ -293,6 +302,7 @@ td,tr {
 }
   
 .antwort label span {
+	width: 300px;
 	text-align: center;
 	padding: 3px 0;
 	display: block;
