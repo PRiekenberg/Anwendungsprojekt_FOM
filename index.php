@@ -41,7 +41,7 @@
 								value="1">
 					<!--<input type="submit" id="button_firmennetz"
 								value="Firmennetz">-->
-						<button class ="button_menu" id="button_firmennetz" name="submit">Firmennetz</button>						
+						<button class ="button_menu" id="button_firmennetz">Firmennetz</button>						
 				</form>
 				<form action="/php/frage.php">
 						<input type="hidden"
@@ -52,7 +52,7 @@
 								value="1">
 						<!--<input type="submit" id="button_krypto"
 								value="Krypto">-->
-						<button class ="button_menu" id="button_krypto" name="submit">Krypto</button>
+						<button class ="button_menu" id="button_krypto">Krypto</button>
 				</form>
         	</div>
             <div id="div_gamescreen_center">
@@ -65,7 +65,7 @@
 								value="1">
 						<!--<input type="submit" id="button_social"
 								value="Social Engineering">-->
-						<button class ="button_menu" id="button_social" name="submit">Social Engineering</button>
+						<button class ="button_menu" id="button_social">Social Engineering</button>
 				</form>
 				<div id="div_hacker_menu">
 					<img id="img_hacker_menu" src="images/hacker_startmenu.jpeg" alt="hacker">
@@ -81,7 +81,7 @@
 							value="1">
 					<!--<input type="submit" id="button_banking"
 							value="Online Banking">-->
-					<button class ="button_menu" id="button_banking" name="submit">Online Banking</button>
+					<button class ="button_menu" id="button_banking">Online Banking</button>
 				</form>
 				<form action="/php/frage.php">
 					<input type="hidden"
@@ -92,7 +92,7 @@
 							value="1">
 					<!--<input type="submit" id="button_passwort"
 							value="Passwort">-->
-					<button class ="button_menu" id="button_password" name="submit">Passwort</button>
+					<button class ="button_menu" id="button_password">Passwort</button>
 				</form>
             </div> 
         </div>
