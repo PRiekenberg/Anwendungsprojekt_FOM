@@ -16,6 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Virus zum Zusammenbauen">
         <link rel="stylesheet" media="screen" href="css/stylesheet.css">
+        <link rel="icon" href="/images/malware_icon.png">
     </head>
     <body>
         <?php

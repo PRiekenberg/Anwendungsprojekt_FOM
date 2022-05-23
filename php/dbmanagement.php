@@ -40,6 +40,7 @@
 		<meta name="description" content="Insertdata">
 		<script src="../js/jquery.js"></script>
 		<!--<link rel="stylesheet" media="screen" href="../css/stylesheet.css">-->
+		<link rel="icon" href="/images/malware_icon.png">
 		<style>
 			table, th, td {
 			border: 1px solid;
