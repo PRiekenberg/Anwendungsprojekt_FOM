@@ -4,7 +4,7 @@
   require_once 'functions.php';
   session_start();
 	/* Kontrolle, ob innerhalb der Session */
-  if (!isset($_SESSION['username'])) {
+  if (isset($_SESSION['admin'])!="true") {
 	header("Location: /php/login.php");
 	exit();
   } 
