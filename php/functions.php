@@ -183,10 +183,12 @@
       foreach ($result as $r) {
         
         $hashed_password = $r['password'];
+        $adminstate = $r['admin'];
         if(password_verify($password, $hashed_password)) {
           //echo "Login erfolgreich!";
           $login_result = 0;
           $_SESSION['username'] = $username;
+          $_SESSION['admin'] = $adminstate;
           header('Location: ../index.php');
         } 
       
