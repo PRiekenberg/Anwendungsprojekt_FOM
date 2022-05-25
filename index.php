@@ -19,7 +19,12 @@
         <link rel="stylesheet" media="screen" href="css/stylesheet.css">
 		<link rel="icon" href="/images/malware_icon.png">
     </head>
-    <body>        
+    <body>
+		<div id="div_admin">
+			<form>
+				<button id="button_admin" formaction="/php/dbmanagement.php">Admin<br></button>
+			</form>
+		</div>        
         <div id = "div_h1">
             	<h1>VIRUS ZUM ZUSAMMENBAUEN</h1>
         </div>

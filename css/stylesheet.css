@@ -121,6 +121,16 @@ input:hover {
 	bottom: 20px;
 	font-size: 0.8333333333333334vw;
 }
+
+#div_admin {
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	text-align: left;
+	font-size: 0.8333333333333334vw;
+	color: #249B3C;
+}
+
 #div_logout {
 	position:absolute;
 	top: 0px;
@@ -283,5 +293,45 @@ input:hover {
 }
 
 .button_menu:hover {
+	color: #FFFFFF;
+}
+
+.button_admin {
+	width: 400px;
+	height: 102px;
+	padding: 0.8em 1.8em;
+	border: 2px solid #000000;
+	position: relative;
+	overflow: hidden;
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 0.8333333333333334vw;
+	transition: .3s;
+	z-index: 2;
+	font-family: inherit;
+	color: #000000;
+	border-radius: 50%; 
+}
+
+
+.button_admin:before {
+	content: '';
+	width: 0;
+	height: 300%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+	background-color: #787878;
+	transition: .5s ease;
+	display: block;
+	z-index: -1;
+}
+
+.button_admin:hover:before {
+	width: 105%;
+}
+
+.button_admin:hover {
 	color: #FFFFFF;
 }
