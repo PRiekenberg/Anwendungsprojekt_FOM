@@ -22,7 +22,7 @@
   }
 
   //insert function
-  function insertDocument($type, $questioncontent, $answercontent, $answerstate, $answerpoints, $phase, $scenarioid, $username, $password) {
+  function insertDocument($type, $questioncontent, $answercontent, $answerstate, $answerpoints, $phase, $scenarioid, $username, $password, $admin, $answerid, $explanationcontent) {
     $client=connectDB();
     $collection=getCollection();
     $result = $collection->insertOne( [ 'type' => $type,
@@ -44,6 +44,9 @@
                                         'scenario4_points' => "0",
                                         'scenario5_phase' => "1",
                                         'scenario5_points' => "0",
+                                        'admin' => $admin,
+                                        'answerid' => $answerid,
+                                        'explanationcontent' => $explanationcontent
                                       ]);
   }
 
@@ -82,6 +85,12 @@
   function getallUsers(){
     $collection = getCollection();
     $result = $collection->find([ 'type' => 'user' ]);
+    return $result;
+  }
+
+  function getallExplanations(){
+    $collection = getCollection();
+    $result = $collection->find([ 'type' => 'explanation' ]);
     return $result;
   }
 
@@ -156,6 +165,23 @@
     return $result;
   }
 
+  function queryExplanationforAnswers($answer) {
+    $collection = getCollection();
+
+    //hole mir anhand des Antwortinhalts den Antwortdatensatz
+    $result = $collection->find( [ 'answercontent' => $answer, 'type' => 'answer' ] );
+
+    foreach ($result as $r) {
+      //return $r['_id'];
+      //hole mir mithilfe der ID aus dem Antwortdatensatz die entsprechende Erklärung
+      $explanation = $collection->find( [ 'answerid' => $r['_id'], 'type' => 'explanation' ] );
+      return var_dump($explanation);
+      //foreach ($explanation as $e) {
+      //  return $e['explanationcontent'];
+      //}
+    }
+  }
+
   function queryAnswersPoints($scenarioid, $phase, $answercontent) {
     $collection = getCollection();
     $result = $collection->find( [ 'scenarioid' => $scenarioid, 'phase' => $phase, 'type' => 'answer', 'answercontent' => $answercontent ] );
@@ -175,6 +201,14 @@
    );
   }
 
+  function setUserPhase($scenarioid,$username,$new_phase){
+    $collection = getCollection();
+    $collection->updateOne(
+      [ 'username' => $username ],
+      [ '$set' => [ 'scenario'.$scenarioid.'_phase' => $new_phase ]]
+    );
+  }
+
   function checkCredentials($username, $password){
     $collection = getCollection();
     $result = $collection->find( [ 'username' => $username, 'type' => 'user' ] );
@@ -182,10 +216,17 @@
       foreach ($result as $r) {
         
         $hashed_password = $r['password'];
+        
         if(password_verify($password, $hashed_password)) {
           //echo "Login erfolgreich!";
           $login_result = 0;
           $_SESSION['username'] = $username;
+          $_SESSION['admin'] = $r['admin'];
+          $_SESSION['scenario1_phase'] = $r['scenario1_phase'];
+          $_SESSION['scenario2_phase'] = $r['scenario2_phase'];
+          $_SESSION['scenario3_phase'] = $r['scenario3_phase'];
+          $_SESSION['scenario4_phase'] = $r['scenario4_phase'];
+          $_SESSION['scenario5_phase'] = $r['scenario5_phase'];
           header('Location: ../index.php');
         } 
       

@@ -11,7 +11,7 @@
 	$question=queryQuestion($_GET['scenarioid'],$_GET['phase']);
 	$answers=queryAnswers($_GET['scenarioid'],$_GET['phase']);
 	$_SESSION['scenarioid'] = $_GET['scenarioid'];
-	$_SESSION['phase'] = $_GET ['phase'];
+	$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] = $_GET ['phase'];
 
 
 	//wenn keine Fragen mehr im Szenario vorhanden sind
@@ -42,6 +42,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Virus zum Zusammenbauen">
         <link rel="stylesheet" media="screen" href="/css/frage.css">
+		<link rel="icon" href="/images/malware_icon.png">
     </head>
     <body>
 		<div id="div_menu">

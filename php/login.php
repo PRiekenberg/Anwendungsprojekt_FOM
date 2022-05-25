@@ -15,6 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" media="screen" href="../css/login.css">
         <title>Login</title>  
+        <link rel="icon" href="/images/malware_icon.png">
     </head> 
 
     <body>

@@ -16,6 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Virus zum Zusammenbauen">
         <link rel="stylesheet" media="screen" href="css/stylesheet.css">
+        <link rel="icon" href="/images/malware_icon.png">
     </head>
     <body>
         <?php
@@ -23,7 +24,7 @@
             $gegebeneantworten=[$_POST['antwort1'],$_POST['antwort2'],$_POST['antwort3'],$_POST['antwort4'],$_POST['antwort5']];
 
             //hole alle Fragen für die Phase und das Szenario
-            $result=queryRightAnswers($_SESSION['scenarioid'],$_SESSION['phase']);
+            $result=queryRightAnswers($_SESSION['scenarioid'],$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase']);
             //erstelle leeren Array für die richtigen Antworten
             $richtigeantworten=[];
             //schreibe richtige Antworten in den Array
@@ -40,19 +41,23 @@
                 if ($antwort != null) {
                     
                     //punkte für die aktuelle Antwort abrufen
-                    $answerpoints = queryAnswersPoints($_SESSION['scenarioid'],$_SESSION['phase'],$antwort);
+                    $answerpoints = queryAnswersPoints($_SESSION['scenarioid'],$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'],$antwort);
+                    $explanation=queryExplanationforAnswers($antwort);
 
                     if (($key = array_search($antwort, $richtigeantworten)) !== false) {
                         unset($richtigeantworten[$key]);
                         echo 'Antwort "'.$antwort; echo '" war richtig!';
                         echo'<br>';
                         echo 'Hier werden '.$answerpoints; echo' punkte hinzugefügt!';
-
+                        echo'<br>';
+                        echo 'Hier ist die Erlärung zu der Antwort: '.$explanation;
                         setUserPoints($_SESSION['scenarioid'],10,$_SESSION['username']);
                     } else {
                         echo 'Antwort "'.$antwort; echo '" war falsch!';
                         echo'<br>';
                         echo 'Hier werden 5 punkte abgezogen!';
+                        echo'<br>';
+                        echo 'Hier ist die Erlärung zu der Antwort: '.$explanation;
                         $fehlergemacht=1;
 
                         setUserPoints($_SESSION['scenarioid'],-5,$_SESSION['username']);
@@ -71,7 +76,7 @@
 
                   echo '<div id="div_tryagain">';
 				  echo '<form action="/php/frage.php">';
-					$new_phase = $_SESSION['phase'];
+					$new_phase = $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'];
 					$scenarioid = $_SESSION['scenarioid'];
 					echo '<input type="hidden"';
 					echo 'name="scenarioid"';
@@ -92,7 +97,7 @@
 
                 echo '<div id="div_tryagain">';
                 echo '<form action="/php/frage.php">';
-                  $new_phase = $_SESSION['phase'];
+                  $new_phase = $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'];
                   $scenarioid = $_SESSION['scenarioid'];
                   echo '<input type="hidden"';
                   echo 'name="scenarioid"';
@@ -113,8 +118,13 @@
 
                   echo '<div id="div_nextphase">';
                   echo '<form action="/php/frage.php">';
-                      $new_phase = $_SESSION['phase'] + 1;
+                      $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] = $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] + 1;
+
+                      $new_phase = $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'];
                       $scenarioid = $_SESSION['scenarioid'];
+
+                      setUserPhase($scenarioid,$_SESSION['username'],$new_phase);
+                      
                       echo '<input type="hidden"';
                       echo 'name="scenarioid"';
                       echo 'value="'.$scenarioid; echo'">';

@@ -4,9 +4,8 @@
   require_once 'functions.php';
   session_start();
 	/* Kontrolle, ob innerhalb der Session */
-  if (!isset($_SESSION['username'])) {
-	header("Location: /php/login.php");
-	exit();
+  if ($_SESSION['admin'] != "true") {
+	die("<p>Kein Zugang<br/><a href='../index.php'>Zurück zur Startseite</a></p>");
   } 
   else{
 	$isAdmin = checkAdmin($_SESSION['username'])
@@ -28,7 +27,11 @@
 				   $_POST['phase'],
 				   $_POST['scenarioid'],
 				   $_POST['username'],
-				   (password_hash($_POST['password'], PASSWORD_DEFAULT)));
+				   (password_hash($_POST['password'], PASSWORD_DEFAULT)),
+				   $_POST['admin'],
+				   $_POST['answerid'],
+				   $_POST['explanationcontent'],
+				);
   }
   
   if (isset($_POST['dbid'])) {
@@ -50,6 +53,7 @@
 		<meta name="description" content="Insertdata">
 		<script src="../js/jquery.js"></script>
 		<!--<link rel="stylesheet" media="screen" href="../css/stylesheet.css">-->
+		<link rel="icon" href="/images/malware_icon.png">
 		<style>
 			table, th, td {
 			border: 1px solid;
@@ -79,41 +83,57 @@
 					<option value="question">Frage</option>
 					<option value="answer">Antwort</option>
 					<option value="user">Benutzer</option>
+					<option value="explanation">Erklärung</option>
 				</select>
-				<div id="questioncontentdiv" class="select-default-shown select-user-hidden select-answer-hidden">
+				<div id="questioncontentdiv" class="select-default-shown select-user-hidden select-answer-hidden select-explanation-hidden">
 					<h3>Inhalt Frage</h3>
 					<input id="questioncontent" type="text" name="questioncontent" placeholder="Frage eingeben" /><br><br>
 				</div>
-				<div id="answercontentdiv" class="select-default-shown select-user-hidden select-question-hidden">
+				<div id="answercontentdiv" class="select-default-shown select-user-hidden select-question-hidden select-explanation-hidden">
 					<h3>Inhalt Antwort</h3>
 					<input id="answercontent" type="text" name="answercontent" placeholder="Antwort eingeben" /><br><br>
 				</div>
-				<div id="answerstatediv" class="select-default-shown select-user-hidden select-question-hidden">
+				<div id="answerstatediv" class="select-default-shown select-user-hidden select-question-hidden select-explanation-hidden">
 					<h3><label for="answerstate">Antwort Wahr oder Falsch?</label></h3>
 					<select id="answerstate" name="answerstate">
 						<option value="true">Wahr</option>
 						<option value="false">Falsch</option>
 					</select>
 				</div>
-				<div id="answerpointsdiv" class="select-default-shown select-user-hidden select-question-hidden">
+				<div id="answerpointsdiv" class="select-default-shown select-user-hidden select-question-hidden select-explanation-hidden">
 					<h3>Anzahl Punkte</h3>
 					<input id="answerpoints" type="number" name="answerpoints" placeholder="Anzahl Punkte eintragen" /><br><br>
 				</div>
-				<div id="phasediv" class="select-default-shown select-user-hidden">
+				<div id="phasediv" class="select-default-shown select-user-hidden select-explanation-hidden">
 					<h3>Phase im Szenario? </h3>
 					<input id="phase" type="number" name="phase" placeholder="Phasennummer eintragen" /><br><br>
 				</div>
-				<div id="scenarioiddiv" class="select-default-shown select-user-hidden">
+				<div id="scenarioiddiv" class="select-default-shown select-user-hidden select-explanation-hidden">
 					<h3>Szenario ID</h3>
 					<input id="scenarioid" type="number" name="scenarioid" placeholder="ID des Szenarios" /><br><br>
 				</div>
-				<div id="usernamediv" class="select-default-shown select-question-hidden select-answer-hidden">
+				<div id="usernamediv" class="select-default-shown select-question-hidden select-answer-hidden select-explanation-hidden">
 					<h3>Username</h3>
 					<input id="username" type="text" name="username" placeholder="Username eingeben" /><br><br>
 				</div>
-				<div id="passworddiv" class="select-default-shown select-question-hidden select-answer-hidden">
+				<div id="passworddiv" class="select-default-shown select-question-hidden select-answer-hidden select-explanation-hidden">
 					<h3>Passwort</h3>
 					<input id="password" type="text" name="password" placeholder="Passwort eingeben" /><br><br>
+				</div>
+				<div id="admindiv" class="select-default-shown select-question-hidden select-answer-hidden select-explanation-hidden">
+				<h3><label for="admin">Handelt es sich um einen Admin?</label></h3>
+					<select id="admin" name="admin">
+						<option value="false">Falsch</option>
+						<option value="true">Wahr</option>
+					</select>
+				</div>
+				<div id="answeriddiv" class="select-default-shown select-question-hidden select-answer-hidden select-user-hidden">
+					<h3>ID der Antwort</h3>
+					<input id="answerid" type="text" name="answerid" placeholder="ID der Antwort eingeben" /><br><br>
+				</div>
+				<div id="explanationdiv" class="select-default-shown select-question-hidden select-answer-hidden select-user-hidden">
+					<h3>Erklärung eingeben</h3>
+					<input id="explanationcontent" type="text" name="explanationcontent" placeholder="Erklärung eingeben" /><br><br>
 				</div>
 				<input id="firebtn" type="submit" value="Daten in Datenbank speichern"></input>
 
@@ -186,6 +206,35 @@
 					?>
 				</tbody>
 			</table>
+			<br><br>
+			<h2>Erklärungen in der Datenbank</h2>
+
+			<table>
+				<thead>
+				<tr>
+					<th>ID</td>
+					<th>Typ</td>
+					<th>Antwort ID</td>
+					<th>Erklärung</td>
+				</tr>
+				</thead>
+
+				<tbody>
+				
+				<?php 
+					$result = getallExplanations();
+					foreach ($result as $r){						
+						echo '<tr>';
+						echo '<td>' . $r['_id']; echo '</td>';  
+						echo '<td>' . $r['type']; echo '</td>';   
+						echo '<td>' . $r['answerid']; echo '</td>';
+						echo '<td>' . $r['explanationcontent']; echo '</td>';  
+						echo '</tr>';
+					}
+
+					?>
+				</tbody>
+			</table>
 
 			<br><br>
 			<h2>Benutzer in der Datenbank</h2>
@@ -207,6 +256,7 @@
 					<th>Szenario 4 Punkte</td>
 					<th>Szenario 5 Phase</td>
 					<th>Szenario 5 Punkte</td>
+					<th>Administrator?</td>
 				</tr>
 				</thead>
 
@@ -230,6 +280,7 @@
 						echo '<td>' . $r['scenario4_points']; echo '</td>'; 
 						echo '<td>' . $r['scenario5_phase']; echo '</td>'; 
 						echo '<td>' . $r['scenario5_points']; echo '</td>'; 
+						echo '<td>' . $r['admin']; echo '</td>'; 
 						echo '</tr>';
 					}
 
