@@ -42,18 +42,20 @@
                     
                     //punkte für die aktuelle Antwort abrufen
                     $answerpoints = queryAnswersPoints($_SESSION['scenarioid'],$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'],$antwort);
+                    $explanation=queryExplanationforAnswers($answer);
 
                     if (($key = array_search($antwort, $richtigeantworten)) !== false) {
                         unset($richtigeantworten[$key]);
                         echo 'Antwort "'.$antwort; echo '" war richtig!';
                         echo'<br>';
                         echo 'Hier werden '.$answerpoints; echo' punkte hinzugefügt!';
-
+                        echo 'Hier ist die Erlärung zu der Antwort: '.$explanation;
                         setUserPoints($_SESSION['scenarioid'],10,$_SESSION['username']);
                     } else {
                         echo 'Antwort "'.$antwort; echo '" war falsch!';
                         echo'<br>';
                         echo 'Hier werden 5 punkte abgezogen!';
+                        echo 'Hier ist die Erlärung zu der Antwort: '.$explanation;
                         $fehlergemacht=1;
 
                         setUserPoints($_SESSION['scenarioid'],-5,$_SESSION['username']);
