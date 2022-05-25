@@ -23,24 +23,36 @@
     <body>
 		<div id="div_menu">
 			<form>
-					<button id="button_menu" formaction="../index.php">Menü<br></button>
+				<button id="button_menu" formaction="../index.php">Menü<br></button>
 			</form>
 		</div>
 		<div id = "div_h1">
-			<h1>Fehler:</h1>
+			<h1>Herzlichen Glückwunsch!</h1>
         </div>
         <div id = "div_h2">
-            <h2>Es sind keine Fragen für dieses Szenario vorhanden!</h2>
+			<?php
+				echo '<h2> Sie haben '.getUserPoints($_SESSION['scenarioid'],$_SESSION['username']) 'erreicht!'; 
+				echo 'Benutzer: '.$_SESSION['username']; 
+				echo '</h2>';
+			?>
 	    </div>
 		<div id="div_logout">
 			<form>
-					<button id="button_logout" formaction="/php/logout.php">Abmelden<br></button>
+				<button id="button_logout" formaction="/php/logout.php">Abmelden<br></button>
 			</form>
 		</div>
 		<div id="div_gamescreen">
-            <a id="error">
-                ¯\_(ツ)_/¯
-            </a>
+            <div id="div_bestenliste">
+				<form>
+					<button id="button_bestenliste" formaction="/php/bestenliste.php">Bestenliste<br></button>
+				</form>
+			</div>
+
+			<div id="div_reset">
+				<form>
+					<button id="button_logout" formaction="../index.php">Reset<br></button>
+				</form>
+			<div>
         </div>  		
 		<div id="div_hinweis">
 			<a id ="hinweis">
