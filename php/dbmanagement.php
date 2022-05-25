@@ -19,7 +19,7 @@
 				   $_POST['username'],
 				   (password_hash($_POST['password'], PASSWORD_DEFAULT)),
 				   $_POST['admin'],
-				   $_POST['antwortid'],
+				   $_POST['answerid'],
 				   $_POST['explanationcontent'],
 				);
   }
@@ -119,7 +119,7 @@
 				</div>
 				<div id="antwortiddiv" class="select-default-shown select-question-hidden select-answer-hidden select-user-hidden">
 					<h3>ID der Antwort</h3>
-					<input id="antwortid" type="text" name="antwortid" placeholder="ID der Antwort eingeben" /><br><br>
+					<input id="answerid" type="text" name="answerid" placeholder="ID der Antwort eingeben" /><br><br>
 				</div>
 				<div id="explanationdiv" class="select-default-shown select-question-hidden select-answer-hidden select-user-hidden">
 					<h3>Erklärung eingeben</h3>
@@ -204,7 +204,7 @@
 				<tr>
 					<th>ID</td>
 					<th>Typ</td>
-					<th>AntwortID</td>
+					<th>Antwort ID</td>
 					<th>Erklärung</td>
 				</tr>
 				</thead>
