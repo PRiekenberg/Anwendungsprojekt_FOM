@@ -31,11 +31,11 @@
         </div>
         <div id = "div_h2">
 			<?php
-				echo '<h2>'; 
-				echo 'Sie haben '; 
-				echo .getUserPoints($_SESSION['scenarioid'],$_SESSION['username']); 
-				echo ' Punkte erreicht!';
-				echo '</h2>';
+			//	echo '<h2>'; 
+			//	echo 'Sie haben '; 
+			//	echo .getUserPoints($_SESSION['scenarioid'],$_SESSION['username']); 
+			//	echo ' Punkte erreicht!';
+			//	echo '</h2>';
 			?>
 	    </div>
 		<div id="div_logout">
