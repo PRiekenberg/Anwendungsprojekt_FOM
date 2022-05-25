@@ -11,7 +11,7 @@
 	$question=queryQuestion($_GET['scenarioid'],$_GET['phase']);
 	$answers=queryAnswers($_GET['scenarioid'],$_GET['phase']);
 	$_SESSION['scenarioid'] = $_GET['scenarioid'];
-	$_SESSION['phase'] = $_GET ['phase'];
+	$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] = $_GET ['phase'];
 
 
 	//wenn keine Fragen mehr im Szenario vorhanden sind
