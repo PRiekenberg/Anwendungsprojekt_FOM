@@ -49,12 +49,14 @@
                         echo 'Antwort "'.$antwort; echo '" war richtig!';
                         echo'<br>';
                         echo 'Hier werden '.$answerpoints; echo' punkte hinzugefügt!';
+                        echo'<br>';
                         echo 'Hier ist die Erlärung zu der Antwort: '.$explanation;
                         setUserPoints($_SESSION['scenarioid'],10,$_SESSION['username']);
                     } else {
                         echo 'Antwort "'.$antwort; echo '" war falsch!';
                         echo'<br>';
                         echo 'Hier werden 5 punkte abgezogen!';
+                        echo'<br>';
                         echo 'Hier ist die Erlärung zu der Antwort: '.$explanation;
                         $fehlergemacht=1;
 
