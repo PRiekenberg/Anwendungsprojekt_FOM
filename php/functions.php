@@ -22,7 +22,7 @@
   }
 
   //insert function
-  function insertDocument($type, $questioncontent, $answercontent, $answerstate, $answerpoints, $phase, $scenarioid, $username, $password, $admin) {
+  function insertDocument($type, $questioncontent, $answercontent, $answerstate, $answerpoints, $phase, $scenarioid, $username, $password, $admin, $antwortid, $explanation) {
     $client=connectDB();
     $collection=getCollection();
     $result = $collection->insertOne( [ 'type' => $type,
@@ -44,7 +44,9 @@
                                         'scenario4_points' => "0",
                                         'scenario5_phase' => "1",
                                         'scenario5_points' => "0",
-                                        'admin' => $admin
+                                        'admin' => $admin,
+                                        'antwortid' => $antwortid,
+                                        'explanation' => $explanation
                                       ]);
   }
 

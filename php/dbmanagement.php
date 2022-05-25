@@ -18,7 +18,10 @@
 				   $_POST['scenarioid'],
 				   $_POST['username'],
 				   (password_hash($_POST['password'], PASSWORD_DEFAULT)),
-				   $_POST['admin']);
+				   $_POST['admin'],
+				   $_POST['antwortid'],
+				   $_POST['explanation'],
+				);
   }
   
   if (isset($_POST['dbid'])) {
@@ -70,48 +73,57 @@
 					<option value="question">Frage</option>
 					<option value="answer">Antwort</option>
 					<option value="user">Benutzer</option>
+					<option value="explanation">Erklärung</option>
 				</select>
-				<div id="questioncontentdiv" class="select-default-shown select-user-hidden select-answer-hidden">
+				<div id="questioncontentdiv" class="select-default-shown select-user-hidden select-answer-hidden select-explanation-hidden">
 					<h3>Inhalt Frage</h3>
 					<input id="questioncontent" type="text" name="questioncontent" placeholder="Frage eingeben" /><br><br>
 				</div>
-				<div id="answercontentdiv" class="select-default-shown select-user-hidden select-question-hidden">
+				<div id="answercontentdiv" class="select-default-shown select-user-hidden select-question-hidden select-explanation-hidden">
 					<h3>Inhalt Antwort</h3>
 					<input id="answercontent" type="text" name="answercontent" placeholder="Antwort eingeben" /><br><br>
 				</div>
-				<div id="answerstatediv" class="select-default-shown select-user-hidden select-question-hidden">
+				<div id="answerstatediv" class="select-default-shown select-user-hidden select-question-hidden select-explanation-hidden">
 					<h3><label for="answerstate">Antwort Wahr oder Falsch?</label></h3>
 					<select id="answerstate" name="answerstate">
 						<option value="true">Wahr</option>
 						<option value="false">Falsch</option>
 					</select>
 				</div>
-				<div id="answerpointsdiv" class="select-default-shown select-user-hidden select-question-hidden">
+				<div id="answerpointsdiv" class="select-default-shown select-user-hidden select-question-hidden select-explanation-hidden">
 					<h3>Anzahl Punkte</h3>
 					<input id="answerpoints" type="number" name="answerpoints" placeholder="Anzahl Punkte eintragen" /><br><br>
 				</div>
-				<div id="phasediv" class="select-default-shown select-user-hidden">
+				<div id="phasediv" class="select-default-shown select-user-hidden select-explanation-hidden">
 					<h3>Phase im Szenario? </h3>
 					<input id="phase" type="number" name="phase" placeholder="Phasennummer eintragen" /><br><br>
 				</div>
-				<div id="scenarioiddiv" class="select-default-shown select-user-hidden">
+				<div id="scenarioiddiv" class="select-default-shown select-user-hidden select-explanation-hidden">
 					<h3>Szenario ID</h3>
 					<input id="scenarioid" type="number" name="scenarioid" placeholder="ID des Szenarios" /><br><br>
 				</div>
-				<div id="usernamediv" class="select-default-shown select-question-hidden select-answer-hidden">
+				<div id="usernamediv" class="select-default-shown select-question-hidden select-answer-hidden select-explanation-hidden">
 					<h3>Username</h3>
 					<input id="username" type="text" name="username" placeholder="Username eingeben" /><br><br>
 				</div>
-				<div id="passworddiv" class="select-default-shown select-question-hidden select-answer-hidden">
+				<div id="passworddiv" class="select-default-shown select-question-hidden select-answer-hidden select-explanation-hidden">
 					<h3>Passwort</h3>
 					<input id="password" type="text" name="password" placeholder="Passwort eingeben" /><br><br>
 				</div>
-				<div id="admindiv" class="select-default-shown select-question-hidden select-answer-hidden">
+				<div id="admindiv" class="select-default-shown select-question-hidden select-answer-hidden select-explanation-hidden">
 				<h3><label for="admin">Handelt es sich um einen Admin?</label></h3>
 					<select id="admin" name="admin">
 						<option value="false">Falsch</option>
 						<option value="true">Wahr</option>
 					</select>
+				</div>
+				<div id="antwortiddiv" class="select-default-shown select-question-hidden select-answer-hidden select-user-hidden">
+					<h3>ID der Antwort</h3>
+					<input id="antwortid" type="text" name="antwortid" placeholder="ID der Antwort eingeben" /><br><br>
+				</div>
+				<div id="explanationdiv" class="select-default-shown select-question-hidden select-answer-hidden select-user-hidden">
+					<h3>Erklärung eingeben</h3>
+					<input id="explanation" type="text" name="explanation" placeholder="Erklärung eingeben" /><br><br>
 				</div>
 				<input id="firebtn" type="submit" value="Daten in Datenbank speichern"></input>
 
