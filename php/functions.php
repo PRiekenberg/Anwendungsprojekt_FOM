@@ -175,9 +175,10 @@
       //return $r['_id'];
       //hole mir mithilfe der ID aus dem Antwortdatensatz die entsprechende Erklärung
       $explanation = $collection->find( [ 'answerid' => $r['_id'], 'type' => 'explanation' ] );
-      foreach ($explanation as $e) {
-        return $e['explanationcontent'];
-      }
+      return var_dump($explanation);
+      //foreach ($explanation as $e) {
+      //  return $e['explanationcontent'];
+      //}
     }
   }
 
