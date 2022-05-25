@@ -5,7 +5,7 @@
   session_start();
 	/* Kontrolle, ob innerhalb der Session */
   if ($_SESSION['admin'] != "true") {
-	die("<p>Kein Zugang<br/><a href='php/login.php'>Zum Login</a></p>");
+	die("<p>Kein Zugang<br/><a href='../index.php'>Zurück zur Startseite</a></p>");
   } 
 
   if (isset($_POST['scenarioid'])) {
