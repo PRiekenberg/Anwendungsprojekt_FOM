@@ -4,19 +4,22 @@
   require_once 'functions.php';
   session_start();
 	/* Kontrolle, ob innerhalb der Session */
-  if ($_SESSION['admin'] != "true") {
-	die("<p>Kein Zugang<br/><a href='../index.php'>Zurück zur Startseite</a></p>");
-  } 
-  else{
-	$isAdmin = checkAdmin($_SESSION['username'])
-	if ($isAdmin == true){
-		echo 'Ja';
-	}
-	else{
-		echo 'Nein';
-	}
-	
+  //if ($_SESSION['admin'] != "true") {
+	//	die("<p>Kein Zugang<br/><a href='../index.php'>Zurück zur Startseite</a></p>");
+  //}
+
+  if (!isset($_SESSION['username'])) {
+	header("Location: /php/login.php");
+	exit();
   }
+  else{
+	$isAdmin = checkAdmin($_SESSION['username']);
+
+	if ($isAdmin == false){
+		die("<p>Kein Zugang<br/><a href='../index.php'>Zurück zur Startseite</a></p>");
+	}
+  }  
+
 
   if (isset($_POST['scenarioid'])) {
     insertDocument($_POST['type'],

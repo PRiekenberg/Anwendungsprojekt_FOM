@@ -249,4 +249,13 @@
 function callEnde(){
   header("Location: ../php/ende.php");
 }
+
+function checkAdmin($username){
+  $isAdmin = false;
+  $result = $collection->find( [ 'username' => $username, 'admin' => 'true' ] );
+  if (!$result -> isDead()){
+    $isAdmin = true;
+  }
+  return $isAdmin;
+}
 ?>
