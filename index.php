@@ -39,7 +39,9 @@
 								value="3">
 								<input type="hidden"
 								name="phase"
-								value="<?php $_SESSION['scenario3_phase'] ?>">
+								<?php
+								echo 'value="'.$_SESSION['scenario3_phase']; echo'">';
+								?>
 					<!--<input type="submit" id="button_firmennetz"
 								value="Firmennetz">-->
 						<button class ="button_menu" id="button_firmennetz">Firmennetz</button>						
@@ -50,7 +52,9 @@
 								value="5">
 								<input type="hidden"
 								name="phase"
-								value="<?php $_SESSION['scenario5_phase'] ?>">
+								<?php
+								echo 'value="'.$_SESSION['scenario5_phase']; echo'">';
+								?>
 						<!--<input type="submit" id="button_krypto"
 								value="Krypto">-->
 						<button class ="button_menu" id="button_krypto">Krypto</button>
@@ -63,7 +67,9 @@
 								value="2">
 								<input type="hidden"
 								name="phase"
-								value="<?php $_SESSION['scenario2_phase'] ?>">
+								<?php
+								echo 'value="'.$_SESSION['scenario2_phase']; echo'">';
+								?>
 						<!--<input type="submit" id="button_social"
 								value="Social Engineering">-->
 						<button class ="button_menu" id="button_social">Social Engineering</button>
@@ -79,7 +85,9 @@
 							value="4">
 							<input type="hidden"
 							name="phase"
-							value="<?php $_SESSION['scenario4_phase'] ?>">
+							<?php
+								echo 'value="'.$_SESSION['scenario4_phase']; echo'">';
+							?>
 					<!--<input type="submit" id="button_banking"
 							value="Online Banking">-->
 					<button class ="button_menu" id="button_banking">Online Banking</button>
@@ -90,7 +98,9 @@
 							value="1">
 							<input type="hidden"
 							name="phase"
-							value="<?php $_SESSION['scenario1_phase'] ?>">
+							<?php
+								echo 'value="'.$_SESSION['scenario1_phase']; echo'">';
+							?>
 					<!--<input type="submit" id="button_passwort"
 							value="Passwort">-->
 					<button class ="button_menu" id="button_password">Passwort</button>
