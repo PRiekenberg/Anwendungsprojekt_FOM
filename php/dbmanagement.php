@@ -5,7 +5,7 @@
   session_start();
 	/* Kontrolle, ob innerhalb der Session */
   if ($_SESSION['admin'] != "true") {
-	header("Location: /php/login.php");
+	die("<p>Kein Zugang<br/><a href='php/login.php'>Zum Login</a></p>");
 	exit();
   } 
 
