@@ -117,7 +117,7 @@
 						<option value="true">Wahr</option>
 					</select>
 				</div>
-				<div id="antwortiddiv" class="select-default-shown select-question-hidden select-answer-hidden select-user-hidden">
+				<div id="answeriddiv" class="select-default-shown select-question-hidden select-answer-hidden select-user-hidden">
 					<h3>ID der Antwort</h3>
 					<input id="answerid" type="text" name="answerid" placeholder="ID der Antwort eingeben" /><br><br>
 				</div>

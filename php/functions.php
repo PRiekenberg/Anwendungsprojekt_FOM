@@ -45,7 +45,7 @@
                                         'scenario5_phase' => "1",
                                         'scenario5_points' => "0",
                                         'admin' => $admin,
-                                        'answerid' => $antwortid,
+                                        'answerid' => $answerid,
                                         'explanationcontent' => $explanationcontent
                                       ]);
   }
