@@ -183,12 +183,17 @@
       foreach ($result as $r) {
         
         $hashed_password = $r['password'];
-        $adminstate = $r['admin'];
+        
         if(password_verify($password, $hashed_password)) {
           //echo "Login erfolgreich!";
           $login_result = 0;
           $_SESSION['username'] = $username;
-          $_SESSION['admin'] = $adminstate;
+          $_SESSION['admin'] = $r['admin'];
+          $_SESSION['scenario1_phase'] = $r['scenario1_phase'];
+          $_SESSION['scenario2_phase'] = $r['scenario2_phase'];
+          $_SESSION['scenario3_phase'] = $r['scenario3_phase'];
+          $_SESSION['scenario4_phase'] = $r['scenario4_phase'];
+          $_SESSION['scenario5_phase'] = $r['scenario5_phase'];
           header('Location: ../index.php');
         } 
       
