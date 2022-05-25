@@ -18,7 +18,8 @@
 				   $_POST['phase'],
 				   $_POST['scenarioid'],
 				   $_POST['username'],
-				   (password_hash($_POST['password'], PASSWORD_DEFAULT)));
+				   (password_hash($_POST['password'], PASSWORD_DEFAULT)),
+				   $_POST['admin']);
   }
   
   if (isset($_POST['dbid'])) {
@@ -105,6 +106,13 @@
 				<div id="passworddiv" class="select-default-shown select-question-hidden select-answer-hidden">
 					<h3>Passwort</h3>
 					<input id="password" type="text" name="password" placeholder="Passwort eingeben" /><br><br>
+				</div>
+				<div id="admindiv" class="select-default-shown select-question-hidden select-answer-hidden">
+				<h3><label for="admin">Handelt es sich um einen Admin?</label></h3>
+					<select id="admin" name="admin">
+						<option value="false">Falsch</option>
+						<option value="true">Wahr</option>
+					</select>
 				</div>
 				<input id="firebtn" type="submit" value="Daten in Datenbank speichern"></input>
 
@@ -198,6 +206,7 @@
 					<th>Szenario 4 Punkte</td>
 					<th>Szenario 5 Phase</td>
 					<th>Szenario 5 Punkte</td>
+					<th>Administrator?</td>
 				</tr>
 				</thead>
 
@@ -221,6 +230,7 @@
 						echo '<td>' . $r['scenario4_points']; echo '</td>'; 
 						echo '<td>' . $r['scenario5_phase']; echo '</td>'; 
 						echo '<td>' . $r['scenario5_points']; echo '</td>'; 
+						echo '<td>' . $r['admin']; echo '</td>'; 
 						echo '</tr>';
 					}
 
