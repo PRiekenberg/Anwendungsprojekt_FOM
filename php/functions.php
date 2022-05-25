@@ -165,6 +165,21 @@
     return $result;
   }
 
+  function queryExplanationforAnswers($answer) {
+    $collection = getCollection();
+
+    //hole mir anhand des Antwortinhalts den Antwortdatensatz
+    $result = $collection->find( [ 'answercontent' => $answer, 'type' => 'answer' ] );
+
+    foreach ($result as $r) {
+      //hole mir mithilfe der ID aus dem Antwortdatensatz die entsprechende Erklärung
+      $explanation = $collection->find( [ 'answerid' => new \MongoDB\BSON\ObjectID($r['_id']), 'type' => 'explanation' ] );
+      foreach ($explanation as $e) {
+        return $e['explanationcontent'];
+      }
+    }
+  }
+
   function queryAnswersPoints($scenarioid, $phase, $answercontent) {
     $collection = getCollection();
     $result = $collection->find( [ 'scenarioid' => $scenarioid, 'phase' => $phase, 'type' => 'answer', 'answercontent' => $answercontent ] );
