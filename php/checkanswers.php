@@ -24,7 +24,7 @@
             $gegebeneantworten=[$_POST['antwort1'],$_POST['antwort2'],$_POST['antwort3'],$_POST['antwort4'],$_POST['antwort5']];
 
             //hole alle Fragen für die Phase und das Szenario
-            $result=queryRightAnswers($_SESSION['scenarioid'],$_SESSION['phase']);
+            $result=queryRightAnswers($_SESSION['scenarioid'],$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase']);
             //erstelle leeren Array für die richtigen Antworten
             $richtigeantworten=[];
             //schreibe richtige Antworten in den Array
@@ -41,7 +41,7 @@
                 if ($antwort != null) {
                     
                     //punkte für die aktuelle Antwort abrufen
-                    $answerpoints = queryAnswersPoints($_SESSION['scenarioid'],$_SESSION['phase'],$antwort);
+                    $answerpoints = queryAnswersPoints($_SESSION['scenarioid'],$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'],$antwort);
 
                     if (($key = array_search($antwort, $richtigeantworten)) !== false) {
                         unset($richtigeantworten[$key]);
