@@ -20,7 +20,7 @@
 				   (password_hash($_POST['password'], PASSWORD_DEFAULT)),
 				   $_POST['admin'],
 				   $_POST['antwortid'],
-				   $_POST['explanation'],
+				   $_POST['explanationcontent'],
 				);
   }
   
@@ -123,7 +123,7 @@
 				</div>
 				<div id="explanationdiv" class="select-default-shown select-question-hidden select-answer-hidden select-user-hidden">
 					<h3>Erklärung eingeben</h3>
-					<input id="explanation" type="text" name="explanation" placeholder="Erklärung eingeben" /><br><br>
+					<input id="explanationcontent" type="text" name="explanationcontent" placeholder="Erklärung eingeben" /><br><br>
 				</div>
 				<input id="firebtn" type="submit" value="Daten in Datenbank speichern"></input>
 
@@ -190,6 +190,35 @@
 						echo '<td>' . $r['answerpoints']; echo '</td>'; 
 						echo '<td>' . $r['phase']; echo '</td>'; 
 						echo '<td>' . $r['scenarioid']; echo '</td>'; 
+						echo '</tr>';
+					}
+
+					?>
+				</tbody>
+			</table>
+			<br><br>
+			<h2>Erklärungen in der Datenbank</h2>
+
+			<table>
+				<thead>
+				<tr>
+					<th>ID</td>
+					<th>Typ</td>
+					<th>AntwortID</td>
+					<th>Erklärung</td>
+				</tr>
+				</thead>
+
+				<tbody>
+				
+				<?php 
+					$result = getallExplanations();
+					foreach ($result as $r){						
+						echo '<tr>';
+						echo '<td>' . $r['_id']; echo '</td>';  
+						echo '<td>' . $r['type']; echo '</td>';   
+						echo '<td>' . $r['answerid']; echo '</td>';
+						echo '<td>' . $r['explanationcontent']; echo '</td>';  
 						echo '</tr>';
 					}
 

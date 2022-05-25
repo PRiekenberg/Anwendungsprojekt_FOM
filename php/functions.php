@@ -22,7 +22,7 @@
   }
 
   //insert function
-  function insertDocument($type, $questioncontent, $answercontent, $answerstate, $answerpoints, $phase, $scenarioid, $username, $password, $admin, $antwortid, $explanation) {
+  function insertDocument($type, $questioncontent, $answercontent, $answerstate, $answerpoints, $phase, $scenarioid, $username, $password, $admin, $antwortid, $explanationcontent) {
     $client=connectDB();
     $collection=getCollection();
     $result = $collection->insertOne( [ 'type' => $type,
@@ -46,7 +46,7 @@
                                         'scenario5_points' => "0",
                                         'admin' => $admin,
                                         'antwortid' => $antwortid,
-                                        'explanation' => $explanation
+                                        'explanation' => $explanationcontent
                                       ]);
   }
 
@@ -85,6 +85,12 @@
   function getallUsers(){
     $collection = getCollection();
     $result = $collection->find([ 'type' => 'user' ]);
+    return $result;
+  }
+
+  function getallExplanations(){
+    $collection = getCollection();
+    $result = $collection->find([ 'type' => 'explanation' ]);
     return $result;
   }
 
