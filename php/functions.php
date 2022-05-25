@@ -172,10 +172,11 @@
     $result = $collection->find( [ 'answercontent' => $answer, 'type' => 'answer' ] );
 
     foreach ($result as $r) {
+      return $r['_id'];
       //hole mir mithilfe der ID aus dem Antwortdatensatz die entsprechende Erklärung
-      $explanation = $collection->find( [ 'answerid' => $r['_id'], 'type' => 'explanation' ] );
+      $explanation = $collection->find( [ 'answerid' => new \MongoDB\BSON\ObjectID($r['_id']), 'type' => 'explanation' ] );
       foreach ($explanation as $e) {
-        return $e['explanationcontent'];
+        //return $e['explanationcontent'];
       }
     }
   }
