@@ -12,14 +12,6 @@
 	header("Location: /php/login.php");
 	exit();
   }
-//else{
-//	$isAdmin = checkAdmin($_SESSION['username']);
-//
-//	if ($isAdmin == false){
-//		die("<p>Kein Zugang<br/><a href='../index.php'>Zurück zur Startseite</a></p>");
-//	}
-//  }  
-
 
   if (isset($_POST['scenarioid'])) {
     insertDocument($_POST['type'],
