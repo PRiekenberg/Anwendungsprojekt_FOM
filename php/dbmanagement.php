@@ -8,6 +8,16 @@
 	header("Location: /php/login.php");
 	exit();
   } 
+  else{
+	$isAdmin = checkAdmin($_SESSION['username'])
+	if ($isAdmin == true){
+		echo 'Ja';
+	}
+	else{
+		echo 'Nein';
+	}
+	
+  }
 
   if (isset($_POST['scenarioid'])) {
     insertDocument($_POST['type'],
