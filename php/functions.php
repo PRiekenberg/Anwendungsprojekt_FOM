@@ -174,6 +174,9 @@
       //hole mir mithilfe der ID aus dem Antwortdatensatz die entsprechende Erklärung
       var_dump($r['_id']);
       echo '<br><br>';
+      $a=new MongoDB\BSON\ObjectId($r['_id'])
+      var_dump($a);
+      echo '<br><br>';
       $explanation = $collection->find( [ 'answerid' => $id, 'type' => 'explanation' ] );
       var_dump($explanation);
       foreach ($explanation as $e) {
