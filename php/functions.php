@@ -170,13 +170,15 @@
 
     //hole mir anhand des Antwortinhalts den Antwortdatensatz
     $result = $collection->find( [ 'answercontent' => $answer, 'type' => 'answer' ] );
-
+    $id = $null;
     foreach ($result as $r) {
       //hole mir mithilfe der ID aus dem Antwortdatensatz die entsprechende Erklärung
-      global $id = $r['_id'];
-      $explanation = $collection->find( [ 'answerid' => global $id, 'type' => 'explanation' ] );
+      global $id;
+      $id = $r['_id'];
+      $explanation = $collection->find( [ 'answerid' =>$id, 'type' => 'explanation' ] );
       foreach ($explanation as $e) {
-        echo global $id;
+        global $id;
+        echo $id;
         echo $e['_id'];
         echo $e['explanationcontent'];
         return $e['explanationcontent'];
