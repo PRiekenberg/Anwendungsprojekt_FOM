@@ -162,7 +162,6 @@
   function queryRightAnswers($scenarioid, $phase) {
     $collection = getCollection();
     $result = $collection->find( [ 'scenarioid' => $scenarioid, 'phase' => $phase, 'type' => 'answer', 'answerstate' => 'true' ] );
-    echo var_dump($result);
     return $result;
   }
 
@@ -173,13 +172,14 @@
     $result = $collection->find( [ 'answercontent' => $answer, 'type' => 'answer' ] );
 
     foreach ($result as $r) {
-      //return $r['_id'];
       //hole mir mithilfe der ID aus dem Antwortdatensatz die entsprechende Erklärung
+      echo $r['_id'];
       $explanation = $collection->find( [ 'answerid' => $r['_id'], 'type' => 'explanation' ] );
-      return var_dump($explanation);
-      //foreach ($explanation as $e) {
-      //  return $e['explanationcontent'];
-      //}
+      foreach ($explanation as $e) {
+        echo $e['_id'];
+        echo $e['explanationcontent'];
+        return $e['explanationcontent'];
+      }
     }
   }
 
