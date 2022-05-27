@@ -174,7 +174,7 @@
     foreach ($result as $r) {
       //hole mir mithilfe der ID aus dem Antwortdatensatz die entsprechende Erklärung
       echo $r['_id'];
-      $explanation = $collection->find( [ 'answerid' => $r['_id'], 'type' => 'explanation' ] );
+      $explanation = $collection->find( [ 'answerid' => new \MongoDB\BSON\ObjectID($r['_id']), 'type' => 'explanation' ] );
       foreach ($explanation as $e) {
         echo $e['_id'];
         echo $e['explanationcontent'];
