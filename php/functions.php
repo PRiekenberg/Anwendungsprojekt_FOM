@@ -169,7 +169,7 @@
     $collection = getCollection();
     //hole mir anhand des Antwortinhalts den Antwortdatensatz
     $result = $collection->find( [ 'answercontent' => $answer, 'type' => 'answer' ] );
-    $a=$question->_id->{'$oid'}
+    $a=$question->_id->{'$oid'};
     foreach ($result as $r) {
       //hole mir mithilfe der ID aus dem Antwortdatensatz die entsprechende Erklärung
       var_dump($r['_id']);
