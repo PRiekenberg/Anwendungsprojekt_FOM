@@ -169,12 +169,11 @@
     $collection = getCollection();
     //hole mir anhand des Antwortinhalts den Antwortdatensatz
     $result = $collection->find( [ 'answercontent' => $answer, 'type' => 'answer' ] );
-
+    $a=$question->_id->{'$oid'}
     foreach ($result as $r) {
       //hole mir mithilfe der ID aus dem Antwortdatensatz die entsprechende Erklärung
       var_dump($r['_id']);
       echo '<br><br>';
-      $a=new \MongoDB\BSON\ObjectID($r['_id']);
       var_dump($a);
       echo '<br><br>';
       $explanation = $collection->find( [ 'answerid' => $a, 'type' => 'explanation' ] );
