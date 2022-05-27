@@ -170,8 +170,7 @@
     //hole mir anhand des Antwortinhalts den Antwortdatensatz
     $result = $collection->find( [ 'answercontent' => $answer, 'type' => 'answer' ] );
     foreach ($result as $r) {
-      $explanation=queryExplanationforAnswers2($r['_id']);
-      return $explanation;
+      queryExplanationforAnswers2($r['_id']);
     }
   }
 
@@ -179,7 +178,7 @@
       //hole mir mithilfe der ID aus dem Antwortdatensatz die entsprechende Erklärung
       $explanation = $collection->find( [ 'answerid' => $id, 'type' => 'explanation' ] );
       foreach ($explanation as $e) {
-        return $e['explanationcontent'];
+        echo $e['explanationcontent'];
       }
     }
 
