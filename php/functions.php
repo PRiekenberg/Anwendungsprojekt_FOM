@@ -172,7 +172,7 @@
 
     foreach ($result as $r) {
       //hole mir mithilfe der ID aus dem Antwortdatensatz die entsprechende Erklärung
-      $r['_id']->{'$id'};
+      var_dump($r['_id']);
       $explanation = $collection->find( [ 'answerid' => $id, 'type' => 'explanation' ] );
       var_dump($explanation);
       foreach ($explanation as $e) {
