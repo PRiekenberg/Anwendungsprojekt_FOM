@@ -173,10 +173,10 @@
 
     foreach ($result as $r) {
       //hole mir mithilfe der ID aus dem Antwortdatensatz die entsprechende Erklärung
-      $id = $r['_id'];
-      $explanation = $collection->find( [ 'answerid' => $id, 'type' => 'explanation' ] );
+      global $id = $r['_id'];
+      $explanation = $collection->find( [ 'answerid' => global $id, 'type' => 'explanation' ] );
       foreach ($explanation as $e) {
-        echo $id;
+        echo global $id;
         echo $e['_id'];
         echo $e['explanationcontent'];
         return $e['explanationcontent'];
