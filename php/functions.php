@@ -169,12 +169,14 @@
     $collection = getCollection();
     //hole mir anhand des Antwortinhalts den Antwortdatensatz
     $result = $collection->find( [ 'answercontent' => $answer, 'type' => 'answer' ] );
-    $a = (string)$result->_id;
-    //hole mir mithilfe der ID aus dem Antwortdatensatz die entsprechende Erklärung
-    $explanation = $collection->find( [ 'answerid' => $a, 'type' => 'explanation' ] );
+    foreach ($result as $r) {
+      $a = (string)$r->_id;
+      //hole mir mithilfe der ID aus dem Antwortdatensatz die entsprechende Erklärung
+      $explanation = $collection->find( [ 'answerid' => $a, 'type' => 'explanation' ] );
       foreach ($explanation as $e) {
         return $e['explanationcontent'];
       }
+    }
   }
 
   function queryAnswersPoints($scenarioid, $phase, $answercontent) {
