@@ -176,8 +176,9 @@
       echo $r['_id'];
       $explanation = $collection->find( [ 'answerid' => new \MongoDB\BSON\ObjectID($r['_id']), 'type' => 'explanation' ] );
       foreach ($explanation as $e) {
-        echo $e['_id'];
-        echo $e['explanationcontent'];
+        echo $r['_id'];
+        //echo $e['_id'];
+        //echo $e['explanationcontent'];
         return $e['explanationcontent'];
       }
     }
