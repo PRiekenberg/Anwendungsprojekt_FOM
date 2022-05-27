@@ -165,22 +165,23 @@
     return $result;
   }
 
+  function queryExplanationforAnswers2($id) {
+    //hole mir mithilfe der ID aus dem Antwortdatensatz die entsprechende Erklärung
+    $explanation = $collection->find( [ 'answerid' => $id, 'type' => 'explanation' ] );
+    foreach ($explanation as $e) {
+      return $e['explanationcontent'];
+    }
+  }
+
   function queryExplanationforAnswers($answer) {
     $collection = getCollection();
     //hole mir anhand des Antwortinhalts den Antwortdatensatz
     $result = $collection->find( [ 'answercontent' => $answer, 'type' => 'answer' ] );
     foreach ($result as $r) {
-      queryExplanationforAnswers2($r['_id']);
+      $explanation=queryExplanationforAnswers2($r['_id']);
+      return $explanation;
     }
   }
-
-  function queryExplanationforAnswers2($id) {
-      //hole mir mithilfe der ID aus dem Antwortdatensatz die entsprechende Erklärung
-      $explanation = $collection->find( [ 'answerid' => $id, 'type' => 'explanation' ] );
-      foreach ($explanation as $e) {
-        echo $e['explanationcontent'];
-      }
-    }
 
   function queryAnswersPoints($scenarioid, $phase, $answercontent) {
     $collection = getCollection();
