@@ -162,7 +162,8 @@
   function queryRightAnswers($scenarioid, $phase) {
     $collection = getCollection();
     $result = $collection->find( [ 'scenarioid' => $scenarioid, 'phase' => $phase, 'type' => 'answer', 'answerstate' => 'true' ] );
-    return var_dump($result);
+    echo var_dump($result);
+    return $result;
   }
 
   function queryExplanationforAnswers($answer) {
