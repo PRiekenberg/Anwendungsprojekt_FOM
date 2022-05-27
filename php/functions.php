@@ -169,8 +169,8 @@
     $collection = getCollection();
     //hole mir anhand des Antwortinhalts den Antwortdatensatz
     $result = $collection->find( [ 'answercontent' => $answer, 'type' => 'answer' ] );
-    $a = (string)$result->_id;
     foreach ($result as $r) {
+      $a = (string)$r->_id;
       //hole mir mithilfe der ID aus dem Antwortdatensatz die entsprechende Erklärung
       var_dump($r['_id']);
       echo '<br><br>';
