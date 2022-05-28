@@ -187,7 +187,6 @@
 
                         setUserPoints($_SESSION['scenarioid'],-5,$_SESSION['username']);
                     }
-                    echo '<br><br>';
                 } 
             }
               
