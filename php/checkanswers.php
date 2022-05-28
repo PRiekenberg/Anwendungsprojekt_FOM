@@ -24,7 +24,7 @@
             $gegebeneantworten=[$_POST['antwort1'],$_POST['antwort2'],$_POST['antwort3'],$_POST['antwort4'],$_POST['antwort5']];
             //hole alle Fragen
             $question=queryQuestion($_GET['scenarioid'],$_GET['phase']);
-            $ansers=queryAnswers($_SESSION['scenarioid'],$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase']);
+            $answers=queryAnswers($_SESSION['scenarioid'],$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase']);
             //hole alle richtigen Antworten für die Phase und das Szenario
             $result=queryRightAnswers($_SESSION['scenarioid'],$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase']);
             //erstelle leeren Array für die richtigen Antworten
