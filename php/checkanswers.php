@@ -75,9 +75,10 @@
 					<?php
 						$counter=1;
 						foreach ($answers as $a){
-							
+							$explanation = queryExplanationforAnswers($a['answercontent']);
+                            $anserstate = $a['answerstate'];
+                            
 							if ($counter == 1) {
-                                $explanation = queryExplanationforAnswers($a['answercontent']);
 								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
 								echo '<label>';
 								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
@@ -89,7 +90,6 @@
 								echo '</div>';
 								echo '<div id="div_gamescreen_center">';
 							} if ($counter == 2 or $counter == 3) {
-                                $explanation = queryExplanationforAnswers($a['answercontent']);
 								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
 								echo '<label>';
 								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
@@ -99,7 +99,6 @@
                                 echo '<p>Erklärung: '.$explanation;echo '</p>';
                                 echo '</div>';
 							} if ($counter == 4) {
-                                $explanation = queryExplanationforAnswers($a['answercontent']);
 								echo '</div>';
 								echo '<div id="div_gamescreen_right">';
 								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
@@ -111,7 +110,6 @@
                                 echo '<p>Erklärung: '.$explanation;echo '</p>';
                                 echo '</div>';
 							} if ($counter == 5) {
-                                $explanation = queryExplanationforAnswers($a['answercontent']);
 								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
 								echo '<label>';
 								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
