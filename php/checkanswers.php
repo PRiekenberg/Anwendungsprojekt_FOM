@@ -22,8 +22,9 @@
         <?php
 
             $gegebeneantworten=[$_POST['antwort1'],$_POST['antwort2'],$_POST['antwort3'],$_POST['antwort4'],$_POST['antwort5']];
-
-            //hole alle Fragen für die Phase und das Szenario
+            //hole alle Fragen
+            $ansers=queryAnswers($_SESSION['scenarioid'],$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase']);
+            //hole alle richtigen Antworten für die Phase und das Szenario
             $result=queryRightAnswers($_SESSION['scenarioid'],$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase']);
             //erstelle leeren Array für die richtigen Antworten
             $richtigeantworten=[];
@@ -33,6 +34,125 @@
             }
 
             $fehlergemacht = 0;
+        ?>
+
+		<div id="div_menu">
+			<form>
+				<button id="button_menu" formaction="../index.php">Menü<br></button>
+			</form>
+		</div>
+		<div id = "div_h1">
+			<h1>Modus</h1>
+		</div>
+		<div id="div_logout">
+			<form>
+				<button id="button_logout" formaction="/php/logout.php">Abmelden<br></button>
+			</form>
+		</div>
+		<div id = "div_h2">
+			<?php
+				foreach ($question as $q) {
+					echo '<h2>' . $q['questioncontent']; echo '</h2>';
+				}
+			?>
+		</div>
+		<form method="post" action="checkanswers.php">
+			<div id="div_gamescreen">
+				<div id="div_gamescreen_left">
+					<div id ="div_bild1">
+						<img id="bild1" src="../images/hacker.jpeg" alt="bild1">
+					</div>
+					<div id = "div_aktuellepunktzahl">
+						<?php
+							echo '<a id ="aktuellepunktzahl">';
+							echo 'Benutzer: '.$_SESSION['username']; 
+							echo '<br>';
+							echo'Punkte: '.getUserPoints($_SESSION['scenarioid'],$_SESSION['username']); 
+							echo '</a>';
+						?>
+					</div>
+					<div id="div_button_checkanswers">
+						<!--<input name="button_checkbutton" id="checkbutton" type="submit" value="Antworten prüfen"></input>-->
+						<button id="button_checkanswers" name="checkanswers">Antworten prüfen<br></button>
+					</div>
+					<?php
+						$counter=1;
+						foreach ($answers as $a){
+							
+							if ($counter == 1) {
+								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
+								echo '<label>';
+								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
+								echo '</label>';
+								echo '</div>';
+								echo '</div>';
+								echo '<div id="div_gamescreen_center">';
+							} if ($counter == 2 or $counter == 3) {
+								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
+								echo '<label>';
+								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
+								echo '</label>';
+								echo '</div>';
+							} if ($counter == 4) {
+								echo '</div>';
+								echo '<div id="div_gamescreen_right">';
+								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
+								echo '<label>';
+								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
+								echo '</label>';
+								echo '</div>';
+							} if ($counter == 5) {
+								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
+								echo '<label>';
+								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
+								echo '</label>';
+								echo '</div>';
+							} 
+							$counter++;
+						}
+						
+					?>
+					<div id ="div_bild2">
+						<img id="bild2" src="../images/user.jpeg" alt="bild2">
+					</div>
+				</div> 
+			</div>
+		</form>
+		
+		<div id="div_hinweis">
+			<a id ="hinweis">
+				Hinweis!
+				<br>
+				Dies ist keine Webseite um einen echten Virus zu bauen!
+			</a>
+		</div>
+		<div id ="div_copyright">
+			<a id="copyrigth">
+				&copy Gruppe 7: Virus zum zusammenbauen
+			</a>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <?php
 
             echo '<h1>Auswertung:</h1>';
             foreach($gegebeneantworten as $antwort) {
