@@ -72,10 +72,6 @@
 							echo '</a>';
 						?>
 					</div>
-					<div id="div_button_checkanswers">
-						<!--<input name="button_checkbutton" id="checkbutton" type="submit" value="Antworten prüfen"></input>-->
-						<button id="button_checkanswers" name="checkanswers">Antworten prüfen<br></button>
-					</div>
 					<?php
 						$counter=1;
 						foreach ($answers as $a){
@@ -148,25 +144,6 @@
 				&copy Gruppe 7: Virus zum zusammenbauen
 			</a>
 		</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         <?php
