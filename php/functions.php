@@ -206,6 +206,14 @@
     );
   }
 
+  function resetUserPhase($scenarioid,$username){
+    $collection = getCollection();
+    $collection->updateOne(
+      [ 'username' => $username ],
+      [ '$set' => [ 'scenario'.$scenarioid.'_phase' => "1" ]]
+    );
+  }
+
   function checkCredentials($username, $password){
     $collection = getCollection();
     $result = $collection->find( [ 'username' => $username, 'type' => 'user' ] );

@@ -6,6 +6,13 @@
 		header("Location: /php/login.php");
 		exit();
 	} 
+
+	if (!isset($_POST['button_menu'])) {
+		resetUserPhase($_SESSION['scenarioid'], $_SESSION['username']);
+		header("Location: /php/index.php");
+		exit();
+	} 
+
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +48,12 @@
             <a id="error">
                 ¯\_(ツ)_/¯
             </a>
-        </div>  		
+        </div>  
+		<div id="div_resetscenario">
+			<form method="post">
+				<button id="button_menu" name="button_menu" formaction="../index.php">Menü<br></button>
+			</form>
+		</div>		
 		<div id="div_hinweis">
 			<a id ="hinweis">
 				Hinweis!
