@@ -177,7 +177,6 @@
                     
                     //punkte für die aktuelle Antwort abrufen
                     $answerpoints = queryAnswersPoints($_SESSION['scenarioid'],$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'],$antwort);
-                    $explanation=queryExplanationforAnswers($antwort);
 
                     if (($key = array_search($antwort, $richtigeantworten)) !== false) {
                         unset($richtigeantworten[$key]);
