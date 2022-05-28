@@ -170,8 +170,6 @@
 
 
         <?php
-
-            echo '<h1>Auswertung:</h1>';
             foreach($gegebeneantworten as $antwort) {
                 //prüfe ob gegebene Antwort in Array mit richtigen Antworten
 
@@ -183,18 +181,8 @@
 
                     if (($key = array_search($antwort, $richtigeantworten)) !== false) {
                         unset($richtigeantworten[$key]);
-                        echo 'Antwort "'.$antwort; echo '" war richtig!';
-                        echo'<br>';
-                        echo 'Hier werden '.$answerpoints; echo' punkte hinzugefügt!';
-                        echo'<br>';
-                        echo 'Hier ist die Erlärung zu der Antwort: '.$explanation;
                         setUserPoints($_SESSION['scenarioid'],10,$_SESSION['username']);
                     } else {
-                        echo 'Antwort "'.$antwort; echo '" war falsch!';
-                        echo'<br>';
-                        echo 'Hier werden 5 punkte abgezogen!';
-                        echo'<br>';
-                        echo 'Hier ist die Erlärung zu der Antwort: '.$explanation;
                         $fehlergemacht=1;
 
                         setUserPoints($_SESSION['scenarioid'],-5,$_SESSION['username']);
