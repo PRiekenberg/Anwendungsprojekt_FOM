@@ -67,54 +67,11 @@
             }
               
               //nicht alle richtigen Antworten waren dabei
-              /*if (count($richtigeantworten) > 0) {
-                  echo 'Sie haben '.count($richtigeantworten); echo ' richtige Antworten vergessen';
-                  echo'<br>';
-                  echo 'Hier werden '.count($richtigeantworten);echo' * 5 punkte abgezogen!';
+              if (count($richtigeantworten) > 0) {
                   $punkte=count($richtigeantworten)*-5;
                   setUserPoints($_SESSION['scenarioid'], $punkte, $_SESSION['username']);
+              } 
 
-                  echo '<div id="div_tryagain">';
-				  echo '<form action="/php/frage.php">';
-					$new_phase = $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'];
-					$scenarioid = $_SESSION['scenarioid'];
-					echo '<input type="hidden"';
-					echo 'name="scenarioid"';
-					echo 'value="'.$scenarioid; echo'">';
-					echo '<input type="hidden"';
-					echo 'name="phase"';
-					echo 'value="'.$new_phase; echo '">';
-				
-					echo '<input type="submit" id="button_next"
-							value="Nochmal probieren">';
-					echo '</form>';
-			      echo '</div>';
-              }
-
-              // alle richtigen Antworten waren dabei aber es wurden auch falsche angekreuzt
-              if (count($richtigeantworten) == 0 and $fehlergemacht == 1) {
-                echo 'Alle richtigen antworten wurden angegeben, aber es waren auch falsche dabei!';
-
-                echo '<div id="div_tryagain">';
-                echo '<form action="/php/frage.php">';
-                  $new_phase = $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'];
-                  $scenarioid = $_SESSION['scenarioid'];
-                  echo '<input type="hidden"';
-                  echo 'name="scenarioid"';
-                  echo 'value="'.$scenarioid; echo'">';
-                  echo '<input type="hidden"';
-                  echo 'name="phase"';
-                  echo 'value="'.$new_phase; echo '">';
-              
-                  echo '<input type="submit" id="button_next"
-                          value="Nochmal probieren">';
-                  echo '</form>';
-                echo '</div>';
-              }
-              */
-              // alle richtigen Antworten waren dabei und es wurden keine falschen angekreuzt
-              //if (count($richtigeantworten) == 0 and $fehlergemacht == 0) {
-               //   echo 'Alles richtig!';
 
                   echo '<div id="div_nextphase">';
                   echo '<form action="/php/frage.php">';
@@ -136,8 +93,6 @@
                               value="Weiter zur nächsten Frage">';
                       echo '</form>';
                   echo '</div>';
-
-             // }
 
         ?>
     </body>
