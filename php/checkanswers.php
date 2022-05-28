@@ -23,7 +23,7 @@
 
 
 	//wenn keine Fragen mehr im Szenario vorhanden sind
-	if ($question -> isDead()){
+	//if ($question -> isDead()){
 		//die ('
 		//<div align="center">
 		//<h1>Es sind keine Fragen in dem Szenario mehr vorhanden</h1>
@@ -36,9 +36,9 @@
 		//</form>
 		//</div>
 		//');
-		header("Location: /php/error.php");
-		exit();
-	}
+	//	header("Location: /php/error.php");
+	//	exit();
+	//}
 
 ?>
 
