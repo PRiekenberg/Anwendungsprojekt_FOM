@@ -88,6 +88,14 @@
     return $result;
   }
 
+  function getUsersPhases($username,$scenarioid){
+    $collection = getCollection();
+    $result = $collection->find([ 'type' => 'user', 'username' => $username ]);
+    foreach ($result as $r) {
+      return $r['scenario'.$scenarioid.'_phase'];
+    }
+  }
+
   function getallExplanations(){
     $collection = getCollection();
     $result = $collection->find([ 'type' => 'explanation' ]);
