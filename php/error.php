@@ -6,6 +6,11 @@
 		header("Location: /php/login.php");
 		exit();
 	} 
+	if (!isset($_POST['button_reset'])) {
+		resetUserPhase($_SESSION['scenarioid'], $_SESSION['username'])
+		header("Location: /index.php");
+		exit();
+	} 
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +46,12 @@
             <a id="error">
                 ¯\_(ツ)_/¯
             </a>
-        </div>  		
+			<div id="div_reset">
+			<form method="post">
+					<button id="button_reset" name="button_reset" value="1">Phase zurücksetzen<br></button>
+			</form>
+		</div>
+        </div> 		
 		<div id="div_hinweis">
 			<a id ="hinweis">
 				Hinweis!
