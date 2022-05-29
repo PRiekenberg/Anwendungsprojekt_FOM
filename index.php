@@ -6,7 +6,7 @@
 		exit();
 	} 
 
-	include '/php/functions.php';
+	require_once '/php/functions.php';
 	$_SESSION['scenario1_phase']=getUsersPhases($_SESSION['username'],"1");
 	$_SESSION['scenario2_phase']=getUsersPhases($_SESSION['username'],"2");
 	$_SESSION['scenario3_phase']=getUsersPhases($_SESSION['username'],"3");
