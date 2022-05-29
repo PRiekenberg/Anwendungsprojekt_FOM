@@ -7,7 +7,7 @@
 		exit();
 	} 
 	if (!isset($_POST['button_reset'])) {
-		resetUserPhase($_SESSION['scenarioid'], $_SESSION['username'])
+		resetUserPhase($_SESSION['scenarioid'], $_SESSION['username']);
 		header("Location: /index.php");
 		exit();
 	} 
