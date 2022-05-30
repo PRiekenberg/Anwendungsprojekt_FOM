@@ -220,6 +220,10 @@
       [ 'username' => $username ],
       [ '$set' => [ 'scenario'.$scenarioid.'_phase' => "1" ]]
     );
+    $collection->updateOne(
+      [ 'username' => $username ],
+      [ '$set' => [ 'scenario'.$scenarioid.'_points' => "0" ]]
+    );
   }
 
   function checkCredentials($username, $password){
