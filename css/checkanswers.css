@@ -198,9 +198,11 @@ td,tr {
 }
 
 #div_explanation1{
-    position: relative;
+    position: absolute;
+    top: 340px;
     width: 300px;
-	left: 50px;
+	left: 56px;
+    height: 60px;
 }
 
 #div_antwort1{
@@ -210,19 +212,42 @@ td,tr {
 	left: 50px;
 }
 
+#div_explanation2{
+    position: absolute;
+    top: 0px;
+    width: 300px;
+	left: 104px;
+    height: 60px;
+}
 
 #div_antwort2{
 	position: absolute;
 	width: 300px;
-	top: 50px;
+	top: 60px;
 	left: 100px;
+}
+
+#div_explanation3{
+    position: absolute;
+    top: 440px;
+    width: 300px;
+	left: 0px;
+    height: 60px;
 }
 
 #div_antwort3{
 	position: absolute;
 	width: 300px;
-	bottom: 50px;
+	top: 500px;
 	left: 0px;
+}
+
+#div_explanation4{
+    position: absolute;
+    top: 140px;
+    width: 300px;
+	right: 0px;
+    height: 60px;
 }
 
 #div_antwort4{
@@ -230,6 +255,14 @@ td,tr {
 	width: 300px;
 	top: 200px;
 	right: 0px;
+}
+
+#div_explanation5{
+    position: absolute;
+    top: 340px;
+    width: 300px;
+	right: 50px;
+    height: 60px;
 }
 
 #div_antwort5{
@@ -271,13 +304,13 @@ td,tr {
 	color: black;
 }
 
-#div_button_checkanswers{
+#div_button_next{
 	position: absolute;
 	left: 0px;
 	bottom: 0px;
 }
 
-#button_checkanswers{
+#button_next{
 	width: 200px;
 	height: 50px;
 	padding: 0.8em 1.8em;
@@ -294,7 +327,7 @@ td,tr {
 	border-radius: 0px;
 }
 
-#button_checkanswers:before{
+#button_next:before{
 	content: '';
 	width: 0;
 	height: 300%;
@@ -308,11 +341,11 @@ td,tr {
 	z-index: -1;
 }
 
-#button_checkanswers:hover:before{
+#button_next:hover:before{
 	width: 105%;
 }
 
-#button_checkanswers:hover {
+#button_next:hover {
 	color: #FFFFFF;
 }
 
