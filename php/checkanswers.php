@@ -15,7 +15,7 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Virus zum Zusammenbauen">
-        <link rel="stylesheet" media="screen" href="/css/frage.css">
+        <link rel="stylesheet" media="screen" href="/css/checkanswers.css">
 		<link rel="icon" href="/images/malware_icon.png">
     </head>
     <body>
@@ -79,12 +79,14 @@
                             $anserstate = $a['answerstate'];
                             
 							if ($counter == 1) {
+								echo '<div id ="div_result'.$counter; echo '">';
+								echo '</div>'
 								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
 								echo '<label>';
 								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
 								echo '</label>';
 								echo '</div>';
-                                echo '<div class="explanation '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
+                                echo '<div class="explanation '.$counter; echo '" id ="div_explanation'.$counter; echo '">';
                                 echo '<p>Erklärung: '.$explanation;echo '</p>';
                                 echo '</div>';
 								echo '</div>';
@@ -95,7 +97,7 @@
 								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
 								echo '</label>';
 								echo '</div>';
-                                echo '<div class="explanation '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
+                                echo '<div class="explanation '.$counter; echo '" id ="div_explanation'.$counter; echo '">';
                                 echo '<p>Erklärung: '.$explanation;echo '</p>';
                                 echo '</div>';
 							} if ($counter == 4) {
@@ -106,7 +108,7 @@
 								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
 								echo '</label>';
 								echo '</div>';
-                                echo '<div class="explanation '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
+                                echo '<div class="explanation '.$counter; echo '" id ="div_explanation'.$counter; echo '">';
                                 echo '<p>Erklärung: '.$explanation;echo '</p>';
                                 echo '</div>';
 							} if ($counter == 5) {
@@ -115,7 +117,7 @@
 								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
 								echo '</label>';
 								echo '</div>';
-                                echo '<div class="explanation '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
+                                echo '<div class="explanation '.$counter; echo '" id ="div_explanation'.$counter; echo '">';
                                 echo '<p>Erklärung: '.$explanation;echo '</p>';
                                 echo '</div>';
 							} 
