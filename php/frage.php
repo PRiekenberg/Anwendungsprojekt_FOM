@@ -13,8 +13,6 @@
 	$_SESSION['scenarioid'] = $_GET['scenarioid'];
 	$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] = $_GET ['phase'];
 
-	$szenarioid 	= $_GET['scenarioid'];
-	$phase 			= getUsersPhases($_SESSION['username'],$scenarioid);
 	$scenarioName 	= getScenarioName($_SESSION['scenarioid']);
 	$questionContent= getQuestionContent($_SESSION['scenarioid'], $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase']);
 
@@ -57,7 +55,7 @@
 		<div id = "div_h1">
 			<h1>
 				<?php
-					echo $szenarioName;
+					echo $scenarioName;
 				?>
 			</h1>
 		</div>
