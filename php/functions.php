@@ -292,24 +292,24 @@ function getQuestionContent($scenarioid, $phase) {
 
 function getSzenarioName($scenarioid){
 
-  switch $szenarioid{
+  switch $scenarioid{
     case 1:
-      $szenarioName = 'Passwort';
+      $scenarioName = 'Passwort';
       break;
     case 2:
-      $szenarioName = 'Social Engineering';
+      $scenarioName = 'Social Engineering';
       break;
     case 3:
-      $szenarioName = 'Firmennetz';
+      $scenarioName = 'Firmennetz';
       break;
     case 4:
-      $szenarioName = 'Krypto';
+      $scenarioName = 'Krypto';
       break;
     case 5:
-      $szenarioName = 'Online Banking';
+      $scenarioName = 'Online Banking';
       break;
   }
-  return $szenarioName;
+  return $scenarioName;
 }
 
 function checkAdmin($username){
