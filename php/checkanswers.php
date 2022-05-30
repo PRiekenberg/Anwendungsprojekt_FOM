@@ -79,7 +79,7 @@
 						?>
 					</div>
 					<div id="div_button_next">
-						<?php
+						<?php /*
 								foreach($gegebeneantworten as $antwort) {
 									//prüfe ob gegebene Antwort in Array mit richtigen Antworten
 
@@ -104,7 +104,7 @@
 									$punkte=count($richtigeantworten)*-5;
 									setUserPoints($_SESSION['scenarioid'], $punkte, $_SESSION['username']);
 								} 
-									/*echo '<form action="/php/frage.php">';
+									echo '<form action="/php/frage.php">';
 									$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] = $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] + 1;
 
 									$new_phase = $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'];
