@@ -292,6 +292,7 @@
 					<th>Typ</td>
 					<th>Benutzername</td>
 					<th>Punktzahl</td>
+					<th>SzenarioID</td>
 					<th>Zeitstempel</td>
 				</tr>
 				</thead>
@@ -306,6 +307,7 @@
 						echo '<td>' . $r['type']; echo '</td>';  
 						echo '<td>' . $r['username']; echo '</td>';  
 						echo '<td>' . $r['points']; echo '</td>'; 
+						echo '<td>' . $r['scenarioid']; echo '</td>'; 
 						echo '<td>' . $r['timestamp']; echo '</td>'; 
 						echo '</tr>';
 					}
