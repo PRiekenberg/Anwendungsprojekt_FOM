@@ -284,13 +284,13 @@ function getQuestionContent($scenarioid, $phase) {
   $collection = getCollection();
   $result = $collection->find( [ 'scenarioid' => $scenarioid, 'phase' => $phase, 'type' => 'question' ] );
   foreach ($result as $r) {
-    $content= $r['content'];
+    $content= $r['questioncontent'];
   }
 
   return $content;
 }
 
-function getSzenarioName($scenarioid){
+function getScenarioName($scenarioid){
 
   switch ($scenarioid){
     case 1:
@@ -314,6 +314,7 @@ function getSzenarioName($scenarioid){
 
 function checkAdmin($username){
   $isAdmin = false;
+  $collection = getCollection();
   $result = $collection->find( [ 'username' => $username, 'admin' => 'true' ] );
   if (!$result -> isDead()){
     $isAdmin = true;

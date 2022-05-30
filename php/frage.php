@@ -15,8 +15,8 @@
 
 	$szenarioid 	= $_GET['scenarioid'];
 	$phase 			= getUsersPhases($_SESSION['username'],$scenarioid);
-	$szenarioName 	= getSzenarioName($scenarioid);
-	$questionContent= getQuestionContent($scenarioid, $phase);
+	$scenarioName 	= getScenarioName($_SESSION['scenarioid']);
+	$questionContent= getQuestionContent($_SESSION['scenarioid'], $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase']);
 
 	//wenn keine Fragen mehr im Szenario vorhanden sind
 	if ($question -> isDead()){
