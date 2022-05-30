@@ -13,6 +13,10 @@
 	$_SESSION['scenarioid'] = $_GET['scenarioid'];
 	$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] = $_GET ['phase'];
 
+	$szenarioid 	= $_GET['scenarioid'];
+	$phase 			= getUsersPhases($_SESSION['username'],$scenarioid);
+	$szenarioName 	= getSzenarioName($scenarioid);
+	$questionContent= getQuestionContent($scenarioid, $phase);
 
 	//wenn keine Fragen mehr im Szenario vorhanden sind
 	if ($question -> isDead()){
@@ -51,7 +55,11 @@
 			</form>
 		</div>
 		<div id = "div_h1">
-			<h1>Modus</h1>
+			<h1>
+				<?php
+					echo $szenarioName;
+				?>
+			</h1>
 		</div>
 		<div id="div_logout">
 			<form>
@@ -59,11 +67,9 @@
 			</form>
 		</div>
 		<div id = "div_h2">
-			<?php
-				foreach ($question as $q) {
-					echo '<h2>' . $q['questioncontent']; echo '</h2>';
-				}
-			?>
+				<?php
+					echo $questionContent;
+				?>
 		</div>
 		<form method="post" action="checkanswers.php">
 			<div id="div_gamescreen">

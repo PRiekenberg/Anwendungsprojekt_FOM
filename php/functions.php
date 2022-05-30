@@ -280,6 +280,38 @@ function callEnde(){
   header("Location: ../php/ende.php");
 }
 
+function getQuestionContent($scenarioid, $phase) {
+  $collection = getCollection();
+  $result = $collection->find( [ 'scenarioid' => $scenarioid, 'phase' => $phase, 'type' => 'question' ] );
+  foreach ($result as $r) {
+    $content= $r['content'];
+  }
+
+  return $content;
+}
+
+function getSzenarioName($scenarioid){
+
+  switch $szenarioid{
+    case 1:
+      $szenarioName = 'Passwort';
+      break;
+    case 2:
+      $szenarioName = 'Social Engineering';
+      break;
+    case 3:
+      $szenarioName = 'Firmennetz';
+      break;
+    case 4:
+      $szenarioName = 'Krypto';
+      break;
+    case 5:
+      $szenarioName = 'Online Banking';
+      break;
+  }
+  return $szenarioName;
+}
+
 function checkAdmin($username){
   $isAdmin = false;
   $result = $collection->find( [ 'username' => $username, 'admin' => 'true' ] );
