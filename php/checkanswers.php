@@ -104,7 +104,7 @@
 									$punkte=count($richtigeantworten)*-5;
 									setUserPoints($_SESSION['scenarioid'], $punkte, $_SESSION['username']);
 								} 
-									echo '<form action="/php/frage.php">';
+									/*echo '<form action="/php/frage.php">';
 									$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] = $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] + 1;
 
 									$new_phase = $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'];
@@ -119,11 +119,11 @@
 									echo 'name="phase"';
 									echo 'value="'.$new_phase; echo '">';
 								
-									//echo '<input type="submit" id="button_next" name="submit">
-									//		value="Weiter zur nächsten Frage">';
-									//echo '</form>';
-									echo '<button id="button_next" name="submit">Weiter zur nächsten Frage</button>';
+									echo '<input type="submit" id="button_next" name="submit">
+											value="Weiter zur nächsten Frage">';
 									echo '</form>';
+									//echo '<button id="button_next" name="submit">Weiter</button>';
+									//echo '</form>';*/
 							?>
 						</div>
 						<?php
@@ -225,7 +225,7 @@
               } 
 
 
-                 /* echo '<div id="div_nextphase">';
+                  echo '<div id="div_nextphase">';
                   echo '<form action="/php/frage.php">';
                       $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] = $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] + 1;
 
@@ -244,7 +244,7 @@
                       echo '<input type="submit" id="button_next"
                               value="Weiter zur nächsten Frage">';
                       echo '</form>';
-                  echo '</div>'; */
+                  echo '</div>'; 
 
         ?>
     </body>
