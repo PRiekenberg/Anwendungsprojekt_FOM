@@ -292,7 +292,7 @@ function getQuestionContent($scenarioid, $phase) {
 
 function getSzenarioName($scenarioid){
 
-  switch $scenarioid{
+  switch ($scenarioid){
     case 1:
       $scenarioName = 'Passwort';
       break;
