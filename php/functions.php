@@ -222,6 +222,7 @@
 
   function resetUserPhase($scenarioid,$username){
     $collection = getCollection();
+    date_default_timezone_set('Europe/Berlin');
     $collection->insertOne( [ 'type' => 'leaderboardentry',
                               'username' => $username,
                               'scenarioid' => $scenarioid,
