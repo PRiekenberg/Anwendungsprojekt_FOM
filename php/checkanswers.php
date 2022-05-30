@@ -79,32 +79,35 @@
 						?>
 					</div>
 					<div id="div_button_next">
-						<?php /*
-								foreach($gegebeneantworten as $antwort) {
-									//prüfe ob gegebene Antwort in Array mit richtigen Antworten
+						<?php
+							foreach($gegebeneantworten as $antwort) {
+								//prüfe ob gegebene Antwort in Array mit richtigen Antworten
 
-									if ($antwort != null) {
-										
-										//punkte für die aktuelle Antwort abrufen
-										$answerpoints = queryAnswersPoints($_SESSION['scenarioid'],$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'],$antwort);
+								if ($antwort != null) {
+									
+									//punkte für die aktuelle Antwort abrufen
+									$answerpoints = queryAnswersPoints($_SESSION['scenarioid'],$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'],$antwort);
 
-										if (($key = array_search($antwort, $richtigeantworten)) !== false) {
-											unset($richtigeantworten[$key]);
-											setUserPoints($_SESSION['scenarioid'],10,$_SESSION['username']);
-										} else {
-											$fehlergemacht=1;
+									if (($key = array_search($antwort, $richtigeantworten)) !== false) {
+										unset($richtigeantworten[$key]);
+										setUserPoints($_SESSION['scenarioid'],10,$_SESSION['username']);
+									} else {
+										$fehlergemacht=1;
 
-											setUserPoints($_SESSION['scenarioid'],-5,$_SESSION['username']);
-										}
-									} 
-								}
-								
-								//nicht alle richtigen Antworten waren dabei
-								if (count($richtigeantworten) > 0) {
-									$punkte=count($richtigeantworten)*-5;
-									setUserPoints($_SESSION['scenarioid'], $punkte, $_SESSION['username']);
+										setUserPoints($_SESSION['scenarioid'],-5,$_SESSION['username']);
+									}
 								} 
-									echo '<form action="/php/frage.php">';
+							}
+							
+							//nicht alle richtigen Antworten waren dabei
+							if (count($richtigeantworten) > 0) {
+								$punkte=count($richtigeantworten)*-5;
+								setUserPoints($_SESSION['scenarioid'], $punkte, $_SESSION['username']);
+							} 
+
+
+								echo '<div id="div_nextphase">';
+								echo '<form action="/php/frage.php">';
 									$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] = $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] + 1;
 
 									$new_phase = $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'];
@@ -119,13 +122,13 @@
 									echo 'name="phase"';
 									echo 'value="'.$new_phase; echo '">';
 								
-									echo '<input type="submit" id="button_next" name="submit">
+									echo '<input type="submit" id="button_next"
 											value="Weiter zur nächsten Frage">';
 									echo '</form>';
-									//echo '<button id="button_next" name="submit">Weiter</button>';
-									//echo '</form>';*/
-							?>
-						</div>
+								echo '</div>'; 
+
+						?>
+					</div>
 						<?php
 							$counter=1;
 							foreach ($answers as $a){
@@ -198,53 +201,5 @@
 		</div>
 
 
-        <?php
-            foreach($gegebeneantworten as $antwort) {
-                //prüfe ob gegebene Antwort in Array mit richtigen Antworten
-
-                if ($antwort != null) {
-                    
-                    //punkte für die aktuelle Antwort abrufen
-                    $answerpoints = queryAnswersPoints($_SESSION['scenarioid'],$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'],$antwort);
-
-                    if (($key = array_search($antwort, $richtigeantworten)) !== false) {
-                        unset($richtigeantworten[$key]);
-                        setUserPoints($_SESSION['scenarioid'],10,$_SESSION['username']);
-                    } else {
-                        $fehlergemacht=1;
-
-                        setUserPoints($_SESSION['scenarioid'],-5,$_SESSION['username']);
-                    }
-                } 
-            }
-              
-              //nicht alle richtigen Antworten waren dabei
-              if (count($richtigeantworten) > 0) {
-                  $punkte=count($richtigeantworten)*-5;
-                  setUserPoints($_SESSION['scenarioid'], $punkte, $_SESSION['username']);
-              } 
-
-
-                  echo '<div id="div_nextphase">';
-                  echo '<form action="/php/frage.php">';
-                      $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] = $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] + 1;
-
-                      $new_phase = $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'];
-                      $scenarioid = $_SESSION['scenarioid'];
-
-                      setUserPhase($scenarioid,$_SESSION['username'],$new_phase);
-                      
-                      echo '<input type="hidden"';
-                      echo 'name="scenarioid"';
-                      echo 'value="'.$scenarioid; echo'">';
-                      echo '<input type="hidden"';
-                      echo 'name="phase"';
-                      echo 'value="'.$new_phase; echo '">';
-                  
-                      echo '<input type="submit" id="button_next"
-                              value="Weiter zur nächsten Frage">';
-                      echo '</form>';
-                  echo '</div>'; 
-
-        ?>
+        
     </body>
