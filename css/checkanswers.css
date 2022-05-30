@@ -197,12 +197,10 @@ td,tr {
 	width: 100%;
 }
 
-#div_result{
-    position: absolute;
-	width: 300px;
-	top: 300px;
+#div_explanation1{
+    position: relative;
+    width: 300px;
 	left: 50px;
-    height: 100px;
 }
 
 #div_antwort1{
@@ -212,11 +210,6 @@ td,tr {
 	left: 50px;
 }
 
-#div_explanation{
-    position: relative;
-    width: 300px;
-	left: 50px;
-}
 
 #div_antwort2{
 	position: absolute;
