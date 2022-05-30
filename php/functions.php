@@ -105,9 +105,9 @@
   function getUsersPointsforScenario($scenarioid){
     $collection = getCollection();
     $options = $options = array(
-      "sort" => array('scenario'.$scenarioid.'_points' => -1),
+      "sort" => array('points' => -1),
     );
-    $result = $collection->find([ 'type' => 'user' ],$options);
+    $result = $collection->find([ 'type' => 'leaderboardentry', 'scenarioid' => $scenarioid ],$options);
     return $result;
   }
 
@@ -216,6 +216,12 @@
 
   function resetUserPhase($scenarioid,$username){
     $collection = getCollection();
+    $collection->insertOne( [ 'type' => 'leaderboardentry',
+                              'username' => $username,
+                              'scenarioid' => $scenarioid,
+                              'points' => getUserPoints($scenarioid,$username),
+                              'timestamp' => date("Y-m-d H:i:s")
+                                      ]);
     $collection->updateOne(
       [ 'username' => $username ],
       [ '$set' => [ 'scenario'.$scenarioid.'_phase' => "1" ]]
