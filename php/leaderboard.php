@@ -29,6 +29,7 @@
                             echo '<th>Platzierung</td>';
                             echo '<th>Username</td>';
                             echo '<th>Punktzahl</td>';
+                            echo 'Zeitstempel'
                         echo '</tr>';
                     echo '</thead>';
 
@@ -43,6 +44,7 @@
                                 echo '<td>' . $counter; echo '</td>';  
                                 echo '<td>' . $r['username']; echo '</td>';  
                                 echo '<td>' . $r['points']; echo '</td>';
+                                echo '<td>' . $r['timestamp']; echo '</td>';
                                 echo '</tr>';
                                 $counter++;
                             
