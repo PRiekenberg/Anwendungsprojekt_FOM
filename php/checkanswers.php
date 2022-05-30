@@ -20,7 +20,9 @@
     </head>
     <body>
         <?php
-
+			$scenarioName 	= getScenarioName($_SESSION['scenarioid']);
+			$questionContent= getQuestionContent($_SESSION['scenarioid'], $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase']);
+		
             $gegebeneantworten=[$_POST['antwort1'],$_POST['antwort2'],$_POST['antwort3'],$_POST['antwort4'],$_POST['antwort5']];
             //hole alle Fragen
             $question=queryQuestion($_GET['scenarioid'],$_GET['phase']);

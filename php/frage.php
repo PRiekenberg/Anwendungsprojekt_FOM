@@ -55,7 +55,7 @@
 		<div id = "div_h1">
 			<h1>
 				<?php
-					echo '<h1>'.$scenarioName; echo '</h1>';
+					echo $scenarioName ;
 				?>
 			</h1>
 		</div>
@@ -65,9 +65,11 @@
 			</form>
 		</div>
 		<div id = "div_h2">
+			<h2>	
 				<?php
-					echo '<h2>'.$questionContent; echo '</h2>';
+					echo $questionContent ; 
 				?>
+			</h2>
 		</div>
 		<form method="post" action="checkanswers.php">
 			<div id="div_gamescreen">
