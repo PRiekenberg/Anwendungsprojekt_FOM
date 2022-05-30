@@ -197,7 +197,7 @@ td,tr {
 	width: 100%;
 }
 
-#div_explanation1{
+#div_result{
     position: absolute;
 	width: 300px;
 	top: 300px;
@@ -209,6 +209,12 @@ td,tr {
 	position: absolute;
 	width: 300px;
 	top: 400px;
+	left: 50px;
+}
+
+#div_explanation{
+    position: relative;
+    width: 300px;
 	left: 50px;
 }
 
