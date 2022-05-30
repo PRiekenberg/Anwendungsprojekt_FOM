@@ -113,11 +113,11 @@
 									echo 'name="phase"';
 									echo 'value="'.$new_phase; echo '">';
 								
-									//echo '<input type="submit" id="button_next"
-									//		value="Weiter zur nächsten Frage">';
-									//echo '</form>';
-									echo '<button id="button_next" name="submit">Weiter</button>';
+									echo '<input type="submit" id="button_next"
+											value="Weiter zur nächsten Frage">';
 									echo '</form>';
+									//echo '<button id="button_next" name="submit">Weiter</button>';
+									//echo '</form>';
 							?>
 						</div>
 						<?php
