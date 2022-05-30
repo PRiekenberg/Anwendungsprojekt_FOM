@@ -282,6 +282,37 @@
 					?>
 				</tbody>
 			</table>
+			<br><br>
+			<h2>Bestenlisteneinträge in der Datenbank</h2>
+
+			<table>
+				<thead>
+				<tr>
+					<th>ID</td>
+					<th>Typ</td>
+					<th>Benutzername</td>
+					<th>Punktzahl</td>
+					<th>Zeitstempel</td>
+				</tr>
+				</thead>
+
+				<tbody>
+				
+				<?php 
+					$result = getallLeaderboardentries();
+					foreach ($result as $r){						
+						echo '<tr>';
+						echo '<td>' . $r['_id']; echo '</td>';  
+						echo '<td>' . $r['type']; echo '</td>';  
+						echo '<td>' . $r['username']; echo '</td>';  
+						echo '<td>' . $r['points']; echo '</td>'; 
+						echo '<td>' . $r['timestamp']; echo '</td>'; 
+						echo '</tr>';
+					}
+
+					?>
+				</tbody>
+			</table>
 			
 			<br><br>
 			<h2> Daten mit bestimmter ID in Datenbank löschen</h2>

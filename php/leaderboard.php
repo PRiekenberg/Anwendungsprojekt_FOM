@@ -29,7 +29,7 @@
                             echo '<th>Platzierung</td>';
                             echo '<th>Username</td>';
                             echo '<th>Punktzahl</td>';
-                            echo 'Zeitstempel'
+                            echo '<th>Zeitstempel</td>';
                         echo '</tr>';
                     echo '</thead>';
 

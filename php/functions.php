@@ -88,6 +88,12 @@
     return $result;
   }
 
+  function getallLeaderboardentries(){
+    $collection = getCollection();
+    $result = $collection->find([ 'type' => 'leaderboardentry' ]);
+    return $result;
+  }
+
   function getUsersPhases($username,$scenarioid){
     $collection = getCollection();
     $result = $collection->find([ 'type' => 'user', 'username' => $username ]);
