@@ -55,7 +55,7 @@
 		<div id = "div_h1">
 			<h1>
 				<?php
-					echo '<h1>.'.$scenarioName; echo '</h1>';
+					echo '<h1>'.$scenarioName; echo '</h1>';
 				?>
 			</h1>
 		</div>
@@ -66,7 +66,7 @@
 		</div>
 		<div id = "div_h2">
 				<?php
-					echo '<h2>.'.$questionContent; echo '</h2>';
+					echo '<h2>'.$questionContent; echo '</h2>';
 				?>
 		</div>
 		<form method="post" action="checkanswers.php">

@@ -219,7 +219,7 @@
               } 
 
 
-                  echo '<div id="div_nextphase">';
+                 /* echo '<div id="div_nextphase">';
                   echo '<form action="/php/frage.php">';
                       $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] = $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] + 1;
 
@@ -238,7 +238,7 @@
                       echo '<input type="submit" id="button_next"
                               value="Weiter zur nächsten Frage">';
                       echo '</form>';
-                  echo '</div>';
+                  echo '</div>'; */
 
         ?>
     </body>
