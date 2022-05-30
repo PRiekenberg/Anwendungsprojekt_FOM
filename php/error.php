@@ -50,10 +50,15 @@
                 ¯\_(ツ)_/¯
             </a>
 			<div id="div_reset">
-			<form method="post">
-					<button id="button_reset" name="button_reset" value="button_reset">Phase zurücksetzen<br></button>
-			</form>
-		</div>
+				<form method="post">
+						<button id="button_reset" name="button_reset" value="button_reset">Phase zurücksetzen<br></button>
+				</form>
+			</div>
+			<div id="div_leaderboard">
+				<form>
+						<button id="button_leaderboard" name="button_leaderboard" value="button_leaderboard" formaction="leaderboard.php">Bestenliste für dieses Szenario anzeigen<br></button>
+				</form>
+			</div>
         </div> 		
 		<div id="div_hinweis">
 			<a id ="hinweis">
