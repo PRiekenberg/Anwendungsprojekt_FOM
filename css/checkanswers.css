@@ -196,13 +196,19 @@ td,tr {
 #bild2{
 	width: 100%;
 }
-
+#explanation{
+	text-align: left;
+	color: #fff;
+	margin-top: 0px;
+}
 #div_explanation1{
     position: absolute;
     top: 340px;
     width: 300px;
 	left: 56px;
     height: 60px;
+	border-radius: 4px;
+	padding-top: 0%;
 }
 
 #div_antwort1{
@@ -218,6 +224,7 @@ td,tr {
     width: 300px;
 	left: 104px;
     height: 60px;
+	border-radius: 4px;
 }
 
 #div_antwort2{
@@ -233,6 +240,7 @@ td,tr {
     width: 300px;
 	left: 0px;
     height: 60px;
+	border-radius: 4px;
 }
 
 #div_antwort3{
@@ -248,6 +256,7 @@ td,tr {
     width: 300px;
 	right: 0px;
     height: 60px;
+	border-radius: 4px;
 }
 
 #div_antwort4{
@@ -263,6 +272,7 @@ td,tr {
     width: 300px;
 	right: 50px;
     height: 60px;
+	border-radius: 4px;
 }
 
 #div_antwort5{
