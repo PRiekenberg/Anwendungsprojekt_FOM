@@ -43,7 +43,7 @@
 
                 if ($antwort != null) {
                     
-                    //punkte für die aktuelle Antwort abrufen
+                    //punkte für die aktuelle Antwort abrufen ---- hat allerdings keine Verwendung
                     $answerpoints = queryAnswersPoints($_SESSION['scenarioid'],$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'],$antwort);
 
                     if (($key = array_search($antwort, $richtigeantworten)) !== false) {
@@ -121,7 +121,7 @@
 							echo 'value="'.$new_phase; echo '">';
 						
 							echo '<input type="submit" id="button_next"
-									value="Weiter zur nächsten Frage">';
+									value="nächste Frage">';
 							echo '</form>';
 						echo '</div>'; 
 
