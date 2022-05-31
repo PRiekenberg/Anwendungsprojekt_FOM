@@ -404,7 +404,8 @@ td,tr {
 	display: none;
 	color: #fff !important;
 }
-
+  /* selects all of the text within the input element and changes the color of the text */
+  .antwort label input + span{color: #fff;}
 
 @media only screen and (max-width: 620px) {
 	/* For mobile phones: */

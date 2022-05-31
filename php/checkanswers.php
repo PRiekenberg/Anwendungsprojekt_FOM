@@ -163,14 +163,14 @@
 									}
 								}
 								echo '</div>';
-								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
-								echo '<label ';
+								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '"';
 								//Markiere gegebene Antwort
 								if (in_array($a['answercontent'], $gegebeneantworten)){
-									echo 'style="background-color: #249B3C"';
+									echo ' style="background-color: #249B3C"';
 								}
 								echo '>';
 
+								echo '<label> ';
 								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
 								echo '</label>';
 								echo '</div>';
