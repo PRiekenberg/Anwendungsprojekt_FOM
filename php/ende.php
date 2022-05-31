@@ -28,10 +28,16 @@
 			</form>
 		</div>
 		<div id = "div_h1">
-			<h1>Fehler:</h1>
+			<h1>Herzlichen Glückwunsch!</h1>
         </div>
         <div id = "div_h2">
-            <h2>Es sind keine Fragen für dieses Szenario vorhanden!</h2>
+            <h2>
+		    Sie haben 
+		    <?php
+			echo .getUserPoints($_SESSION['scenarioid'],$_SESSION['username']); 
+		    ?>
+		    Punkte erreicht!
+	    </h2>
 	    </div>
 		<div id="div_logout">
 			<form>
@@ -39,9 +45,6 @@
 			</form>
 		</div>
 		<div id="div_gamescreen">
-            <a id="error">
-                ¯\_(ツ)_/¯
-            </a>
 			<!--<div id="div_reset">
 				<form method="post">
 						<button id="button_reset" name="button_reset" value="button_reset">In Bestenliste eintragen und zurücksetzen<br></button>
