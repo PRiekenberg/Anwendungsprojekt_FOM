@@ -34,7 +34,7 @@
             <h2>
 		    Sie haben 
 		    <?php
-			echo .getUserPoints($_SESSION['scenarioid'],$_SESSION['username']); 
+			echo getUserPoints($_SESSION['scenarioid'],$_SESSION['username']); 
 		    ?>
 		    Punkte erreicht!
 	    </h2>
