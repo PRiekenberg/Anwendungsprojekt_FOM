@@ -181,7 +181,16 @@
 					</div>
 				</div> 
 			</div>
+		<?php
+		//schreibe richtige Antworten in den Array
+		foreach ($richtigeantworten as $r){
+			echo $r;
+		}
+		foreach ($gegebeneantworten as $g){
+			echo $g;
+		}
 		
+		?>
 		<div id="div_hinweis">
 			<a id ="hinweis">
 				Hinweis!
