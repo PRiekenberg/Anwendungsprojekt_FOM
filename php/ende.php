@@ -47,51 +47,42 @@
 			</form>
 		</div>
 		<div id="div_gamescreen">
-			<!--<div id="div_reset">
-				<form method="post">
-						<button id="button_reset" name="button_reset" value="button_reset">In Bestenliste eintragen und zurücksetzen<br></button>
-				</form>
-			</div>-->
-			<!--<div id="div_leaderboard">-->
-				<form>
-						<?php 
-							echo'<table>';
-							    echo'<thead>';
-								echo '<tr>';
-								    echo '<th>Platzierung</td>';
-								    echo '<th>Username</td>';
-								    echo '<th>Punktzahl</td>';
-								    echo '<th>Zeitstempel</td>';
-								echo '</tr>';
-							    echo '</thead>';
+			<h3 id="h3_leaderboard"> Bestenliste </h3>
+			<?php 
+				echo'<table id="table_leaderboard">';
+				    echo'<thead>';
+					echo '<tr>';
+					    echo '<th>Platzierung</td>';
+					    echo '<th>Username</td>';
+					    echo '<th>Punktzahl</td>';
+					    echo '<th>Zeitstempel</td>';
+					echo '</tr>';
+				    echo '</thead>';
 
-							    echo '<tbody>';
+				    echo '<tbody>';
 
-								$result = getUsersPointsforScenario($_SESSION['scenarioid']);
+					$result = getUsersPointsforScenario($_SESSION['scenarioid']);
 
-								$counter=1;
-								foreach ($result as $r){
+					$counter=1;
+					foreach ($result as $r){
 
-									echo '<tr>';
-									echo '<td>' . $counter; echo '</td>';  
-									echo '<td>' . $r['username']; echo '</td>';  
-									echo '<td>' . $r['points']; echo '</td>';
-									echo '<td>' . $r['timestamp']; echo '</td>';
-									echo '</tr>';
-									$counter++;
-									
-									if ($counter == 11){
-										break;
-									}
+						echo '<tr>';
+						echo '<td>' . $counter; echo '</td>';  
+						echo '<td>' . $r['username']; echo '</td>';  
+						echo '<td>' . $r['points']; echo '</td>';
+						echo '<td>' . $r['timestamp']; echo '</td>';
+						echo '</tr>';
+						$counter++;
 
-								}
+						if ($counter == 11){
+							break;
+						}
 
-							    echo '</tbody>';
-							echo '</table>';
-						?>
-						
-				</form>
-			<!--</div>-->
+					}
+
+				    echo '</tbody>';
+				echo '</table>';
+			?>
         </div> 		
 		<div id="div_hinweis">
 			<a id ="hinweis">
