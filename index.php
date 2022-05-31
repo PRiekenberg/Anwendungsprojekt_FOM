@@ -29,7 +29,11 @@
     <body>
 		<div id="div_admin">
 			<form>
-				<button id="button_admin" formaction="/php/dbmanagement.php">Admin<br></button>
+				<?php
+					if ($_SESSION['admin'] == "true") {
+						echo '<button id="button_admin" formaction="/php/dbmanagement.php">Admin<br></button>';
+					}
+				?>
 			</form>
 		</div>        
         <div id = "div_h1">
