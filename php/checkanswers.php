@@ -177,33 +177,127 @@
 								echo '</div>';
 								echo '<div id="div_gamescreen_center">';
 							} if ($counter == 2 or $counter == 3) {
-								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
+
+								echo '<div class="explanation '.$counter; echo '" id ="div_explanation'.$counter; echo '"';
+								//Wenn Antwort gechecked wurde
+								if (in_array($a['answercontent'], $gegebeneantworten)){
+									//Antwort gehört zu richtigen Antworten
+									if (in_array($a['answercontent'], $richtigeantworten2)){ //Korrekt
+										echo ' style="background-color:#249B3C">';
+										echo '<p id="explanation">Korrekt: '.$explanation;echo '</p>';
+									}
+									//Anwort gehört zu falschen Antworten
+									else{	//Falsch
+										echo ' style="background-color:#88001B">';
+										echo '<p id="explanation">Falsch: '.$explanation;echo '</p>';
+									}
+								}
+								//Antwort wurde nicht gechecked
+								else{
+									//Antwort gehört zu richtigen Antworten
+									if (in_array($a['answercontent'], $richtigeantworten2)){ //Falsch
+										echo ' style="background-color:#88001B">';
+										echo '<p id="explanation">Falsch: '.$explanation;echo '</p>';
+									}
+									//Anwort gehört zu falschen Antworten
+									else{	//Korrekt
+										echo ' style="background-color:#249B3C">';
+										echo '<p id="explanation">Korrekt: '.$explanation;echo '</p>';
+									}
+								}
+								echo '</div>';
+
+								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '"';
+								//Markiere gegebene Antwort
+								if (in_array($a['answercontent'], $gegebeneantworten)){
+									echo ' style="background-color: #249B3C"';
+								}
+								echo '>';
 								echo '<label>';
 								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
 								echo '</label>';
-								echo '</div>';
-								echo '<div class="explanation '.$counter; echo '" id ="div_explanation'.$counter; echo '">';
-								echo '<p>Erklärung: '.$explanation;echo '</p>';
 								echo '</div>';
 							} if ($counter == 4) {
 								echo '</div>';
 								echo '<div id="div_gamescreen_right">';
-								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
+
+								echo '<div class="explanation '.$counter; echo '" id ="div_explanation'.$counter; echo '"';
+								//Wenn Antwort gechecked wurde
+								if (in_array($a['answercontent'], $gegebeneantworten)){
+									//Antwort gehört zu richtigen Antworten
+									if (in_array($a['answercontent'], $richtigeantworten2)){ //Korrekt
+										echo ' style="background-color:#249B3C">';
+										echo '<p id="explanation">Korrekt: '.$explanation;echo '</p>';
+									}
+									//Anwort gehört zu falschen Antworten
+									else{	//Falsch
+										echo ' style="background-color:#88001B">';
+										echo '<p id="explanation">Falsch: '.$explanation;echo '</p>';
+									}
+								}
+								//Antwort wurde nicht gechecked
+								else{
+									//Antwort gehört zu richtigen Antworten
+									if (in_array($a['answercontent'], $richtigeantworten2)){ //Falsch
+										echo ' style="background-color:#88001B">';
+										echo '<p id="explanation">Falsch: '.$explanation;echo '</p>';
+									}
+									//Anwort gehört zu falschen Antworten
+									else{	//Korrekt
+										echo ' style="background-color:#249B3C">';
+										echo '<p id="explanation">Korrekt: '.$explanation;echo '</p>';
+									}
+								}
+								echo '</div>';
+
+								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '"';
+								//Markiere gegebene Antwort
+								if (in_array($a['answercontent'], $gegebeneantworten)){
+									echo ' style="background-color: #249B3C"';
+								}
 								echo '<label>';
 								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
 								echo '</label>';
-								echo '</div>';
-								echo '<div class="explanation '.$counter; echo '" id ="div_explanation'.$counter; echo '">';
-								echo '<p>Erklärung: '.$explanation;echo '</p>';
 								echo '</div>';
 							} if ($counter == 5) {
-								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
+
+								echo '<div class="explanation '.$counter; echo '" id ="div_explanation'.$counter; echo '"';
+								//Wenn Antwort gechecked wurde
+								if (in_array($a['answercontent'], $gegebeneantworten)){
+									//Antwort gehört zu richtigen Antworten
+									if (in_array($a['answercontent'], $richtigeantworten2)){ //Korrekt
+										echo ' style="background-color:#249B3C">';
+										echo '<p id="explanation">Korrekt: '.$explanation;echo '</p>';
+									}
+									//Anwort gehört zu falschen Antworten
+									else{	//Falsch
+										echo ' style="background-color:#88001B">';
+										echo '<p id="explanation">Falsch: '.$explanation;echo '</p>';
+									}
+								}
+								//Antwort wurde nicht gechecked
+								else{
+									//Antwort gehört zu richtigen Antworten
+									if (in_array($a['answercontent'], $richtigeantworten2)){ //Falsch
+										echo ' style="background-color:#88001B">';
+										echo '<p id="explanation">Falsch: '.$explanation;echo '</p>';
+									}
+									//Anwort gehört zu falschen Antworten
+									else{	//Korrekt
+										echo ' style="background-color:#249B3C">';
+										echo '<p id="explanation">Korrekt: '.$explanation;echo '</p>';
+									}
+								}
+								echo '</div>';
+
+								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '"';
+								//Markiere gegebene Antwort
+								if (in_array($a['answercontent'], $gegebeneantworten)){
+									echo ' style="background-color: #249B3C"';
+								}
 								echo '<label>';
 								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
 								echo '</label>';
-								echo '</div>';
-								echo '<div class="explanation '.$counter; echo '" id ="div_explanation'.$counter; echo '">';
-								echo '<p>Erklärung: '.$explanation;echo '</p>';
 								echo '</div>';
 							} 
 							$counter++;
