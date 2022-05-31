@@ -95,7 +95,6 @@
 				?>
 			</h2>
 		</div>
-		<form method="post" action="checkanswers.php">
 			<div id="div_gamescreen">
 				<div id="div_gamescreen_left">
 					<div id ="div_bild1">
@@ -182,7 +181,6 @@
 					</div>
 				</div> 
 			</div>
-		</form>
 		
 		<div id="div_hinweis">
 			<a id ="hinweis">
