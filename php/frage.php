@@ -30,7 +30,8 @@
 		//</form>
 		//</div>
 		//');
-		resetUserPhase($_SESSION['scenarioid'], $_SESSION['username']);
+		//Punkte werden noch für ende.php benötigt...
+		//resetUserPhase($_SESSION['scenarioid'], $_SESSION['username']);
 		header("Location: /php/ende.php");
 		exit();
 	}
