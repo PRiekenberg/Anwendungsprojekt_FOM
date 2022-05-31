@@ -131,6 +131,11 @@ h2 {
     vertical-align: center;
 }
 
+#div_leaderboard{
+	background-color: black;
+	color: white;
+}
+
 #error{
     font-size: 50pt;;
     text-align: center;
