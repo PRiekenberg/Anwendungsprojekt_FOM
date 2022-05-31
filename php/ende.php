@@ -52,7 +52,7 @@
 						<button id="button_reset" name="button_reset" value="button_reset">In Bestenliste eintragen und zurücksetzen<br></button>
 				</form>
 			</div>-->
-			<div id="div_leaderboard">
+			<!--<div id="div_leaderboard">-->
 				<form>
 						<?php 
 							echo'<table>';
@@ -91,7 +91,7 @@
 						?>
 						
 				</form>
-			</div>
+			<!--</div>-->
         </div> 		
 		<div id="div_hinweis">
 			<a id ="hinweis">
