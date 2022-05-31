@@ -56,6 +56,7 @@
 		<div id = "div_h1">
 			<h1>
 				<?php
+					echo 'Szenario: ';
 					echo $scenarioName ;
 				?>
 			</h1>
