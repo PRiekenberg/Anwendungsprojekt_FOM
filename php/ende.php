@@ -55,8 +55,6 @@
 			<div id="div_leaderboard">
 				<form>
 						<?php 
-						    echo '<div align="center">';
-							echo'<h1>Bestenliste Szenario '.$_SESSION['scenarioid'];echo'</h1>';
 							echo'<table>';
 							    echo'<thead>';
 								echo '<tr>';
@@ -86,7 +84,6 @@
 
 							    echo '</tbody>';
 							echo '</table>';
-						    echo '</div>';
 						?>
 						
 				</form>
