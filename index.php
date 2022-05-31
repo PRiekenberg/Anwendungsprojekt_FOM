@@ -67,9 +67,9 @@
 								<?php
 								echo 'value="'.$_SESSION['scenario5_phase']; echo'">';
 								?>
-						<!--<input type="submit" id="button_krypto" disabled="disabled"
+						<!--<input type="submit" id="button_krypto"
 								value="Krypto">-->
-						<button class ="button_menu" id="button_krypto">Krypto</button>
+						<button class ="button_menu" id="button_krypto" disabled="disabled">Krypto</button>
 				</form>
         	</div>
             <div id="div_gamescreen_center">
@@ -100,9 +100,9 @@
 							<?php
 								echo 'value="'.$_SESSION['scenario4_phase']; echo'">';
 							?>
-					<!--<input type="submit" id="button_banking" disabled="disabled"
+					<!--<input type="submit" id="button_banking"
 							value="Online Banking">-->
-					<button class ="button_menu" id="button_banking">Online Banking</button>
+					<button class ="button_menu" id="button_banking" disabled="disabled">Online Banking</button>
 				</form>
 				<form action="/php/frage.php">
 					<input type="hidden"
