@@ -5,7 +5,9 @@
 	if (!isset($_SESSION['username'])) {
 		header("Location: /php/login.php");
 		exit();
-	} 
+	}
+	$Userpoints = getUserPoints($_SESSION['scenarioid'],$_SESSION['username']); ;
+	resetUserPhase($_SESSION['scenarioid'], $_SESSION['username']);
 
 ?>
 
@@ -34,7 +36,7 @@
             <h2>
 		    Sie haben 
 		    <?php
-			echo getUserPoints($_SESSION['scenarioid'],$_SESSION['username']); 
+			echo $UserPoints; 
 		    ?>
 		    Punkte erreicht!
 	    </h2>
