@@ -84,13 +84,9 @@
 
 							    echo '</tbody>';
 							echo '</table>';
-							echo '<br><br>';
-								echo '<form>';
-								echo '<button id="button_homescreen" formaction="/index.php">Zurück zur Startseite<br></button>';
-								echo '</form>';
 						    echo '</div>';
 						?>
-						<button id="button_leaderboard" name="button_leaderboard" value="button_leaderboard" formaction="leaderboard.php">Bestenliste für dieses Szenario anzeigen<br></button>
+						
 				</form>
 			</div>
         </div> 		
