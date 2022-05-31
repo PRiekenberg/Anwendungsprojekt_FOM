@@ -79,6 +79,10 @@
 									echo '<td>' . $r['timestamp']; echo '</td>';
 									echo '</tr>';
 									$counter++;
+									
+									if ($counter == 11){
+										break;
+									}
 
 								}
 
