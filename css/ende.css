@@ -122,7 +122,8 @@ h2 {
 
 #div_gamescreen{
 	z-index: 1;
-	background-color: #FFFFFF;
+	background: url('../images/leaderboard.gif') no-repeat;
+    	background-size: 100%;
 	margin: auto;
 	width: 1200px;
 	height: 675px;
