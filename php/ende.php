@@ -52,6 +52,44 @@
 			</div>-->
 			<div id="div_leaderboard">
 				<form>
+						<?php 
+						    echo '<div align="center">';
+							echo'<h1>Bestenliste Szenario '.$_SESSION['scenarioid'];echo'</h1>';
+							echo'<table>';
+							    echo'<thead>';
+								echo '<tr>';
+								    echo '<th>Platzierung</td>';
+								    echo '<th>Username</td>';
+								    echo '<th>Punktzahl</td>';
+								    echo '<th>Zeitstempel</td>';
+								echo '</tr>';
+							    echo '</thead>';
+
+							    echo '<tbody>';
+
+								$result = getUsersPointsforScenario($_SESSION['scenarioid']);
+
+								$counter=1;
+								foreach ($result as $r){
+
+									echo '<tr>';
+									echo '<td>' . $counter; echo '</td>';  
+									echo '<td>' . $r['username']; echo '</td>';  
+									echo '<td>' . $r['points']; echo '</td>';
+									echo '<td>' . $r['timestamp']; echo '</td>';
+									echo '</tr>';
+									$counter++;
+
+								}
+
+							    echo '</tbody>';
+							echo '</table>';
+							echo '<br><br>';
+								echo '<form>';
+								echo '<button id="button_homescreen" formaction="/index.php">Zurück zur Startseite<br></button>';
+								echo '</form>';
+						    echo '</div>';
+						?>
 						<button id="button_leaderboard" name="button_leaderboard" value="button_leaderboard" formaction="leaderboard.php">Bestenliste für dieses Szenario anzeigen<br></button>
 				</form>
 			</div>
