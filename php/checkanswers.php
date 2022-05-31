@@ -35,6 +35,8 @@
             foreach ($result as $r){
                 array_push($richtigeantworten, $r['answercontent']);
             }
+			//Erstelle Kopie für späteren Einsatz beim Anzeigen des Ergebnisses
+			$richtigeantworten2 = $richtigeantworten;
 
             $fehlergemacht = 0;
 
@@ -183,16 +185,8 @@
 				</div> 
 			</div>
 		<?php
-			$result=queryRightAnswers('2', '3');
-			//erstelle leeren Array für die richtigen Antworten
-			$richtigeantworten=[];
-			//schreibe richtige Antworten in den Array
-			foreach ($result as $r){
-				array_push($richtigeantworten, $r['answercontent']);
-			}
-
 			echo 'richtige Antworten:<br>';
-			foreach ($richtigeantworten as $r){
+			foreach ($richtigeantworten2 as $r){
 				echo $r;
 				echo '<br>';
 			}
