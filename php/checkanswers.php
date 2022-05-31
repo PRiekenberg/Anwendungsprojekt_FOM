@@ -182,14 +182,24 @@
 				</div> 
 			</div>
 		<?php
-		//schreibe richtige Antworten in den Array
-		foreach ($richtigeantworten as $r){
-			echo $r;
-		}
-		foreach ($gegebeneantworten as $g){
-			echo $g;
-		}
-		
+			$result=queryRightAnswers($_SESSION['scenarioid'],$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase']);
+			//erstelle leeren Array für die richtigen Antworten
+			$richtigeantworten=[];
+			//schreibe richtige Antworten in den Array
+			foreach ($result as $r){
+				array_push($richtigeantworten, $r['answercontent']);
+			}
+
+			echo 'richtige Antworten:';
+			foreach ($richtigeantworten as $r){
+				echo $r;
+				echo '<br>';
+			}
+			echo 'gegebene Antworten:';
+			foreach ($gegebeneantworten as $g){
+				echo $g;
+				echo '<br>';
+			}
 		?>
 		<div id="div_hinweis">
 			<a id ="hinweis">
