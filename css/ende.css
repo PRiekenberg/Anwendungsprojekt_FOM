@@ -130,7 +130,11 @@ h2 {
     text-align: center;
     vertical-align: center;
 }
-
+#h3_leaderboard{
+	text-align: center;
+	color: #fff;
+	background-color: #000;
+}
 #table_leaderboard{
 	color: #fff;
     	margin-left: auto;
