@@ -6,7 +6,7 @@
 		header("Location: /php/login.php");
 		exit();
 	}
-	$Userpoints = getUserPoints($_SESSION['scenarioid'],$_SESSION['username']); ;
+	$UserPoints = getUserPoints($_SESSION['scenarioid'],$_SESSION['username']); ;
 	resetUserPhase($_SESSION['scenarioid'], $_SESSION['username']);
 
 ?>
