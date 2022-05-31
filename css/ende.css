@@ -131,9 +131,11 @@ h2 {
     vertical-align: center;
 }
 
-#div_leaderboard{
-	background-color: black;
-	color: white;
+#table_leaderboard{
+	color: #fff;
+    	margin-left: auto;
+    	margin-right: auto;
+    	background-color: #000;
 }
 
 #error{
