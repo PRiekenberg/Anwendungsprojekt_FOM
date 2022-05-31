@@ -6,14 +6,7 @@
 		header("Location: /php/login.php");
 		exit();
 	} 
-    if(array_key_exists('button_reset', $_POST)) { 
-        button1(); 
-    } 
-    function button1() { 
-        resetUserPhase($_SESSION['scenarioid'], $_SESSION['username']);
-		header("Location: /index.php");
-		exit();
-    } 
+
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +18,7 @@
         <meta name="description" content="Virus zum Zusammenbauen">
         <link rel="stylesheet" media="screen" href="/css/error.css">
 		<link rel="icon" href="/images/malware_icon.png">
-        <title>Error</title>
+        <title>Ende</title>
 
     </head>
     <body>
@@ -49,16 +42,16 @@
             <a id="error">
                 ¯\_(ツ)_/¯
             </a>
-			<div id="div_reset">
+			<!--<div id="div_reset">
 				<form method="post">
 						<button id="button_reset" name="button_reset" value="button_reset">In Bestenliste eintragen und zurücksetzen<br></button>
 				</form>
-			</div>
-			<!--<div id="div_leaderboard">
+			</div>-->
+			<div id="div_leaderboard">
 				<form>
 						<button id="button_leaderboard" name="button_leaderboard" value="button_leaderboard" formaction="leaderboard.php">Bestenliste für dieses Szenario anzeigen<br></button>
 				</form>
-			</div>-->
+			</div>
         </div> 		
 		<div id="div_hinweis">
 			<a id ="hinweis">

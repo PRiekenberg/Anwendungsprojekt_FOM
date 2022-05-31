@@ -30,7 +30,8 @@
 		//</form>
 		//</div>
 		//');
-		header("Location: /php/error.php");
+		resetUserPhase($_SESSION['scenarioid'], $_SESSION['username']);
+		header("Location: /php/ende.php");
 		exit();
 	}
 
