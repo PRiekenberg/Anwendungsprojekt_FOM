@@ -206,10 +206,10 @@ td,tr {
     position: absolute;
     top: 340px;
     width: 300px;
-	left: 56px;
+    left: 54px;
     height: 60px;
 	border-radius: 4px;
-	padding-top: 0%;
+	padding: 2px;
 }
 
 #div_antwort1{
@@ -226,6 +226,7 @@ td,tr {
 	left: 104px;
     height: 60px;
 	border-radius: 4px;
+	padding: 2px;
 }
 
 #div_antwort2{
@@ -242,6 +243,7 @@ td,tr {
 	left: 4px;
     height: 60px;
 	border-radius: 4px;
+	padding: 2px;
 }
 
 #div_antwort3{
@@ -258,6 +260,7 @@ td,tr {
 	right: 4px;
     height: 60px;
 	border-radius: 4px;
+	padding: 2px;
 }
 
 #div_antwort4{
@@ -274,6 +277,7 @@ td,tr {
 	right: 54px;
     height: 60px;
 	border-radius: 4px;
+	padding: 2px;
 }
 
 #div_antwort5{
