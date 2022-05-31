@@ -111,7 +111,7 @@
 						?>
 					</div>
 					<?php
-						echo '<div id="div_nextphase">';
+						echo '<div id="div_button_next">';
 						echo '<form action="/php/frage.php">';
 							
 							echo '<input type="hidden"';
@@ -126,56 +126,55 @@
 							echo '</form>';
 						echo '</div>'; 
 
-					?>
-						<?php
-							$counter=1;
-							foreach ($answers as $a){
-								$explanation = queryExplanationforAnswers($a['answercontent']);
-								$anserstate = $a['answerstate'];
-								
-								if ($counter == 1) {
-									echo '<div class="explanation '.$counter; echo '" id ="div_explanation'.$counter; echo '">';
-									echo '<p>Erklärung: '.$explanation;echo '</p>';
-									echo '</div>';
-									echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
-									echo '<label>';
-									echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
-									echo '</label>';
-									echo '</div>';
-									echo '</div>';
-									echo '<div id="div_gamescreen_center">';
-								} if ($counter == 2 or $counter == 3) {
-									echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
-									echo '<label>';
-									echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
-									echo '</label>';
-									echo '</div>';
-									echo '<div class="explanation '.$counter; echo '" id ="div_explanation'.$counter; echo '">';
-									echo '<p>Erklärung: '.$explanation;echo '</p>';
-									echo '</div>';
-								} if ($counter == 4) {
-									echo '</div>';
-									echo '<div id="div_gamescreen_right">';
-									echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
-									echo '<label>';
-									echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
-									echo '</label>';
-									echo '</div>';
-									echo '<div class="explanation '.$counter; echo '" id ="div_explanation'.$counter; echo '">';
-									echo '<p>Erklärung: '.$explanation;echo '</p>';
-									echo '</div>';
-								} if ($counter == 5) {
-									echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
-									echo '<label>';
-									echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
-									echo '</label>';
-									echo '</div>';
-									echo '<div class="explanation '.$counter; echo '" id ="div_explanation'.$counter; echo '">';
-									echo '<p>Erklärung: '.$explanation;echo '</p>';
-									echo '</div>';
-								} 
-								$counter++;
-							}
+					
+						$counter=1;
+						foreach ($answers as $a){
+							$explanation = queryExplanationforAnswers($a['answercontent']);
+							$anserstate = $a['answerstate'];
+							
+							if ($counter == 1) {
+								echo '<div class="explanation '.$counter; echo '" id ="div_explanation'.$counter; echo '">';
+								echo '<p>Erklärung: '.$explanation;echo '</p>';
+								echo '</div>';
+								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
+								echo '<label>';
+								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
+								echo '</label>';
+								echo '</div>';
+								echo '</div>';
+								echo '<div id="div_gamescreen_center">';
+							} if ($counter == 2 or $counter == 3) {
+								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
+								echo '<label>';
+								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
+								echo '</label>';
+								echo '</div>';
+								echo '<div class="explanation '.$counter; echo '" id ="div_explanation'.$counter; echo '">';
+								echo '<p>Erklärung: '.$explanation;echo '</p>';
+								echo '</div>';
+							} if ($counter == 4) {
+								echo '</div>';
+								echo '<div id="div_gamescreen_right">';
+								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
+								echo '<label>';
+								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
+								echo '</label>';
+								echo '</div>';
+								echo '<div class="explanation '.$counter; echo '" id ="div_explanation'.$counter; echo '">';
+								echo '<p>Erklärung: '.$explanation;echo '</p>';
+								echo '</div>';
+							} if ($counter == 5) {
+								echo '<div class="antwort '.$counter; echo '" id ="div_antwort'.$counter; echo '">';
+								echo '<label>';
+								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
+								echo '</label>';
+								echo '</div>';
+								echo '<div class="explanation '.$counter; echo '" id ="div_explanation'.$counter; echo '">';
+								echo '<p>Erklärung: '.$explanation;echo '</p>';
+								echo '</div>';
+							} 
+							$counter++;
+						}
 							
 						?>
 					<div id ="div_bild2">
