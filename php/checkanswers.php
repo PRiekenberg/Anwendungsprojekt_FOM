@@ -255,6 +255,7 @@
 								if (in_array($a['answercontent'], $gegebeneantworten)){
 									echo ' style="background-color: #249B3C"';
 								}
+								echo '>';
 								echo '<label>';
 								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
 								echo '</label>';
@@ -295,6 +296,7 @@
 								if (in_array($a['answercontent'], $gegebeneantworten)){
 									echo ' style="background-color: #249B3C"';
 								}
+								echo '>';
 								echo '<label>';
 								echo '<input name="antwort'. $counter; echo '" id="antwort'. $counter; echo '" type="checkbox" value="'. $a['answercontent']; echo '"><span>'. $a['answercontent']; echo '</span>';
 								echo '</label>';
