@@ -110,7 +110,7 @@
     );
     foreach ($users as $user) {
       $collection=getCollection();
-      $delRec = $collection->deleteone(['username' => $user]));
+      $delRec = $collection->deleteone(['username' => $user]);
     }
   }
 
