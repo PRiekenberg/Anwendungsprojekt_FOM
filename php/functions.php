@@ -155,6 +155,12 @@
     $delRec = $collection->deletemany([], ['limit' => 0]);
   }
 
+  // Delete alle Bestenlisteneinträge
+  function deleteallLeaderboardentries() {
+    $collection = getCollection(); 
+    $delRec = $collection->deletemany(['type' => 'leaderboardentry'], ['limit' => 0]);
+  }
+
   // Delete specific documents in collection
   function deleteDocument($id) {
     $collection = getCollection(); 

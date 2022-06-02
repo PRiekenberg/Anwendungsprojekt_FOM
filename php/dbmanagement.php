@@ -37,6 +37,10 @@
     deleteallDocuments();
   }
 
+  if (isset($_POST['deleteleaderboardentriesbtn'])) {
+    deleteallLeaderboardentries();
+  }
+
 
 ?>
 
@@ -321,6 +325,12 @@
 			<form method="post">
 				<input id="dbid" type="text" name="dbid" placeholder="ID eingeben" /><br><br>
 				<input id="deletebtn" name="deletebtn" type="submit" value="Daten mit ID in der Datenbank löschen"></input>
+			</form>
+
+			<br><br>
+			<h2> Daten in allen Bestenlisten löschen</h2>
+			<form method="post">
+				<input id="deleteleaderboardentriesbtn" name="deleteleaderboardentriesbtn" type="submit" value="Alle Bestenlisteneinträge löschen"></input>
 			</form>
 
 			<br><br>
