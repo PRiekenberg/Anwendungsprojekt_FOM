@@ -50,6 +50,70 @@
                                       ]);
   }
 
+  function addFOMUsers() {
+    $users = array(
+      "anciferov",
+      "barasi",
+      "bibow",
+      "clemens",
+      "güner",
+      "harms",
+      "kohlmeyer",
+      "komatowsky",
+      "kupresak",
+      "oldenbüttel",
+      "prüwer",
+      "röben",
+      "sulies",
+      "timmler",
+      "zweschper"
+    );
+
+    foreach ($users as $user) {
+      $password = password_hash($user.'_fom', PASSWORD_DEFAULT);
+      $collection=getCollection();
+      $result = $collection->insertOne( [ 'type' => 'user',
+                                          'username' => $user,
+                                          'password' => $password,
+                                          'scenario1_phase' => "1",
+                                          'scenario1_points' => "0",
+                                          'scenario2_phase' => "1",
+                                          'scenario2_points' => "0",
+                                          'scenario3_phase' => "1",
+                                          'scenario3_points' => "0",
+                                          'scenario4_phase' => "1",
+                                          'scenario4_points' => "0",
+                                          'scenario5_phase' => "1",
+                                          'scenario5_points' => "0",
+                                          'admin' => 'false',
+                                        ]);
+    }
+  }
+
+  function deleteFOMUsers() {
+    $users = array(
+      "anciferov",
+      "barasi",
+      "bibow",
+      "clemens",
+      "güner",
+      "harms",
+      "kohlmeyer",
+      "komatowsky",
+      "kupresak",
+      "oldenbüttel",
+      "prüwer",
+      "röben",
+      "sulies",
+      "timmler",
+      "zweschper"
+    );
+    foreach ($users as $user) {
+      $collection=getCollection();
+      $delRec = $collection->deleteone(['username' => $user]));
+    }
+  }
+
   //print out list of collections
   function printCollection() {
     echo "<h2>Collections</h2>";

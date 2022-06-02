@@ -41,6 +41,14 @@
     deleteallLeaderboardentries();
   }
 
+  if (isset($_POST['addfombtn'])) {
+    addFOMUsers();
+  }
+
+  if (isset($_POST['deletefombtn'])) {
+    deleteFOMUsers();
+  }
+
 
 ?>
 
@@ -334,10 +342,18 @@
 			</form>
 
 			<br><br>
+			<h2> FOM User verwalten</h2>
+			<form method="post">
+				<input id="addfombtn" name="addfombtn" type="submit" value="FOM User anlegen"></input>
+				<input id="deletefombtn" name="deletefombtn" type="submit" value="FOM User löschen"></input>
+			</form>
+
+			<br><br>
 			<h2> alle Daten in Datenbank löschen</h2>
 			<form method="post">
 				<input id="deleteallbtn" name="deleteallbtn" type="submit" value="Alle Daten in der Datenbank löschen" disabled="disabled"></input>
 			</form>
+			
 			<br><br>
 			<a id ="logout" href="logout.php">Abmelden</a>
 		</div>
