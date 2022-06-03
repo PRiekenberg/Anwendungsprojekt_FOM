@@ -114,7 +114,7 @@
 					</div>
 					<?php
 						echo '<div id="div_button_next">';
-						echo '<form action="/php/frage.php">';
+						echo '<form action="/php/frage.php" method="post">';
 							
 							echo '<input type="hidden"';
 							echo 'name="scenarioid"';
