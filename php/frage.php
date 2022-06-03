@@ -8,10 +8,10 @@
 	} 
 	
 
-	$question=queryQuestion($_GET['scenarioid'],$_GET['phase']);
-	$answers=queryAnswers($_GET['scenarioid'],$_GET['phase']);
-	$_SESSION['scenarioid'] = $_GET['scenarioid'];
-	$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] = $_GET ['phase'];
+	$question=queryQuestion($_POST['scenarioid'],$_POST['phase']);
+	$answers=queryAnswers($_POST['scenarioid'],$_POST['phase']);
+	$_SESSION['scenarioid'] = $_POST['scenarioid'];
+	$_SESSION['scenario'.$_SESSION['scenarioid'].'_phase'] = $_POST ['phase'];
 
 	$scenarioName 	= getScenarioName($_SESSION['scenarioid']);
 	$questionContent= getQuestionContent($_SESSION['scenarioid'], $_SESSION['scenario'.$_SESSION['scenarioid'].'_phase']);

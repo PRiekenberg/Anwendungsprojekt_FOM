@@ -49,7 +49,7 @@
 	</div>
         <div id="div_gamescreen">
            	<div id="div_gamescreen_left">
-				<form action="/php/frage.php">
+				<form action="/php/frage.php" method="post">
 						<input type="hidden"
 								name="scenarioid"
 								value="3">
@@ -62,7 +62,7 @@
 								value="Firmennetz">-->
 						<button class ="button_menu" id="button_firmennetz">Firmennetz</button>						
 				</form>
-				<form action="/php/frage.php">
+				<form action="/php/frage.php" method="post">
 						<input type="hidden"
 								name="scenarioid"
 								value="5">
@@ -77,7 +77,7 @@
 				</form>
         	</div>
             <div id="div_gamescreen_center">
-				<form action="/php/frage.php">
+				<form action="/php/frage.php" method="post">
 						<input type="hidden"
 								name="scenarioid"
 								value="2">
@@ -95,7 +95,7 @@
 				</div>
             </div>
             <div id="div_gamescreen_right">
-				<form action="/php/frage.php">
+				<form action="/php/frage.php" method="post">
 					<input type="hidden"
 							name="scenarioid"
 							value="4">
@@ -108,7 +108,7 @@
 							value="Online Banking">-->
 					<button class ="button_menu" id="button_banking" disabled="disabled">Online Banking</button>
 				</form>
-				<form action="/php/frage.php">
+				<form action="/php/frage.php" method="post">
 					<input type="hidden"
 							name="scenarioid"
 							value="1">
