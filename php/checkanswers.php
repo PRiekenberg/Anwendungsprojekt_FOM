@@ -81,8 +81,7 @@
 		<div id = "div_h1">
 			<h1>
 				<?php
-					echo 'Szenario: ';
-					echo $scenarioName ;
+					echo $questionContent ; 
 				?>
 			</h1>
 		</div>
@@ -94,7 +93,8 @@
 		<div id = "div_h2">
 			<h2>	
 				<?php
-					echo $questionContent ; 
+					echo 'Szenario: ';
+					echo $scenarioName ;
 				?>
 			</h2>
 		</div>
@@ -141,12 +141,12 @@
 									//Antwort gehört zu richtigen Antworten
 									if (in_array($a['answercontent'], $richtigeantworten2)){ //Korrekt
 										echo ' style="background-color:#249B3C">';
-										echo '<p id="explanation">Korrekt: '.$explanation;echo '</p>';
+										echo '<p id="explanation">Richtig! : '.$explanation;echo '</p>';
 									}
 									//Anwort gehört zu falschen Antworten
 									else{	//Falsch
 										echo ' style="background-color:#88001B">';
-										echo '<p id="explanation">Falsch: '.$explanation;echo '</p>';
+										echo '<p id="explanation">Falsch! : '.$explanation;echo '</p>';
 									}
 								}
 								//Antwort wurde nicht gechecked
@@ -154,12 +154,12 @@
 									//Antwort gehört zu richtigen Antworten
 									if (in_array($a['answercontent'], $richtigeantworten2)){ //Falsch
 										echo ' style="background-color:#88001B">';
-										echo '<p id="explanation">Falsch: '.$explanation;echo '</p>';
+										echo '<p id="explanation">Falsch!: '.$explanation;echo '</p>';
 									}
 									//Anwort gehört zu falschen Antworten
 									else{	//Korrekt
 										echo ' style="background-color:#249B3C">';
-										echo '<p id="explanation">Korrekt: '.$explanation;echo '</p>';
+										echo '<p id="explanation">Richtig! : '.$explanation;echo '</p>';
 									}
 								}
 								echo '</div>';
@@ -184,12 +184,12 @@
 									//Antwort gehört zu richtigen Antworten
 									if (in_array($a['answercontent'], $richtigeantworten2)){ //Korrekt
 										echo ' style="background-color:#249B3C">';
-										echo '<p id="explanation">Korrekt: '.$explanation;echo '</p>';
+										echo '<p id="explanation">Richtig!: '.$explanation;echo '</p>';
 									}
 									//Anwort gehört zu falschen Antworten
 									else{	//Falsch
 										echo ' style="background-color:#88001B">';
-										echo '<p id="explanation">Falsch: '.$explanation;echo '</p>';
+										echo '<p id="explanation">Falsch!: '.$explanation;echo '</p>';
 									}
 								}
 								//Antwort wurde nicht gechecked
@@ -197,12 +197,12 @@
 									//Antwort gehört zu richtigen Antworten
 									if (in_array($a['answercontent'], $richtigeantworten2)){ //Falsch
 										echo ' style="background-color:#88001B">';
-										echo '<p id="explanation">Falsch: '.$explanation;echo '</p>';
+										echo '<p id="explanation">Falsch!: '.$explanation;echo '</p>';
 									}
 									//Anwort gehört zu falschen Antworten
 									else{	//Korrekt
 										echo ' style="background-color:#249B3C">';
-										echo '<p id="explanation">Korrekt: '.$explanation;echo '</p>';
+										echo '<p id="explanation">Richtig!: '.$explanation;echo '</p>';
 									}
 								}
 								echo '</div>';
@@ -227,12 +227,12 @@
 									//Antwort gehört zu richtigen Antworten
 									if (in_array($a['answercontent'], $richtigeantworten2)){ //Korrekt
 										echo ' style="background-color:#249B3C">';
-										echo '<p id="explanation">Korrekt: '.$explanation;echo '</p>';
+										echo '<p id="explanation">Richtig!: '.$explanation;echo '</p>';
 									}
 									//Anwort gehört zu falschen Antworten
 									else{	//Falsch
 										echo ' style="background-color:#88001B">';
-										echo '<p id="explanation">Falsch: '.$explanation;echo '</p>';
+										echo '<p id="explanation">Falsch!: '.$explanation;echo '</p>';
 									}
 								}
 								//Antwort wurde nicht gechecked
@@ -240,12 +240,12 @@
 									//Antwort gehört zu richtigen Antworten
 									if (in_array($a['answercontent'], $richtigeantworten2)){ //Falsch
 										echo ' style="background-color:#88001B">';
-										echo '<p id="explanation">Falsch: '.$explanation;echo '</p>';
+										echo '<p id="explanation">Falsch!: '.$explanation;echo '</p>';
 									}
 									//Anwort gehört zu falschen Antworten
 									else{	//Korrekt
 										echo ' style="background-color:#249B3C">';
-										echo '<p id="explanation">Korrekt: '.$explanation;echo '</p>';
+										echo '<p id="explanation">Richtig!: '.$explanation;echo '</p>';
 									}
 								}
 								echo '</div>';
@@ -268,12 +268,12 @@
 									//Antwort gehört zu richtigen Antworten
 									if (in_array($a['answercontent'], $richtigeantworten2)){ //Korrekt
 										echo ' style="background-color:#249B3C">';
-										echo '<p id="explanation">Korrekt: '.$explanation;echo '</p>';
+										echo '<p id="explanation">Richtig!: '.$explanation;echo '</p>';
 									}
 									//Anwort gehört zu falschen Antworten
 									else{	//Falsch
 										echo ' style="background-color:#88001B">';
-										echo '<p id="explanation">Falsch: '.$explanation;echo '</p>';
+										echo '<p id="explanation">Falsch!: '.$explanation;echo '</p>';
 									}
 								}
 								//Antwort wurde nicht gechecked
@@ -281,12 +281,12 @@
 									//Antwort gehört zu richtigen Antworten
 									if (in_array($a['answercontent'], $richtigeantworten2)){ //Falsch
 										echo ' style="background-color:#88001B">';
-										echo '<p id="explanation">Falsch: '.$explanation;echo '</p>';
+										echo '<p id="explanation">Falsch!: '.$explanation;echo '</p>';
 									}
 									//Anwort gehört zu falschen Antworten
 									else{	//Korrekt
 										echo ' style="background-color:#249B3C">';
-										echo '<p id="explanation">Korrekt: '.$explanation;echo '</p>';
+										echo '<p id="explanation">Richtig!: '.$explanation;echo '</p>';
 									}
 								}
 								echo '</div>';

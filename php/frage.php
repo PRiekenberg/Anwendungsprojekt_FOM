@@ -57,8 +57,7 @@
 		<div id = "div_h1">
 			<h1>
 				<?php
-					echo 'Szenario: ';
-					echo $scenarioName ;
+					echo $questionContent ; 
 				?>
 			</h1>
 		</div>
@@ -70,7 +69,8 @@
 		<div id = "div_h2">
 			<h2>	
 				<?php
-					echo $questionContent ; 
+					echo 'Szenario: ';
+					echo $scenarioName ;
 				?>
 			</h2>
 		</div>
