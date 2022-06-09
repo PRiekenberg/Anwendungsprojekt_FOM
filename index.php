@@ -127,7 +127,7 @@
             	<a id ="hinweis">
                 	Hinweis!
                 	<br>
-                	Dies ist keine Webseite um einen echten Virus zu bauen!
+                	Dies nur ein Quiz!
             	</a>
         </div>
         <div id ="div_copyright">
