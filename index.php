@@ -37,7 +37,7 @@
 			</form>
 		</div>        
         <div id = "div_h1">
-            	<h1>VIRUS ZUM ZUSAMMENBAUEN</h1>
+            	<h1>Your state of knowledge - Attention! It's serious</h1>
         </div>
 	<div id="div_logout">
 		<form>

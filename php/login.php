@@ -34,7 +34,7 @@
         -->
 
         <div id = "div_login">
-            <h1> Virus zum Zusammenbauen </h1>
+            <h1> Your state of knowledge - Attention! It's serious </h1>
             <form action="" method="post">
                 <br>
                 <br>
