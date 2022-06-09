@@ -66,12 +66,12 @@
             	<a id ="hinweis">
                 	Hinweis!
                 	<br>
-                	Dies ist keine Webseite um einen echten Virus zu bauen!
+                	Dies ist nur ein Quiz!
             	</a>
         </div>
         <div id ="div_copyright">
             	<a id="copyrigth">
-                	&copy Gruppe 7: Virus zum zusammenbauen
+                	&copy Your state of knowledge - Attention! It's serious
             	</a>
 		</div>                    
     </body>

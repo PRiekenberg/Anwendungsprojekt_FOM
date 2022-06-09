@@ -15,7 +15,7 @@
         <meta charset="utf-8">
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Virus zum Zusammenbauen">
+        <meta name="description" content="Your state of knowledge - Attention! It's serious">
         <link rel="icon" href="/images/malware_icon.png">
     </head>
     <body>
